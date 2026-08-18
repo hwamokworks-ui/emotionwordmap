@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>감정 찾기 · 감정 어휘 지도</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { base:'#E8E6D2', elevated:'#FFFFFF', elevated2:'#E3E1DA', parchment:'#262420', taupe:'#77746C', dim:'#A6A296',
+      amber:{ DEFAULT:'#8F5A12', strong:'#703F0A', glow:'#E0BD75' },
+      region:{ anger:'#D1503A', emptiness:'#A79A85', loneliness:'#3D8657', excitement:'#E87792', anxiety:'#4779A8', joy:'#E8A93A', sadness:'#5B72B8', shame:'#BE6D97', calm:'#3FA495' } },
+    fontFamily: { serif:['Pretendard','-apple-system','sans-serif'], sans:['Pretendard','-apple-system','sans-serif'], mono:['"IBM Plex Mono"','monospace'] },
+    borderRadius: { sm:'10px', md:'20px', lg:'28px' },
+    boxShadow: { card:'0 1px 2px rgba(38,36,32,.06), 0 8px 20px -8px rgba(38,36,32,.14)', glow:'0 1px 2px rgba(38,36,32,.15), 0 0 20px rgba(224,189,117,.35)' },
+  } } };
+</script>
+<link rel="stylesheet" href="../design-system/tokens.css" />
+</head>
+<body class="bg-base text-parchment">
+<div class="page-wrap">
+
+  <header class="topbar">
+    <a href="find.html" class="topbar-brand">감정 어휘 지도</a>
+    <div class="topbar-right">
+      <nav class="topbar-nav">
+        <a href="find.html" class="active">감정 찾기</a>
+        <a href="map.html">감정 지도</a>
+        <a href="archive.html">감정 서고</a>
+      </nav>
+      <div class="user-chip">
+        <span class="avatar">이</span>
+        <span class="text-[13px] text-taupe hidden md:inline">이준호</span>
+        <span class="status-dot" aria-hidden="true"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="content-inner max-w-[1200px] mx-auto">
+    <div class="grid gap-10" style="grid-template-columns: minmax(0,1fr) 340px;">
+      <div>
+        <header class="enter">
+          <h1 id="heroHeadline" class="font-display-serif text-[32px] md:text-[42px] leading-[1.4]" style="letter-spacing:-.01em;">햇살 드는 오후의 책상에<br/>감정의 지도를 펼쳐 두었어요.</h1>
+          <p class="text-taupe mt-5 leading-relaxed max-w-[520px] text-[14.5px]">지금의 마음을 한 줄 적으면, 그 마음이 놓인 자리를 지도에서 찾아드려요.<br/>하나의 감정에서 멈추지 말고, 이어진 길을 따라 더 정확한 단어를 발견해 보세요.</p>
+        </header>
+
+        <!-- 마음을 적는 곳 — 메인의 주인공 -->
+        <section class="paper-card p-8 md:p-10 mt-9 enter enter-delay-1 relative overflow-hidden" style="background: linear-gradient(165deg, rgba(224,189,117,.28), var(--bg-elevated) 45%); border:2px solid rgba(143,90,18,.55); box-shadow:0 2px 4px rgba(38,36,32,.08), 0 14px 32px -10px rgba(143,90,18,.22);">
+          <textarea id="mainQuery" rows="2" placeholder="지금 어떤 마음인지 적어보세요."
+            onkeydown="if(event.key==='Enter' && !event.shiftKey){ event.preventDefault(); document.getElementById('findSubmit').click(); }"
+            class="font-display-serif w-full bg-transparent border-0 outline-none resize-none text-[22px] md:text-[27px] leading-snug placeholder:text-dim/60"
+          ></textarea>
+
+          <div class="flex items-center justify-between mt-6 pt-5" style="border-top:1px solid var(--border-hairline);">
+            <span class="text-[11.5px] text-dim" style="letter-spacing:.02em;">Enter · 줄바꿈은 Shift + Enter</span>
+            <button id="findSubmit" onclick="goToMap()" class="btn-primary text-[15px] inline-flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="6"/><path d="M17 17l-4-4"/></svg>
+              내 마음의 위치 찾기
+            </button>
+          </div>
+        </section>
+        <p class="text-dim text-[12px] mt-3 enter enter-delay-2">이 지도는 나만 볼 수 있어요 — 누구에게도 공유되지 않아요</p>
+
+        <section class="mt-11 enter enter-delay-2">
+          <p class="text-xs text-parchment label-eyebrow mb-3" style="font-weight:600;">어떤 상황인가요?</p>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <a href="map.html?w=geurip" class="paper-card situation-card p-4 text-[14px] leading-snug" style="border:1.5px solid #3D8657; --accent:#3D8657; --accent-rgb:61,134,87;">애인과 헤어졌을 때</a>
+            <a href="map.html?w=chojo" class="paper-card situation-card p-4 text-[14px] leading-snug" style="border:1.5px solid #4779A8; --accent:#4779A8; --accent-rgb:71,121,168;">시험 전날</a>
+            <a href="map.html?w=dugeun" class="paper-card situation-card p-4 text-[14px] leading-snug" style="border:1.5px solid #E87792; --accent:#E87792; --accent-rgb:232,119,146;">첫 출근</a>
+            <a href="map.html?w=seoun" class="paper-card situation-card p-4 text-[14px] leading-snug" style="border:1.5px solid #D1503A; --accent:#D1503A; --accent-rgb:209,80,58;">답장이 늦을 때</a>
+            <a href="map.html?w=seolle" class="paper-card situation-card p-4 text-[14px] leading-snug" style="border:1.5px solid #E87792; --accent:#E87792; --accent-rgb:232,119,146;">누군가를 좋아하기 시작했을 때</a>
+            <a href="map.html?w=ppudeut" class="paper-card situation-card p-4 text-[14px] leading-snug" style="border:1.5px solid #E8A93A; --accent:#E8A93A; --accent-rgb:232,169,58;">오래 준비한 일이 잘 됐을 때</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- ══ 사이드바 ══ — 입력창 시작 지점과 높이를 맞춤 -->
+      <aside class="mt-[172px] md:mt-[220px]">
+        <div class="p-5 enter enter-delay-3" style="background:var(--bg-elevated); border:1px solid var(--border-hairline); border-radius:20px;">
+          <p class="text-xs text-taupe label-eyebrow mb-2">오늘의 한 단어</p>
+          <p class="font-display-serif text-[25px] text-parchment">먹먹함</p>
+          <p class="text-[13px] text-taupe italic mt-2 leading-relaxed">"슬픔이 가슴에 차올라 아무 말도 나오지 않는다."</p>
+          <a href="map.html?w=meokmeok" class="text-[12px] text-amber mt-3 inline-block hover:opacity-70 transition-opacity" style="text-decoration:underline; text-underline-offset:3px;">지도에서 발견하기 ›</a>
+        </div>
+
+        <div class="flex items-center justify-between mb-2 mt-7 enter enter-delay-3">
+          <p class="text-[11.5px] text-taupe label-eyebrow">요즘 많이 찾는 감정</p>
+          <span class="text-[11px] text-dim">이번 주</span>
+        </div>
+        <div class="divide-y enter enter-delay-3" style="background:var(--bg-elevated); border:1px solid var(--border-hairline); border-radius:16px; overflow:hidden;">
+          <a href="map.html?w=meokmeok" class="flex items-center gap-3 py-3 px-3.5 hover:bg-elevated2 transition-colors" style="border-bottom:1px solid var(--border-hairline);">
+            <span class="text-[12.5px] text-dim w-4">1</span>
+            <span class="w-2 h-2 rounded-full shrink-0" style="background:#5B72B8;"></span>
+            <span class="flex-1 text-[14.5px] text-parchment">먹먹함</span>
+            <span class="text-[10.5px] text-taupe">1,204명</span>
+          </a>
+          <a href="map.html?w=mugiryeok" class="flex items-center gap-3 py-3 px-3.5 hover:bg-elevated2 transition-colors" style="border-bottom:1px solid var(--border-hairline);">
+            <span class="text-[12.5px] text-dim w-4">2</span>
+            <span class="w-2 h-2 rounded-full shrink-0" style="background:#A79A85;"></span>
+            <span class="flex-1 text-[14.5px] text-parchment">무기력하다</span>
+            <span class="text-[10.5px] text-taupe">986명</span>
+          </a>
+          <a href="map.html?w=buran" class="flex items-center gap-3 py-3 px-3.5 hover:bg-elevated2 transition-colors" style="border-bottom:1px solid var(--border-hairline);">
+            <span class="text-[12.5px] text-dim w-4">3</span>
+            <span class="w-2 h-2 rounded-full shrink-0" style="background:#4779A8;"></span>
+            <span class="flex-1 text-[14.5px] text-parchment">불안하다</span>
+            <span class="text-[10.5px] text-taupe">842명</span>
+          </a>
+          <a href="map.html?w=huryeon" class="flex items-center gap-3 py-3 px-3.5 hover:bg-elevated2 transition-colors" style="border-bottom:1px solid var(--border-hairline);">
+            <span class="text-[12.5px] text-dim w-4">4</span>
+            <span class="w-2 h-2 rounded-full shrink-0" style="background:#E8A93A;"></span>
+            <span class="flex-1 text-[14.5px] text-parchment">후련하다</span>
+            <span class="text-[10.5px] text-taupe">771명</span>
+          </a>
+          <a href="map.html?w=geurip" class="flex items-center gap-3 py-3 px-3.5 hover:bg-elevated2 transition-colors">
+            <span class="text-[12.5px] text-dim w-4">5</span>
+            <span class="w-2 h-2 rounded-full shrink-0" style="background:#3D8657;"></span>
+            <span class="flex-1 text-[14.5px] text-parchment">그립다</span>
+            <span class="text-[10.5px] text-taupe">690명</span>
+          </a>
+        </div>
+        <p class="text-dim text-[11px] mt-3 leading-relaxed">사용자들이 지도에서 발견한 감정을 모아 매주 집계해요.</p>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<script>
+// [id, w(원형), n(명사형)] — 검색어를 실제 감정 단어로 매칭하기 위한 최소 데이터(145개)
+const WORD_FORMS = [
+['bulpyeon','불편하다','불편함'],['dapdap','답답하다','답답함'],['jjajeung','짜증나다','짜증'],['hwanada','화나다','분노'],['bunhada','분하다','분함'],['eogul','억울하다','억울함'],['seoun','서운하다','서운함'],['motmattang','못마땅하다','못마땅함'],['eonjjanh','언짢다','언짢음'],['seonggasi','성가시다','성가심'],['geoseul','거슬리다','거슬림'],['bunggae','분개하다','분개'],['gyeokbun','격분하다','격분'],['ulhwa','울화가 치밀다','울화'],['wonmang','원망하다','원망'],['yasok','야속하다','야속함'],['gwaesim','괘씸하다','괘씸함'],['ppyoro','뾰로통하다','뾰로통함'],['jinyeom','진저리나다','진저리'],
+['heotal','허탈하다','허탈함'],['gonghu','공허하다','공허함'],['heomu','허무하다','허무함'],['ssupssul','씁쓸하다','씁쓸함'],['maekeop','맥없다','맥없음'],['mugiryeok','무기력하다','무기력'],['simdeureong','심드렁하다','심드렁함'],['mudeomdeom','무덤덤하다','무덤덤함'],['sideul','시들하다','시들함'],['heotheot','헛헛하다','헛헛함'],['gimppa','김빠지다','김빠짐'],['jichida','지치다','지침'],['sojin','소진되다','소진'],['deotteops','덧없다','덧없음'],
+['ssulssul','쓸쓸하다','쓸쓸함'],['heojeon','허전하다','허전함'],['oeroun','외롭다','외로움'],['geurip','그립다','그리움'],['seogeul','서글프다','서글픔'],['soewe','소외되다','소외감'],['godok','고독하다','고독'],['jeokjeok','적적하다','적적함'],['samuchi','사무치다','사무침'],['aryeon','아련하다','아련함'],['aejan','애잔하다','애잔함'],['sirida','시리다','시림'],['seomeok','서먹하다','서먹함'],['natseol','낯설다','낯섦'],['hyangsu','향수에 젖다','향수'],['chueok','추억하다','추억'],
+['aetteut','애틋하다','애틋함'],['sarang','사랑하다','사랑'],['joa','좋아하다','좋아함'],['seolle','설레다','설렘'],['dugeun','두근거리다','두근거림'],['gidae','기대하다','기대'],['deulddeu','들뜨다','들뜸'],['banha','반하다','반함'],['kkeulli','끌리다','끌림'],['akkida','아끼다','아낌'],['dajeong','다정하다','다정함'],['geuuk','그윽하다','그윽함'],['ganjeol','간절하다','간절함'],['aetae','애태우다','애태움'],['jeonggyeop','정겹다','정겨움'],['sarangseureop','사랑스럽다','사랑스러움'],['chinmil','친밀하다','친밀함'],['sinroe','신뢰하다','신뢰'],['gomap','고맙다','고마움'],
+['makmak','막막하다','막막함'],['buran','불안하다','불안'],['geokjeong','걱정하다','걱정'],['chojo','초조하다','초조함'],['duryeop','두렵다','두려움'],['jomajoma','조마조마하다','조마조마함'],['ginjang','긴장되다','긴장'],['gyeopna','겁나다','겁'],['tteollida','떨리다','떨림'],['anjeol','안절부절못하다','안절부절'],['geunsim','근심하다','근심'],['yeomnyeo','염려하다','염려'],['bulgil','불길하다','불길함'],['wichuk','위축되다','위축'],['danghwang','당황하다','당황'],['ajjil','아찔하다','아찔함'],
+['huryeon','후련하다','후련함'],['gippeu','기쁘다','기쁨'],['haengbok','행복하다','행복'],['beokcha','벅차다','벅참'],['ppudeut','뿌듯하다','뿌듯함'],['heumut','흐뭇하다','흐뭇함'],['sinna','신나다','신남'],['jeulgeop','즐겁다','즐거움'],['yukwae','유쾌하다','유쾌함'],['sangkwae','상쾌하다','상쾌함'],['holgabun','홀가분하다','홀가분함'],['gamsa','감사하다','감사'],['heupjok','흡족하다','흡족함'],['jarangseureop','자랑스럽다','자랑스러움'],['gamgyeok','감격하다','감격'],['bangap','반갑다','반가움'],['jjarit','짜릿하다','짜릿함'],
+['sokssang','속상하다','속상함'],['antakkap','안타깝다','안타까움'],['seuljeu','슬프다','슬픔'],['seoreop','서럽다','서러움'],['meokmeok','먹먹하다','먹먹함'],['uljeok','울적하다','울적함'],['chimul','침울하다','침울함'],['bicham','비참하다','비참함'],['chamdam','참담하다','참담함'],['aecheo','애처롭다','애처로움'],['cheoryang','처량하다','처량함'],['nunmulgyeop','눈물겹다','눈물겨움'],['sangsim','상심하다','상심'],['nakdam','낙담하다','낙담'],['aetong','애통하다','애통함'],['simurook','시무룩하다','시무룩함'],
+['minmang','민망하다','민망함'],['bukkeu','부끄럽다','부끄러움'],['changpi','창피하다','창피함'],['ssukseu','쑥스럽다','쑥스러움'],['mian','미안하다','미안함'],['gyeomyeon','겸연쩍다','겸연쩍음'],['meosseuk','머쓱하다','머쓱함'],['nancheo','난처하다','난처함'],['gollan','곤란하다','곤란함'],['kkeorim','꺼림칙하다','꺼림칙함'],['joeseureop','죄스럽다','죄스러움'],['nwiuchi','뉘우치다','뉘우침'],['huhoe','후회하다','후회'],['jachaek','자책하다','자책'],
+['pyeonan','편안하다','편안함'],['pyeongon','평온하다','평온함'],['janjan','잔잔하다','잔잔함'],['yeoyu','여유롭다','여유로움'],['nareun','나른하다','나른함'],['chabun','차분하다','차분함'],['goyo','고요하다','고요함'],['ansim','안심하다','안심'],['deundeun','든든하다','든든함'],['pogeun','포근하다','포근함'],['neugeut','느긋하다','느긋함'],['mudeon','무던하다','무던함'],['damdam','담담하다','담담함'],['gaeun','개운하다','개운함'],
+];
+// 자주 쓰는 구어체 표현 → 감정 id (직접 단어형에 없는 표현 보완용)
+const KEYWORDS = [
+  {id:'seoun', k:['서운','섭섭']}, {id:'dapdap', k:['답답']}, {id:'jjajeung', k:['짜증']},
+  {id:'hwanada', k:['화나','화가','열받']}, {id:'eogul', k:['억울']},
+  {id:'heotal', k:['허탈']}, {id:'gonghu', k:['공허']}, {id:'mugiryeok', k:['무기력']}, {id:'heotheot', k:['헛헛']},
+  {id:'oeroun', k:['외롭','혼자']}, {id:'ssulssul', k:['쓸쓸']}, {id:'geurip', k:['그립','보고 싶','헤어']},
+  {id:'seolle', k:['설레','두근']}, {id:'gidae', k:['기대']}, {id:'aetteut', k:['애틋']}, {id:'sarang', k:['사랑']},
+  {id:'buran', k:['불안']}, {id:'chojo', k:['초조','시험','발표','면접']}, {id:'duryeop', k:['두렵','무섭','겁나']}, {id:'makmak', k:['막막']},
+  {id:'gippeu', k:['기뻐','기쁘','기쁨','좋은 소식']}, {id:'haengbok', k:['행복']}, {id:'ppudeut', k:['뿌듯','해냈']},
+  {id:'huryeon', k:['후련','시원']}, {id:'beokcha', k:['벅차','울컥']},
+  {id:'sokssang', k:['속상']}, {id:'seuljeu', k:['슬프','슬퍼','눈물','우울']}, {id:'seoreop', k:['서럽','북받']},
+  {id:'meokmeok', k:['먹먹','뭉클']}, {id:'uljeok', k:['울적']},
+  {id:'bukkeu', k:['부끄럽','쑥스']}, {id:'changpi', k:['창피']}, {id:'minmang', k:['민망','어색']}, {id:'mian', k:['미안','잘못한']},
+  {id:'pyeonan', k:['편안']}, {id:'pyeongon', k:['평온','고요']}, {id:'nareun', k:['나른']}, {id:'yeoyu', k:['여유']},
+];
+
+function resolveWord(text){
+  const t = (text || '').trim();
+  if (!t) return null;
+  let best = null, bestScore = 0;
+  for (const [id, w, n] of WORD_FORMS){
+    if (w && t.includes(w) && w.length*3 > bestScore){ bestScore = w.length*3; best = id; }
+    if (n && t.includes(n) && n.length*3 > bestScore){ bestScore = n.length*3; best = id; }
+  }
+  if (best) return best;
+  for (const {id, k} of KEYWORDS){
+    for (const kw of k){
+      if (t.includes(kw) && kw.length*2 > bestScore){ bestScore = kw.length*2; best = id; }
+    }
+  }
+  return best;
+}
+function goToMap(){
+  const text = document.getElementById('mainQuery').value;
+  const id = resolveWord(text);
+  location.href = id ? ('map.html?w=' + id) : 'map.html';
+}
+
+// 시간대별 헤드라인 — 매시 정각에 맞춰 새로고침 없이도 갱신
+const HEADLINES = [
+  { from: 0,  to: 5,  text: '고요한 새벽의 책상에<br/>감정의 지도를 펼쳐 두었어요.' },
+  { from: 5,  to: 8,  text: '이른 아침 빛이 드는 책상에<br/>감정의 지도를 펼쳐 두었어요.' },
+  { from: 8,  to: 12, text: '아침 햇살 드는 책상에<br/>감정의 지도를 펼쳐 두었어요.' },
+  { from: 12, to: 18, text: '햇살 드는 오후의 책상에<br/>감정의 지도를 펼쳐 두었어요.' },
+  { from: 18, to: 21, text: '노을 지는 저녁의 책상에<br/>감정의 지도를 펼쳐 두었어요.' },
+  { from: 21, to: 24, text: '고요한 밤의 책상에<br/>감정의 지도를 펼쳐 두었어요.' },
+];
+function updateHeroHeadline(){
+  const h = new Date().getHours();
+  const match = HEADLINES.find(b => h >= b.from && h < b.to);
+  const el = document.getElementById('heroHeadline');
+  if (el && match) el.innerHTML = match.text;
+}
+updateHeroHeadline();
+setInterval(updateHeroHeadline, 5 * 60 * 1000);
+</script>
+</body>
+</html>

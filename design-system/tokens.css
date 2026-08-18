@@ -1,0 +1,247 @@
+/* 감정 어휘 지도 — Shared Design Tokens & Utilities (v3, 오후의 책상 · 웹 우선 · 노드형 지도)
+   모든 screens/*.html 이 이 파일을 <link>로 공유한다. MASTER.md 참고. */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Noto+Serif+KR:wght@500;600;700&display=swap");
+
+:root{
+  --bg-base:#E8E6D2;
+  --bg-elevated:#FFFFFF;
+  --bg-elevated-2:#E3E1DA;
+  --border-hairline:rgba(38,36,32,.10);
+  --border-hairline-strong:rgba(38,36,32,.22);
+  --text-primary:#262420;
+  --text-secondary:#77746C;
+  --text-tertiary:#A6A296;
+  --accent-amber:#8F5A12;
+  --accent-amber-strong:#703F0A;
+  --accent-amber-glow:#E0BD75;
+  --accent-amber-dim:rgba(143,90,18,.13);
+}
+
+html{ background:var(--bg-base); font-family:'Pretendard', -apple-system, sans-serif; }
+/* 한글이 쓰이는 모든 텍스트는 예외 없이 Pretendard를 쓴다. IBM Plex Mono는 한글이 아닌
+   좌표·청구기호(예: SAD·07, 37.5°S) 라벨에만 한정해서 쓴다. 폼 요소는 브라우저 기본 UI 폰트로
+   빠지기 쉬워 명시적으로 상속시킨다. */
+button, input, textarea, select{ font-family:inherit; }
+/* 연그레이 배경 + 옅은 하이라이트. 뷰포트에 고정(background-attachment:fixed)해
+   화면 높이·스크롤과 무관하게 모든 페이지에서 항상 같은 위치·같은 톤으로 보이게 한다. */
+body{
+  font-family:'Pretendard', -apple-system, sans-serif; -webkit-font-smoothing:antialiased;
+  color:var(--text-primary);
+  background:
+    radial-gradient(ellipse 1200px 680px at 14% -8%, rgba(255,255,255,.82), transparent 65%),
+    radial-gradient(circle at 30% 40%, rgba(38,36,32,.025) 0, transparent 2px),
+    radial-gradient(circle at 75% 65%, rgba(38,36,32,.02) 0, transparent 2px),
+    radial-gradient(circle at 55% 85%, rgba(38,36,32,.02) 0, transparent 2px),
+    var(--bg-base);
+  background-size: auto, 150px 150px, 150px 150px, 150px 150px, auto;
+  background-attachment: fixed, fixed, fixed, fixed, fixed;
+  background-repeat: no-repeat, repeat, repeat, repeat, repeat;
+}
+
+/* ===== 상단 내비게이션 (v3) ===== */
+.topbar{
+  position:sticky; top:0; z-index:30; height:68px;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 32px;
+  background:rgba(255,255,255,.86); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border-hairline);
+}
+.topbar-brand{ font-family:'Pretendard', -apple-system, sans-serif; font-size:19px; font-weight:700; color:var(--text-primary); transition:opacity .15s ease; }
+.topbar-brand:hover{ opacity:.7; }
+.topbar-nav{ display:flex; gap:4px; }
+.topbar-nav a{
+  padding:10px 20px; border-radius:999px; font-weight:600; font-size:14.5px;
+  color:var(--text-secondary); transition:background .15s ease, color .15s ease;
+}
+.topbar-nav a:hover{ background:var(--bg-elevated-2); color:var(--text-primary); }
+.topbar-nav a.active{ background:var(--accent-amber-dim); color:var(--accent-amber-strong); }
+
+.topbar-right{ display:flex; align-items:center; gap:14px; }
+.user-chip{
+  display:flex; align-items:center; gap:9px; padding:6px 12px 6px 6px; border-radius:999px;
+  border:1px solid var(--border-hairline); background:var(--bg-elevated2);
+}
+.user-chip .avatar{
+  width:28px; height:28px; border-radius:50%; flex:none;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--accent-amber-dim); color:var(--accent-amber-strong);
+  font-family:'Noto Serif KR', serif; font-size:13px; font-weight:600;
+}
+.user-chip .status-dot{
+  width:7px; height:7px; border-radius:50%; background:#3D8657; flex:none;
+  box-shadow:0 0 0 2px var(--bg-elevated2);
+}
+
+.page-wrap{ min-height:100vh; }
+.content-inner{ padding:40px 48px 96px; }
+@media (max-width: 900px){ .content-inner{ padding:24px 20px 72px; } .topbar{ padding:0 18px; } }
+
+/* 감정 여정 하위 화면 이동용 서브탭 (지도 화면과 동일 톤) */
+.subtab{
+  padding:9px 18px; border-radius:999px; font-size:13.5px; color:var(--text-secondary);
+  border:1px solid var(--border-hairline-strong); white-space:nowrap; font-weight:500;
+  transition:background .15s ease, color .15s ease;
+}
+.subtab:hover{ background:var(--bg-elevated-2); }
+.subtab.active{ background:var(--accent-amber-dim); color:var(--accent-amber-strong); border-color:rgba(143,90,18,.35); }
+
+/* ===== 전체 화면 지도 (v3) ===== */
+.map-full{ position:relative; height:calc(100vh - 68px); width:100%; overflow:hidden; }
+.map-full svg{ width:100%; height:100%; display:block; }
+
+.region-fill{ mix-blend-mode:multiply; }
+
+.map-float{
+  position:absolute; z-index:5;
+  background:rgba(255,255,255,.92); backdrop-filter:blur(8px);
+  border:1px solid var(--border-hairline); border-radius:20px;
+  box-shadow:0 1px 2px rgba(38,36,32,.06), 0 12px 32px -12px rgba(38,36,32,.2);
+}
+
+/* 노드 상태 — 3단계 발견 상태(tier 0 숨김 · 1 이웃/미확인 · 2 발견됨) */
+.node-group{ cursor:pointer; }
+.node-group .node-label{ opacity:0; transition:opacity .15s ease; pointer-events:none; }
+.node-group[data-tier="2"] .node-label{ opacity:1; }
+.node-group[data-tier="1"]:hover .node-label{ opacity:1; }
+.node-group[data-tier="1"] .node-fill{ fill:var(--bg-elevated); stroke-width:1.5; stroke-dasharray:2.5 3.5; opacity:.75; }
+.node-group[data-tier="2"] .node-fill{ stroke:#262420; stroke-opacity:.18; stroke-width:1.5; }
+/* tier 0(그래프상 아직 안 이어진 단어)도 클릭해서 바로 발견할 수 있다 — 다만 흐릿하게 표시해
+   "아직 안 가본 곳"이라는 느낌은 유지한다. */
+.node-group[data-tier="0"] .node-fill{ opacity:.32; }
+.node-group[data-tier="0"]:hover .node-fill{ opacity:.6; }
+.node-group[data-tier="0"]:hover .node-label{ opacity:1; }
+.node-group:hover .node-fill{ filter:brightness(1.04); }
+
+.edge-line{ transition:stroke-dasharray .2s ease, opacity .2s ease; }
+.edge-dashed{ stroke-dasharray:4 7; opacity:.4; }
+.edge-solid{ stroke-dasharray:none; opacity:.6; }
+
+/* 지도 팬/줌 캔버스 */
+.map-canvas-wrap{ position:absolute; inset:0; cursor:grab; overflow:hidden; }
+.map-canvas-wrap.dragging{ cursor:grabbing; }
+.map-canvas{ position:absolute; left:0; top:0; transform-origin:0 0; }
+
+/* 작은 지도 툴 버튼(줌 등) */
+.map-tool-btn{
+  width:32px; height:32px; display:flex; align-items:center; justify-content:center;
+  background:rgba(255,255,255,.92); backdrop-filter:blur(8px);
+  border:1px solid var(--border-hairline); border-radius:9px;
+  box-shadow:0 1px 2px rgba(38,36,32,.06), 0 8px 16px -8px rgba(38,36,32,.2);
+  color:var(--text-primary); cursor:pointer; transition:background .15s ease;
+}
+.map-tool-btn:hover{ background:var(--bg-elevated2); }
+
+/* 감정 서고 · 통계 탭 / 진행바 / 뱃지 */
+.stat-tab{ flex:1; text-align:left; padding:14px 16px; border-radius:14px; cursor:pointer; border:1px solid var(--border-hairline); background:var(--bg-elevated); transition:background .15s ease; }
+.stat-tab:hover{ background:var(--bg-elevated-2); }
+.stat-tab.active{ border-color:var(--accent-amber); background:var(--accent-amber-dim); }
+.region-progress{ height:5px; border-radius:3px; background:var(--bg-elevated-2); overflow:hidden; }
+.region-progress > div{ height:100%; }
+.badge-seal{ width:42px; height:42px; flex:none; display:flex; align-items:center; justify-content:center; position:relative; }
+
+.paper-card{
+  background:var(--bg-elevated);
+  border:1px solid var(--border-hairline);
+  border-radius:20px;
+  box-shadow:0 1px 2px rgba(38,36,32,.06), 0 8px 20px -8px rgba(38,36,32,.14);
+}
+
+/* 상황 카드 — 카드별 --accent-rgb로 색상을 계산하는 호버·액티브 인터랙션.
+   테두리만 있는 버전이면 border-color/background 규칙이 적용되고, 색상 채움(fill) 버전이면
+   inline background/border가 우선해서 filter·box-shadow·transform만 작동함. */
+.situation-card{ transition: transform .15s ease, box-shadow .18s ease, border-color .15s ease, background-color .15s ease, filter .15s ease; }
+.situation-card:hover{
+  border-color: var(--accent);
+  background: rgba(var(--accent-rgb), .07);
+  box-shadow: 0 6px 18px -8px rgba(var(--accent-rgb), .4);
+  transform: translateY(-2px);
+  filter: brightness(1.05) saturate(1.05);
+}
+.situation-card:active{ transform: scale(.96); transition-duration:.08s; filter:brightness(.97); }
+
+.index-card{ position:relative; padding-left:28px; }
+.index-card::before{
+  content:''; position:absolute; left:14px; top:20px; width:8px; height:8px; border-radius:50%;
+  background:var(--bg-base); box-shadow: inset 0 0 0 1px var(--border-hairline-strong);
+}
+.index-card::after{
+  content:''; position:absolute; left:20px; top:14px; bottom:14px; width:1px; background:var(--border-hairline);
+}
+
+.font-serif-kr{ font-family:'Pretendard', -apple-system, sans-serif; font-weight:700; }
+/* 명조(세리프) — 메인 화면의 히어로 헤드라인 등 '한 순간의 우아함'을 위해서만 의도적으로 예외를 둔다.
+   다른 모든 곳의 규칙(한글은 Pretendard)은 유지된다. */
+.font-display-serif{ font-family:'Noto Serif KR', serif; }
+/* IBM Plex Mono는 한글 글리프가 없다 — 한글과 같은 텍스트 노드에 걸면 그 부분만 시스템 폰트로 조용히
+   깨져 나온다(Pretendard가 아니게 됨). 좌표·청구기호처럼 순수 라틴/숫자 라벨에만 이 클래스를 쓴다. */
+.font-mono-coord{ font-family:'IBM Plex Mono', monospace; letter-spacing:.08em; text-transform:uppercase; }
+/* 한글 섹션 눈썹 라벨(예: "감정 찾기", "상황으로 시작하기") — Pretendard로 같은 라벨 톤을 낸다. */
+.label-eyebrow{ font-family:'Pretendard', -apple-system, sans-serif; letter-spacing:.01em; font-weight:600; }
+
+.btn-primary{
+  background:var(--accent-amber); color:#FFF8EB;
+  border-radius:999px; font-weight:600; min-height:48px; padding:0 26px;
+  display:inline-flex; align-items:center; justify-content:center;
+  transition:background .18s ease, box-shadow .18s ease, transform .18s ease;
+  box-shadow:0 1px 2px rgba(38,36,32,.15), 0 0 20px rgba(224,189,117,.35);
+}
+.btn-primary:hover{ background:var(--accent-amber-strong); transform:translateY(-1px); }
+.btn-primary:active{ transform:translateY(0); }
+
+.btn-secondary{
+  background:transparent; color:var(--text-primary);
+  border:1px solid var(--border-hairline-strong); border-radius:999px;
+  min-height:48px; padding:0 24px;
+  display:inline-flex; align-items:center; justify-content:center;
+  transition:border-color .18s ease, background .18s ease;
+}
+.btn-secondary:hover{ background:var(--bg-elevated-2); border-color:rgba(38,36,32,.32); }
+
+/* 단어 저장 토글 — 진한 단색, 확실한 hover/active 피드백 */
+.btn-save{
+  width:100%; min-height:52px; padding:0 24px; border-radius:999px; border:none;
+  font-weight:700; font-size:14px; cursor:pointer;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:var(--accent-amber-strong); color:#FFF8EB;
+  box-shadow:0 1px 2px rgba(38,36,32,.2);
+  transition:background .15s ease, transform .12s ease, box-shadow .12s ease;
+}
+.btn-save:hover{ background:#5C3208; }
+.btn-save:active{ transform:scale(.97); box-shadow:0 1px 1px rgba(38,36,32,.15); }
+.btn-save.saved{ background:var(--text-primary); color:var(--bg-elevated); }
+.btn-save.saved:hover{ background:#171512; }
+
+.chip{ border-radius:999px; display:inline-flex; align-items:center; gap:6px; padding:6px 14px; font-size:14px; font-weight:500; }
+
+.field{ background:var(--bg-elevated-2); border:1px solid var(--border-hairline); border-radius:10px; min-height:48px; color:var(--text-primary); }
+.field:focus{ outline:none; box-shadow:0 0 0 2px var(--accent-amber); border-color:var(--accent-amber); }
+
+@keyframes pulse-glow{ 0%,100%{ opacity:.55; transform:scale(1); } 50%{ opacity:1; transform:scale(1.08); } }
+.pulse-glow{ animation:pulse-glow 3s ease-in-out infinite; }
+
+/* 지도에서 선택된 노드 — 깜빡이며 커졌다 작아졌다 하는 강조 링 */
+@keyframes node-blink{
+  0%, 100%{ opacity:.15; transform:scale(.8); }
+  50%{ opacity:.65; transform:scale(1.55); }
+}
+.node-focus-ring{
+  transform-box: fill-box; transform-origin: center;
+  animation: node-blink 1.5s ease-in-out infinite;
+}
+
+@keyframes enter-fade{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:translateY(0); } }
+.enter{ animation:enter-fade .26s ease-out both; }
+.enter-delay-1{ animation-delay:.05s; }
+.enter-delay-2{ animation-delay:.1s; }
+.enter-delay-3{ animation-delay:.15s; }
+
+:focus-visible{ outline:2px solid var(--accent-amber); outline-offset:2px; }
+::-webkit-scrollbar{ width:6px; height:6px; }
+::-webkit-scrollbar-thumb{ background:var(--border-hairline-strong); border-radius:999px; }
+::-webkit-scrollbar-track{ background:transparent; }
+
+@media (prefers-reduced-motion: reduce){
+  .pulse-glow, .node-focus-ring, .enter{ animation:none !important; }
+}

@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>감정 지도 · 감정 어휘 지도</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { base:'#E8E6D2', elevated:'#FFFFFF', elevated2:'#E3E1DA', parchment:'#262420', taupe:'#77746C', dim:'#A6A296',
+      amber:{ DEFAULT:'#8F5A12', strong:'#703F0A', glow:'#E0BD75' },
+      region:{ anger:'#D1503A', emptiness:'#A79A85', loneliness:'#3D8657', excitement:'#E87792', anxiety:'#4779A8', joy:'#E8A93A', sadness:'#5B72B8', shame:'#BE6D97', calm:'#3FA495' } },
+    fontFamily: { serif:['Pretendard','-apple-system','sans-serif'], sans:['Pretendard','-apple-system','sans-serif'], mono:['"IBM Plex Mono"','monospace'] },
+    borderRadius: { sm:'10px', md:'20px', lg:'28px' },
+    boxShadow: { card:'0 1px 2px rgba(38,36,32,.06), 0 8px 20px -8px rgba(38,36,32,.14)', glow:'0 1px 2px rgba(38,36,32,.15), 0 0 20px rgba(224,189,117,.35)' },
+  } } };
+</script>
+<link rel="stylesheet" href="../design-system/tokens.css" />
+</head>
+<body class="bg-base text-parchment">
+<div class="page-wrap">
+
+  <header class="topbar">
+    <a href="find.html" class="topbar-brand">감정 어휘 지도</a>
+    <div class="topbar-right">
+      <nav class="topbar-nav">
+        <a href="find.html">감정 찾기</a>
+        <a href="map.html" class="active">감정 지도</a>
+        <a href="archive.html">감정 서고</a>
+      </nav>
+      <div class="user-chip">
+        <span class="avatar">이</span>
+        <span class="text-[13px] text-taupe hidden md:inline">이준호</span>
+        <span class="status-dot" aria-hidden="true"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="map-full">
+    <div class="map-canvas-wrap" id="mapWrap">
+      <div class="map-canvas" id="mapCanvas">
+        <svg id="mapSvg" width="2700" height="1850" style="display:block; overflow:visible;">
+          <defs>
+            <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" /></filter>
+            <pattern id="mapGrid" width="90" height="90" patternUnits="userSpaceOnUse">
+              <path d="M 90 0 L 0 0 0 90" fill="none" stroke="#6B6153" stroke-width="1.2" stroke-opacity="0.2"/>
+            </pattern>
+          </defs>
+
+          <!-- 격자 배경 — 지도 종이 질감을 위한 순전히 장식용 레이어 -->
+          <rect x="-15000" y="-15000" width="35000" height="35000" fill="url(#mapGrid)" opacity="0.7"/>
+
+          <g id="regionLayer" filter="url(#soft)" style="mix-blend-mode:multiply;"></g>
+          <g id="regionBorderLayer"></g>
+          <g id="regionLabelLayer"></g>
+          <g id="edgeLayer" stroke="#262420"></g>
+          <g id="nodeLayer" font-family="Pretendard" font-weight="600"></g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 지도 도구 -->
+    <div class="map-float p-4 enter" style="top:20px; left:20px; width:250px;">
+      <p class="label-eyebrow text-[10px] text-amber mb-1">현재 위치</p>
+      <p id="hereWord" class="font-serif-kr text-[20px] leading-tight">—</p>
+      <p id="hereHint" class="text-[11px] text-taupe mt-1 leading-relaxed">감정 찾기에서 감정을 찾거나 현재 지도에서 노드를 클릭해서 단어를 발견해보세요.</p>
+      <div class="mt-3 pt-3 text-[11px] leading-relaxed text-taupe" style="border-top:1px dashed var(--border-hairline-strong);">
+        <b class="text-parchment">지도 읽는 법</b><br/>
+진한 점은 이미 발견한 감정, 점선 원은 아직 이름을 모르는 이웃이에요. 흐린 점도 눌러서 바로 발견할 수 있어요. 상세 패널의 <b>가까운 감정</b>·<b>반의어</b>를 눌러 점선을 이어보세요. 드래그로 지도를 옮기고, 마우스 휠(스크롤 업 확대·다운 축소)이나 좌하단 버튼으로 크기를 조절하세요.
+      </div>
+    </div>
+
+    <!-- 나침반 -->
+    <div class="absolute pointer-events-none opacity-70" style="right:26px; bottom:112px;">
+      <svg width="72" height="72" viewBox="0 0 92 92">
+        <circle cx="46" cy="46" r="40" fill="none" stroke="var(--text-secondary)" stroke-width="1"/>
+        <circle cx="46" cy="46" r="31" fill="none" stroke="var(--text-secondary)" stroke-width=".5" stroke-dasharray="2 5"/>
+        <path d="M46 12 52 46 46 80 40 46Z" fill="var(--accent-amber)" opacity=".85"/>
+        <path d="M12 46 46 40 80 46 46 52Z" fill="var(--text-secondary)" opacity=".35"/>
+        <text x="46" y="10" text-anchor="middle" font-size="10" font-family="Pretendard" font-weight="700" fill="var(--text-secondary)">N</text>
+      </svg>
+    </div>
+
+    <!-- 줌 컨트롤 (작게, 좌하단) -->
+    <div class="absolute flex flex-col gap-1.5" style="left:26px; bottom:24px;">
+      <button onclick="zoomBy(1.25)" class="map-tool-btn text-[15px]" aria-label="확대">＋</button>
+      <button onclick="zoomBy(0.8)" class="map-tool-btn text-[15px]" aria-label="축소">－</button>
+      <button onclick="recenter()" class="map-tool-btn text-[15px]" aria-label="원래 크기로">◦</button>
+    </div>
+  </div>
+
+  <!-- 감정 상세 패널 — 우측 고정 (팝업 아님). 표시/숨김은 inline style로만 제어(클래스와 인라인 style 충돌 방지) -->
+  <aside id="focusPanel" style="display:none; position:fixed; right:22px; top:88px; bottom:20px; width:400px; z-index:20; background:var(--bg-elevated); border:1px solid var(--border-hairline-strong); border-radius:20px; box-shadow:0 24px 48px -16px rgba(38,36,32,.28); flex-direction:column; overflow:hidden;">
+    <div id="focusHeader" class="flex items-start justify-between gap-3 p-5" style="border-bottom:2px solid var(--border-hairline);"></div>
+    <div id="focusBody" class="flex-1 overflow-y-auto p-5"></div>
+  </aside>
+</div>
+
+<script>
+/* ══════════════ 데이터 ══════════════ */
+const MAPW = 2700, MAPH = 1850;
+// color = 노드·칩·엣지 등에 쓰는 원래 채도(변경 없음). area = 지도 영역 워시 전용, 훨씬 옅은 파스텔.
+// textColor = 영역 라벨 전용 색 — area가 옅어져도 글씨는 또렷하게 보이도록 진하게 지정(옅은 3개 영역은 별도 보정).
+const REGIONS = [
+  { id:'fire',   name:'분노의 영역',    root:'bulpyeon', cx:470,  cy:340,  rx:400, ry:268, color:'#D1503A', area:'#DB7765' },
+  { id:'room',   name:'허탈함의 방',    root:'heotal',   cx:470,  cy:930,  rx:400, ry:255, color:'#A79A85', area:'#BAB0A0', textColor:'#6B6153' },
+  { id:'forest', name:'외로움의 숲',    root:'ssulssul', cx:470,  cy:1520, rx:400, ry:268, color:'#3D8657', area:'#68A17C' },
+  { id:'garden', name:'설렘의 정원',    root:'deulddeu', cx:2235, cy:345,  rx:400, ry:272, color:'#E87792', area:'#ED95AA' },
+  { id:'sea',    name:'불안의 바다',    root:'makmak',   cx:1355, cy:1520, rx:400, ry:265, color:'#4779A8', area:'#7097BB' },
+  { id:'joy',    name:'기쁨의 언덕',    root:'huryeon',  cx:1355, cy:330,  rx:400, ry:262, color:'#E8A93A', area:'#EDBC65', textColor:'#8A6116' },
+  { id:'sad',    name:'슬픔의 강',      root:'sokssang', cx:1355, cy:935,  rx:400, ry:262, color:'#5B72B8', area:'#7F91C8' },
+  { id:'shame',  name:'부끄러움의 골목', root:'minmang',  cx:2235, cy:930,  rx:400, ry:255, color:'#BE6D97', area:'#CC8DAE', textColor:'#8C4A6B' },
+  { id:'calm',   name:'평온의 호수',    root:'pyeonan',  cx:2235, cy:1520, rx:400, ry:258, color:'#3FA495', area:'#69B8AC', textColor:'#1F6B60' },
+];
+const REGION_MOOD = { fire:'frown', sea:'frown', shame:'frown', room:'flat', forest:'flat', sad:'flat', garden:'smile', joy:'smile', calm:'smile' };
+
+// [id, w(원형), n(명사형), region, intensity(1-5), pos, prop, def, say, scene]
+const WORD_ROWS = [
+// 분노의 영역
+['bulpyeon','불편하다','불편함','fire',1,'형용사','book','마음이 어딘가 걸려서 편안하지 않다.','왜인지는 모르겠는데 그 자리가 계속 불편했어.','책상 위 삐뚤어진 책 한 권을 자꾸 다시 놓아보는 캐릭터'],
+['dapdap','답답하다','답답함','fire',2,'형용사','map','말이 되어 나오지 못한 마음이 가슴에 쌓여 있다.','하고 싶은 말이 있었는데 결국 못 해서 답답했어.','닫힌 창문 앞에서 지도를 부채처럼 흔드는 캐릭터'],
+['jjajeung','짜증나다','짜증','fire',3,'동사','book','사소한 일에도 신경이 곤두서 마음이 거칠어진다.','별일 아닌데 오늘은 유난히 짜증이 났어.','책장 사이 좁은 통로에서 짐을 몇 번이나 떨어뜨리는 캐릭터'],
+['hwanada','화나다','분노','fire',5,'동사','none','참아온 마음이 한꺼번에 뜨겁게 솟구친다.','참으려고 했는데 결국 화가 났어.','램프 불을 확 키워버린 채 서 있는 캐릭터'],
+['bunhada','분하다','분함','fire',4,'형용사','book','억울한 일을 당해 마음이 사무치도록 분노스럽다.','생각할수록 분해서 잠이 안 왔어.','덮어버린 장부를 두 손으로 누르고 있는 캐릭터'],
+['eogul','억울하다','억울함','fire',4,'형용사','map','잘못하지 않은 일로 오해를 받아 마음이 답답하고 분하다.','내 얘기를 끝까지 들어주지 않아서 억울했어.','지도 앞에서 두 손을 들고 자기 이야기를 설명하는 캐릭터'],
+['seoun','서운하다','서운함','fire',2,'형용사','book','기대했던 만큼 마음이 돌아오지 않아 섭섭하고 아쉽다.','화가 난 줄 알았는데 생각해보니 조금 서운했던 것 같아.','도서관 책상에 혼자 앉아 덮인 책을 바라보는 캐릭터'],
+['motmattang','못마땅하다','못마땅함','fire',2,'형용사','book','마음에 들지 않아 자꾸 눈에 거슬린다.','말은 안 했지만 계속 못마땅했어.','삐뚤게 꽂힌 책등을 팔짱 끼고 보는 캐릭터'],
+['eonjjanh','언짢다','언짢음','fire',2,'형용사','none','기분이 상해 마음이 개운하지 않다.','그 말투가 하루 종일 언짢았어.','인사를 받지 못한 채 문을 닫는 캐릭터'],
+['seonggasi','성가시다','성가심','fire',2,'형용사','none','자꾸 방해가 되어 귀찮고 번거롭다.','별것도 아닌데 자꾸 부르니까 성가셨어.','같은 질문에 세 번째 답해주는 캐릭터'],
+['geoseul','거슬리다','거슬림','fire',2,'동사','none','작은 것이 계속 신경에 닿아 불편하다.','그 소리가 유난히 거슬리는 날이었어.','삐걱대는 의자를 몇 번이나 고쳐 앉는 캐릭터'],
+['bunggae','분개하다','분개','fire',5,'동사','none','옳지 않은 일에 크게 화가 치민다.','그건 아니라고 생각해서 분개했어.','게시판 앞에서 주먹을 꼭 쥔 캐릭터'],
+['gyeokbun','격분하다','격분','fire',5,'동사','none','감정이 폭발할 만큼 몹시 화가 난다.','그 순간엔 아무 말도 안 들렸어.','문을 세게 닫고 나가버린 캐릭터'],
+['ulhwa','울화가 치밀다','울화','fire',4,'관용구','none','참아온 화가 속에서 뜨겁게 올라온다.','생각날 때마다 울화가 치밀어.','식은 차를 그대로 둔 채 창밖을 노려보는 캐릭터'],
+['wonmang','원망하다','원망','fire',4,'동사','letter','남의 탓으로 돌리며 서운함이 쌓인다.','나도 모르게 그 사람을 원망하고 있었어.','답장 없는 편지를 서랍에 넣는 캐릭터'],
+['yasok','야속하다','야속함','fire',3,'형용사','none','인정 없이 구는 상대가 섭섭하고 밉다.','한마디만 해줬어도 됐을 텐데 야속했어.','닫힌 창구 앞에 서 있는 캐릭터'],
+['gwaesim','괘씸하다','괘씸함','fire',4,'형용사','none','상대의 태도가 미워 벌주고 싶어진다.','모른 척하는 게 제일 괘씸했어.','명단에서 이름 하나를 지우는 캐릭터'],
+['ppyoro','뾰로통하다','뾰로통함','fire',2,'형용사','none','서운한 티가 얼굴에 그대로 난다.','괜찮다고 했지만 표정은 뾰로통했지.','등을 돌린 채 책만 넘기는 캐릭터'],
+['jinyeom','진저리나다','진저리','fire',4,'동사','none','같은 일이 되풀이돼 몸서리치도록 싫다.','또 같은 얘기라니 진저리가 났어.','같은 서류를 네 번째 다시 쓰는 캐릭터'],
+// 허탈함의 방
+['heotal','허탈하다','허탈함','room',3,'형용사','none','기대나 힘이 한꺼번에 빠져나가 마음이 텅 빈 듯하다.','끝나고 나니 기쁘기보다 그냥 허탈했어.','텅 빈 책장을 올려다보며 서 있는 캐릭터'],
+['gonghu','공허하다','공허함','room',3,'형용사','none','속이 비어 무엇으로도 채워지지 않는 느낌이다.','사람들 사이에 있었는데도 공허했어.','빈 서랍을 하나씩 열어보는 캐릭터'],
+['heomu','허무하다','허무함','room',3,'형용사','letter','애쓴 일이 아무 의미 없게 느껴진다.','열심히 했는데 남은 게 없는 것 같아 허무했어.','백지가 된 원고를 들고 서 있는 캐릭터'],
+['ssupssul','씁쓸하다','씁쓸함','room',2,'형용사','none','받아들이기는 했지만 마음 한쪽이 쓰다.','축하해주면서도 조금 씁쓸했어.','식은 차를 한 모금 마시고 잔을 내려놓는 캐릭터'],
+['maekeop','맥없다','맥없음','room',2,'형용사','none','기운이 하나도 없어 몸이 처진다.','하루 종일 맥없이 앉아 있었어.','램프도 켜지 않은 책상에 앉은 캐릭터'],
+['mugiryeok','무기력하다','무기력','room',3,'형용사','none','무엇도 시작할 힘이 나지 않는다.','해야 할 걸 알면서 손이 안 갔어.','펼쳐둔 책을 며칠째 그대로 두는 캐릭터'],
+['simdeureong','심드렁하다','심드렁함','room',2,'형용사','none','별 흥미가 없어 시큰둥하다.','좋은 소식인데도 심드렁했어.','추천 목록을 대충 훑고 덮는 캐릭터'],
+['mudeomdeom','무덤덤하다','무덤덤함','room',1,'형용사','none','감정이 크게 일지 않고 잔잔히 지나간다.','울 줄 알았는데 의외로 무덤덤했어.','소식을 듣고도 하던 정리를 계속하는 캐릭터'],
+['sideul','시들하다','시들함','room',2,'형용사','flower','좋아하던 것에도 마음이 가지 않는다.','그렇게 좋아하던 게 요즘은 시들해.','물을 주지 않은 화분을 지나치는 캐릭터'],
+['heotheot','헛헛하다','헛헛함','room',3,'형용사','none','속이 빈 듯 아쉽고 허전하다.','배는 부른데 마음이 헛헛했어.','남은 자리를 한참 바라보는 캐릭터'],
+['gimppa','김빠지다','김빠짐','room',2,'동사','none','기대하던 흥이 갑자기 사라진다.','취소됐다는 말에 완전히 김빠졌어.','준비해둔 자리를 다시 접는 캐릭터'],
+['jichida','지치다','지침','room',3,'동사','none','오래 애써서 더는 힘이 남지 않는다.','버티는 것도 이제 지쳤어.','책 수레에 몸을 기대고 선 캐릭터'],
+['sojin','소진되다','소진','room',4,'동사','none','마음의 연료가 바닥까지 비었다.','다 쏟고 나니 아무것도 안 남았어.','심지가 다 탄 램프를 들여다보는 캐릭터'],
+['deotteops','덧없다','덧없음','room',3,'형용사','none','모든 게 금세 지나가 허무하다.','지나고 보니 다 덧없더라.','먼지 앉은 연간 기록을 넘겨보는 캐릭터'],
+// 외로움의 숲
+['ssulssul','쓸쓸하다','쓸쓸함','forest',2,'형용사','none','주위가 비어 마음이 조용하고 서늘하다.','혼자 밥 먹는 저녁이 조금 쓸쓸했어.','문 닫힌 열람실 창가에 앉아 있는 캐릭터'],
+['heojeon','허전하다','허전함','forest',2,'형용사','book','있어야 할 것이 없어 마음 한쪽이 비었다.','매일 하던 일을 안 하니까 허전했어.','책 한 권이 빠진 자리를 손으로 짚어보는 캐릭터'],
+['oeroun','외롭다','외로움','forest',3,'형용사','none','마음을 나눌 사람이 없어 혼자라고 느낀다.','말할 사람이 없다는 게 외로웠어.','긴 책상 끝에 홀로 램프를 켜둔 캐릭터'],
+['geurip','그립다','그리움','forest',3,'형용사','letter','다시 만나고 싶은 마음이 오래 남아 있다.','그 계절이 자꾸 그리워져.','오래된 대출 카드에 적힌 이름을 쓸어보는 캐릭터'],
+['seogeul','서글프다','서글픔','forest',2,'형용사','book','서럽고 슬픈 마음이 조용히 밀려온다.','괜찮다고 말하는데 왜 서글퍼지는지 모르겠어.','창밖 비를 보며 책장을 넘기지 못하는 캐릭터'],
+['soewe','소외되다','소외감','forest',3,'동사','none','무리 밖에 홀로 남겨진 느낌이 든다.','그 대화에 나만 없는 것 같았어.','둥근 탁자 밖 의자에 앉은 캐릭터'],
+['godok','고독하다','고독','forest',3,'형용사','none','혼자인 상태가 깊고 조용하게 이어진다.','고독이 싫지만은 않은 밤이야.','문 잠긴 서고에서 홀로 책을 읽는 캐릭터'],
+['jeokjeok','적적하다','적적함','forest',2,'형용사','none','주위가 조용해 마음이 허전하다.','집이 너무 조용해서 적적했어.','괘종시계 소리만 듣고 있는 캐릭터'],
+['samuchi','사무치다','사무침','forest',5,'동사','letter','그리움이 뼈에 닿을 만큼 깊다.','그날은 유난히 사무치게 보고 싶었어.','낡은 이름표를 손끝으로 오래 짚는 캐릭터'],
+['aryeon','아련하다','아련함','forest',2,'형용사','letter','멀리 있는 기억이 흐릿하고 애틋하다.','그 계절이 아련하게 떠올라.','빛바랜 사진 카드를 들여다보는 캐릭터'],
+['aejan','애잔하다','애잔함','forest',3,'형용사','none','가슴 한쪽이 가늘고 길게 아프다.','그 뒷모습이 애잔했어.','문 밖까지 배웅하고 서 있는 캐릭터'],
+['sirida','시리다','시림','forest',3,'형용사','none','마음이 차갑고 아릿하게 저린다.','겨울 저녁이면 마음이 시려.','입김이 서린 창에 손을 대는 캐릭터'],
+['seomeok','서먹하다','서먹함','forest',2,'형용사','none','가까웠던 사이가 어색하게 멀어진다.','오랜만에 만나니 서먹하더라.','인사만 하고 각자 서가로 흩어지는 캐릭터'],
+['natseol','낯설다','낯섦','forest',2,'형용사','map','익숙하던 것이 처음처럼 어색하다.','같은 자리인데 낯설게 느껴졌어.','새로 바뀐 서가 배치도를 들여다보는 캐릭터'],
+['hyangsu','향수에 젖다','향수','forest',3,'관용구','book','지나간 시절이 그리워 마음이 젖는다.','그 노래만 들으면 향수에 젖어.','옛 대출 목록을 처음부터 읽는 캐릭터'],
+['chueok','추억하다','추억','forest',2,'동사','letter','좋았던 순간을 마음속에서 다시 꺼내본다.','가끔 그때를 추억하곤 해.','상자 속 엽서를 한 장씩 꺼내보는 캐릭터'],
+// 설렘의 정원
+['aetteut','애틋하다','애틋함','garden',3,'형용사','letter','사랑하거나 소중히 여기는 마음이 깊고 간절하다.','오래 못 볼 걸 아니까 더 애틋했어.','오래된 편지를 두 손으로 소중히 들고 있는 캐릭터'],
+['sarang','사랑하다','사랑','garden',5,'동사','book','누군가를 아끼고 소중히 여기는 마음이 가득하다.','표현이 서툴러도 사랑하고 있었어.','가장 좋아하는 책을 남의 손에 먼저 건네는 캐릭터'],
+['joa','좋아하다','좋아함','garden',3,'동사','book','마음이 자연스럽게 그쪽으로 기운다.','그 사람 얘기만 나오면 표정이 달라진대.','같은 서가에서 자꾸 마주치는 이름을 눈으로 따라가는 캐릭터'],
+['seolle','설레다','설렘','garden',4,'동사','flower','좋은 일이 생길 것 같아 마음이 가볍게 흔들린다.','약속 날짜만 봐도 설렜어.','책 사이에서 작은 꽃이 피어난 것을 발견한 캐릭터'],
+['dugeun','두근거리다','두근거림','garden',4,'동사','none','기대와 긴장으로 가슴이 빠르게 뛴다.','문 앞에서 두근거려서 한참 서 있었어.','노크하려던 손을 잠시 멈춘 캐릭터'],
+['gidae','기대하다','기대','garden',3,'동사','letter','좋은 결과를 마음속으로 미리 그린다.','별거 아닌데 자꾸 기대하게 돼.','예약해 둔 책이 도착할 날을 달력에 표시하는 캐릭터'],
+['deulddeu','들뜨다','들뜸','garden',4,'동사','book','마음이 위로 붕 떠서 가만히 있기 어렵다.','전날부터 들떠서 짐을 세 번 쌌어.','책을 한 아름 안고 계단을 두 칸씩 오르는 캐릭터'],
+['banha','반하다','반함','garden',4,'동사','flower','첫눈에 마음을 빼앗긴다.','웃는 모습에 그냥 반해버렸어.','페이지를 넘기다 손을 멈춘 캐릭터'],
+['kkeulli','끌리다','끌림','garden',3,'동사','none','이유 없이 마음이 그쪽으로 향한다.','설명은 못 하겠는데 자꾸 끌려.','같은 서가로 두 번째 발길이 향하는 캐릭터'],
+['akkida','아끼다','아낌','garden',4,'동사','book','소중해서 함부로 대하지 못한다.','아끼는 마음이 커서 더 조심스러워.','표지를 천으로 감싸 보관하는 캐릭터'],
+['dajeong','다정하다','다정함','garden',3,'형용사','none','마음이 따뜻하게 상대에게 건네진다.','그 사람은 늘 다정했어.','무거운 책을 대신 들어주는 캐릭터'],
+['geuuk','그윽하다','그윽함','garden',3,'형용사','none','깊고 은근한 마음이 조용히 감돈다.','그윽한 눈빛이 오래 남았어.','등불 아래 오래 마주 앉은 캐릭터'],
+['ganjeol','간절하다','간절함','garden',5,'형용사','letter','바라는 마음이 절실하고 깊다.','이번만은 정말 간절했어.','두 손 모아 반납함 앞에 선 캐릭터'],
+['aetae','애태우다','애태움','garden',4,'동사','none','기다리는 마음에 속이 탄다.','답장을 기다리며 애태웠어.','문 쪽을 자꾸 돌아보는 캐릭터'],
+['jeonggyeop','정겹다','정겨움','garden',3,'형용사','none','오래된 사이처럼 따뜻하고 편하다.','그 동네 골목이 참 정겨웠어.','단골 자리를 서로 남겨두는 캐릭터'],
+['sarangseureop','사랑스럽다','사랑스러움','garden',4,'형용사','flower','보고만 있어도 마음이 환해진다.','뭘 해도 사랑스럽더라.','작은 화분을 창가로 옮겨두는 캐릭터'],
+['chinmil','친밀하다','친밀함','garden',3,'형용사','none','거리 없이 가깝고 편안하다.','말하지 않아도 통하는 사이야.','같은 책상을 나눠 쓰는 두 캐릭터'],
+['sinroe','신뢰하다','신뢰','garden',4,'동사','book','믿고 마음을 맡길 수 있다.','그 사람 말이라면 믿어.','열쇠를 건네받는 캐릭터'],
+['gomap','고맙다','고마움','garden',3,'형용사','letter','받은 마음이 따뜻하게 남는다.','말은 못 했지만 정말 고마웠어.','쪽지를 책 사이에 끼워두는 캐릭터'],
+// 불안의 바다
+['makmak','막막하다','막막함','sea',3,'형용사','map','어디로 가야 할지 몰라 앞이 보이지 않는다.','뭘 먼저 해야 할지 몰라서 막막했어.','접힌 지도를 펼쳐도 길이 보이지 않아 멈춰 선 캐릭터'],
+['buran','불안하다','불안','sea',3,'형용사','none','나쁜 일이 일어날 것 같아 마음이 가라앉지 않는다.','괜찮을 거라고 생각하면서도 계속 불안했어.','흔들리는 등불을 두 손으로 감싸는 캐릭터'],
+['geokjeong','걱정하다','걱정','sea',2,'동사','letter','좋지 않은 일을 미리 떠올리며 마음을 쓴다.','답장이 없어서 하루 종일 걱정했어.','같은 편지를 세 번째 다시 읽는 캐릭터'],
+['chojo','초조하다','초조함','sea',3,'형용사','none','기다리는 동안 마음이 조급하고 가만히 있기 어렵다.','결과 나오기 전까지 초조해서 아무것도 못 했어.','같은 서가를 몇 번이고 왕복하는 캐릭터'],
+['duryeop','두렵다','두려움','sea',4,'형용사','none','무슨 일이 생길지 몰라 마음이 움츠러든다.','다시 시작하는 게 두려웠어.','불 꺼진 서고 입구에서 한 걸음 앞을 살피는 캐릭터'],
+['jomajoma','조마조마하다','조마조마함','sea',3,'형용사','none','일이 잘못될까 봐 마음이 졸아든다.','끝날 때까지 조마조마했어.','기울어진 책 더미를 두 손으로 받치는 캐릭터'],
+['ginjang','긴장되다','긴장','sea',3,'동사','none','몸과 마음이 딱딱하게 굳는다.','차례가 다가올수록 긴장됐어.','호명 목록 앞에서 숨을 고르는 캐릭터'],
+['gyeopna','겁나다','겁','sea',4,'동사','none','닥칠 일이 무서워 물러서고 싶다.','솔직히 겁이 났어.','지하 서고 계단 앞에 멈춘 캐릭터'],
+['tteollida','떨리다','떨림','sea',3,'동사','none','긴장으로 몸이 미세하게 흔들린다.','목소리가 자꾸 떨렸어.','낭독대 앞에서 종이를 고쳐 잡는 캐릭터'],
+['anjeol','안절부절못하다','안절부절','sea',4,'동사','none','가만히 있지 못하고 계속 서성인다.','연락을 기다리며 안절부절못했어.','복도를 몇 번이나 오가는 캐릭터'],
+['geunsim','근심하다','근심','sea',3,'동사','none','풀리지 않는 일이 마음에 얹혀 있다.','그 일만 생각하면 근심이 깊어져.','장부를 덮지 못하고 앉아 있는 캐릭터'],
+['yeomnyeo','염려하다','염려','sea',2,'동사','letter','남의 일을 조심스럽게 마음에 둔다.','무리하는 것 같아 염려됐어.','우산을 하나 더 챙겨 나서는 캐릭터'],
+['bulgil','불길하다','불길함','sea',4,'형용사','none','좋지 않은 일이 생길 것 같다.','왠지 불길한 예감이 들었어.','꺼진 램프를 다시 켜지 못한 캐릭터'],
+['wichuk','위축되다','위축','sea',3,'동사','none','자신이 작아진 듯 움츠러든다.','말을 꺼내기가 어려워졌어.','질문을 접어 주머니에 넣는 캐릭터'],
+['danghwang','당황하다','당황','sea',3,'동사','book','예상 못 한 일에 머리가 하얘진다.','갑자기 물어봐서 당황했어.','책을 거꾸로 든 채 굳어 있는 캐릭터'],
+['ajjil','아찔하다','아찔함','sea',4,'형용사','none','큰일 날 뻔해 순간 정신이 아득하다.','생각만 해도 아찔해.','사다리에서 미끄러질 뻔한 캐릭터'],
+// 기쁨의 언덕
+['huryeon','후련하다','후련함','joy',3,'형용사','none','막혀 있던 마음이 풀려 속이 시원하다.','말하고 나니까 그제야 후련했어.','오래 닫혀 있던 창문을 활짝 열어젖힌 캐릭터'],
+['gippeu','기쁘다','기쁨','joy',4,'형용사','book','바라던 일이 이루어져 마음이 환하게 밝아진다.','소식 듣자마자 나도 모르게 웃음이 났어.','찾던 책을 드디어 서가에서 뽑아 든 캐릭터'],
+['haengbok','행복하다','행복','joy',5,'형용사','flower','마음이 넉넉하게 차올라 지금 이대로 충분하다고 느낀다.','별일 없는 오후인데 문득 행복했어.','햇살 드는 창가 자리에서 책을 펼친 채 눈을 감은 캐릭터'],
+['beokcha','벅차다','벅참','joy',5,'형용사','letter','감정이 가슴에 가득 차올라 말로 다 담기지 않는다.','이름이 불리는 순간 가슴이 벅찼어.','완성된 원고 마지막 장을 두 손으로 감싸 쥔 캐릭터'],
+['ppudeut','뿌듯하다','뿌듯함','joy',4,'형용사','book','해낸 일이 마음에 차서 스스로가 대견하다.','끝까지 해낸 내가 조금 뿌듯했어.','직접 채워 넣은 책장 한 칸을 한 걸음 물러나 바라보는 캐릭터'],
+['heumut','흐뭇하다','흐뭇함','joy',2,'형용사','none','보고 있는 것만으로 마음이 조용히 흡족하다.','열심히 하는 모습을 보니 그냥 흐뭇하더라.','열람실 구석에서 누군가의 뒷모습을 지긋이 바라보는 캐릭터'],
+['sinna','신나다','신남','joy',4,'동사','none','기운이 솟아 몸이 먼저 움직인다.','출발 전부터 신났어.','계단을 뛰어 올라가는 캐릭터'],
+['jeulgeop','즐겁다','즐거움','joy',3,'형용사','book','지금 이 시간이 유쾌하고 좋다.','오랜만에 즐거운 저녁이었어.','여럿이 둘러앉아 책장을 넘기는 캐릭터'],
+['yukwae','유쾌하다','유쾌함','joy',3,'형용사','none','기분이 가볍고 웃음이 잘 난다.','분위기가 참 유쾌했어.','서가 사이에서 소리 내 웃는 캐릭터'],
+['sangkwae','상쾌하다','상쾌함','joy',3,'형용사','none','막힘없이 맑고 개운하다.','아침 공기가 상쾌했어.','창을 열고 크게 숨을 들이쉬는 캐릭터'],
+['holgabun','홀가분하다','홀가분함','joy',3,'형용사','none','짐을 내려놓아 마음이 가볍다.','다 끝내고 나니 홀가분해.','빈 수레를 끌고 나오는 캐릭터'],
+['gamsa','감사하다','감사','joy',4,'형용사','letter','받은 마음이 커서 고개가 숙여진다.','그날 도와준 게 정말 감사했어.','감사 카드를 반납함에 함께 넣는 캐릭터'],
+['heupjok','흡족하다','흡족함','joy',3,'형용사','book','모자람 없이 마음에 든다.','결과가 흡족했어.','정리된 서가를 천천히 둘러보는 캐릭터'],
+['jarangseureop','자랑스럽다','자랑스러움','joy',4,'형용사','none','스스로나 누군가가 대견해 마음이 부푼다.','네가 참 자랑스러워.','이름이 적힌 표지를 벽에 거는 캐릭터'],
+['gamgyeok','감격하다','감격','joy',5,'동사','letter','벅찬 마음에 눈시울이 뜨거워진다.','그 말에 감격해서 아무 말도 못 했어.','봉투를 열고 그대로 멈춰 선 캐릭터'],
+['bangap','반갑다','반가움','joy',3,'형용사','none','기다리던 사람이나 소식을 만나 기쁘다.','그 이름을 보니 정말 반가웠어.','문 앞에서 두 팔을 벌린 캐릭터'],
+['jjarit','짜릿하다','짜릿함','joy',4,'형용사','none','순간적으로 온몸이 찌릿하게 좋다.','마지막 문장을 쓸 때 짜릿했어.','마지막 카드를 목록에 꽂는 캐릭터'],
+// 슬픔의 강
+['sokssang','속상하다','속상함','sad',3,'형용사','book','일이 뜻대로 되지 않아 마음이 상하고 아프다.','별것 아닌데 하루 종일 속상했어.','표지가 찢어진 책을 무릎에 올려놓고 들여다보는 캐릭터'],
+['antakkap','안타깝다','안타까움','sad',2,'형용사','book','도와주고 싶은데 그럴 수 없어 마음이 아리다.','해줄 수 있는 게 없어서 안타까웠어.','닿지 않는 높은 칸의 책을 올려다보는 사람을 지켜보는 캐릭터'],
+['seuljeu','슬프다','슬픔','sad',4,'형용사','none','마음이 무겁게 가라앉아 눈물이 날 것 같다.','덤덤한 줄 알았는데 아직 슬프더라.','빗소리를 들으며 램프를 조금 낮추는 캐릭터'],
+['seoreop','서럽다','서러움','sad',4,'형용사','none','억눌린 슬픔이 북받쳐 올라 참기 어렵다.','괜찮다고 하다가 결국 서러워서 울었어.','서고 구석에 쪼그려 앉아 소매로 눈가를 훔치는 캐릭터'],
+['meokmeok','먹먹하다','먹먹함','sad',3,'형용사','book','슬픔이 가슴에 차올라 아무 말도 나오지 않는다.','마지막 장을 덮고 한참 먹먹했어.','다 읽은 책을 덮은 채 한참 손을 올려두고 있는 캐릭터'],
+['uljeok','울적하다','울적함','sad',3,'형용사','none','마음이 가라앉아 기운이 나지 않는다.','비 오는 날이면 울적해져.','창가에 턱을 괴고 앉은 캐릭터'],
+['chimul','침울하다','침울함','sad',4,'형용사','none','분위기까지 무겁게 가라앉는다.','그날 우리 모두 침울했어.','불을 반만 켠 열람실의 캐릭터'],
+['bicham','비참하다','비참함','sad',5,'형용사','none','처지가 딱하고 마음이 무너진다.','그때만 생각하면 비참해져.','젖은 원고를 주워 담는 캐릭터'],
+['chamdam','참담하다','참담함','sad',5,'형용사','none','끔찍한 일 앞에서 마음이 캄캄하다.','결과를 보고 참담했어.','무너진 책 더미 앞에 선 캐릭터'],
+['aecheo','애처롭다','애처로움','sad',3,'형용사','none','보기에 딱해 마음이 아프다.','그 모습이 애처로워 보였어.','젖은 채 서 있는 이에게 수건을 건네는 캐릭터'],
+['cheoryang','처량하다','처량함','sad',3,'형용사','none','자기 신세가 초라하게 느껴진다.','혼자 앉아 있으니 좀 처량하더라.','닫힌 매점 앞 벤치에 앉은 캐릭터'],
+['nunmulgyeop','눈물겹다','눈물겨움','sad',4,'형용사','letter','감동과 슬픔이 겹쳐 눈물이 난다.','그 편지가 눈물겨웠어.','편지를 읽다 소매로 눈가를 누르는 캐릭터'],
+['sangsim','상심하다','상심','sad',4,'동사','none','마음이 크게 다쳐 오래 아프다.','그 말에 많이 상심했어.','접힌 페이지를 펴지 못하는 캐릭터'],
+['nakdam','낙담하다','낙담','sad',4,'동사','none','바라던 일이 어긋나 기운이 꺾인다.','결과를 보고 완전히 낙담했어.','명단에서 이름을 찾지 못한 캐릭터'],
+['aetong','애통하다','애통함','sad',5,'형용사','none','가슴이 미어지도록 슬프다.','차마 말로 못 할 만큼 애통했어.','검은 리본을 책상에 올려두는 캐릭터'],
+['simurook','시무룩하다','시무룩함','sad',2,'형용사','none','서운한 마음이 표정에 그대로 남는다.','하루 종일 시무룩했어.','고개를 숙인 채 책만 넘기는 캐릭터'],
+// 부끄러움의 골목
+['minmang','민망하다','민망함','shame',2,'형용사','none','상황이 어색해 얼굴을 들기가 조금 곤란하다.','혼자 오해한 걸 알고 나니 민망했어.','헛짚은 서가 앞에서 슬쩍 방향을 바꾸는 캐릭터'],
+['bukkeu','부끄럽다','부끄러움','shame',3,'형용사','letter','남에게 보이기 싫은 마음이 들어 얼굴이 달아오른다.','칭찬을 들었는데 오히려 부끄러웠어.','제 이름이 적힌 대출 카드를 슬며시 뒤집는 캐릭터'],
+['changpi','창피하다','창피함','shame',4,'형용사','book','남 앞에서 체면이 상해 몸 둘 바를 모르겠다.','다 보는 앞에서 넘어져서 창피했어.','쏟아진 책 더미를 서둘러 끌어안는 캐릭터'],
+['ssukseu','쑥스럽다','쑥스러움','shame',2,'형용사','letter','마음을 드러내기가 어색해 괜히 몸이 움츠러든다.','고맙다는 말 한마디가 왜 이렇게 쑥스럽지.','건네려던 쪽지를 책갈피 사이에 다시 끼우는 캐릭터'],
+['mian','미안하다','미안함','shame',3,'형용사','book','상대에게 잘못한 것 같아 마음이 무겁고 조심스럽다.','말을 그렇게 한 게 계속 미안했어.','반납일이 지난 책을 조용히 카운터에 올려두는 캐릭터'],
+['gyeomyeon','겸연쩍다','겸연쩍음','shame',2,'형용사','none','멋쩍어서 어떻게 해야 할지 모르겠다.','괜히 겸연쩍어서 웃고 말았어.','뒷머리를 긁으며 서 있는 캐릭터'],
+['meosseuk','머쓱하다','머쓱함','shame',2,'형용사','none','분위기가 어색해 기가 죽는다.','아무도 못 들은 것 같아 머쓱했어.','들어 올린 손을 슬며시 내리는 캐릭터'],
+['nancheo','난처하다','난처함','shame',3,'형용사','none','어느 쪽도 택하기 어려워 곤란하다.','대답하기가 참 난처했어.','양쪽에서 부르는 소리에 멈춰 선 캐릭터'],
+['gollan','곤란하다','곤란함','shame',3,'형용사','book','사정이 딱해 처리하기 어렵다.','그 부탁은 좀 곤란했어.','대출 규정을 짚으며 난감해하는 캐릭터'],
+['kkeorim','꺼림칙하다','꺼림칙함','shame',3,'형용사','none','마음 한구석이 개운하지 않다.','그냥 넘긴 게 계속 꺼림칙했어.','덮어둔 서랍을 다시 보는 캐릭터'],
+['joeseureop','죄스럽다','죄스러움','shame',4,'형용사','none','잘못한 것 같아 마음이 무겁다.','혼자 편한 게 죄스러웠어.','남겨진 자리를 오래 바라보는 캐릭터'],
+['nwiuchi','뉘우치다','뉘우침','shame',4,'동사','letter','잘못을 깨닫고 마음을 고쳐먹는다.','그제야 내 잘못을 뉘우쳤어.','사과 편지를 다시 쓰는 캐릭터'],
+['huhoe','후회하다','후회','shame',4,'동사','none','그때 다르게 했더라면 하고 되뇐다.','그 말을 한 걸 계속 후회해.','지운 문장을 다시 들여다보는 캐릭터'],
+['jachaek','자책하다','자책','shame',4,'동사','none','모든 탓을 자신에게 돌린다.','내 탓인 것 같아 계속 자책했어.','혼자 남아 목록을 다시 세는 캐릭터'],
+// 평온의 호수
+['pyeonan','편안하다','편안함','calm',3,'형용사','none','긴장이 풀려 몸과 마음이 고르게 놓인다.','그 자리에 앉으면 이상하게 편안해져.','늘 앉던 창가 자리에 가방을 내려놓는 캐릭터'],
+['pyeongon','평온하다','평온함','calm',3,'형용사','book','마음에 물결이 일지 않아 조용하고 고요하다.','아무 일도 없는 하루가 평온했어.','닫힌 열람실에서 먼지 앉은 책등을 천천히 훑는 캐릭터'],
+['janjan','잔잔하다','잔잔함','calm',2,'형용사','book','큰 감정 없이 마음이 고르게 이어진다.','요즘은 마음이 잔잔한 편이야.','같은 속도로 책장을 넘기는 캐릭터'],
+['yeoyu','여유롭다','여유로움','calm',3,'형용사','flower','서두를 일이 없어 마음에 넉넉한 자리가 있다.','오늘은 시간이 남아서 여유로웠어.','다 읽은 책을 옆에 두고 창밖을 오래 바라보는 캐릭터'],
+['nareun','나른하다','나른함','calm',2,'형용사','book','따뜻한 기운에 몸이 노곤하게 풀린다.','햇살 드는 자리에 앉으니 나른해졌어.','오후 햇살 속에서 책을 펼친 채 꾸벅이는 캐릭터'],
+['chabun','차분하다','차분함','calm',2,'형용사','none','들뜸 없이 마음이 가라앉아 있다.','오늘은 마음이 차분해.','같은 간격으로 카드를 정리하는 캐릭터'],
+['goyo','고요하다','고요함','calm',2,'형용사','none','아무 소리 없이 잔잔하다.','고요한 아침이 좋아.','문 열기 전 빈 열람실에 선 캐릭터'],
+['ansim','안심하다','안심','calm',3,'동사','none','걱정이 풀려 마음이 놓인다.','무사하다는 말에 안심했어.','도착한 소포를 확인하고 어깨를 내리는 캐릭터'],
+['deundeun','든든하다','든든함','calm',3,'형용사','book','기댈 곳이 있어 마음이 단단하다.','네가 있어서 든든했어.','옆자리에 앉아주는 캐릭터'],
+['pogeun','포근하다','포근함','calm',3,'형용사','none','감싸이는 듯 따뜻하고 부드럽다.','그 자리가 포근했어.','담요를 덮고 책을 읽는 캐릭터'],
+['neugeut','느긋하다','느긋함','calm',2,'형용사','none','서두르지 않고 여유롭게 움직인다.','오늘은 느긋하게 걸었어.','천천히 계단을 오르는 캐릭터'],
+['mudeon','무던하다','무던함','calm',2,'형용사','none','웬만한 일에는 흔들리지 않는다.','그 정도는 무던하게 넘겼어.','쏟아진 종이를 말없이 줍는 캐릭터'],
+['damdam','담담하다','담담함','calm',2,'형용사','none','감정을 드러내지 않고 고르게 지낸다.','생각보다 담담하게 받아들였어.','평소처럼 자리를 정리하는 캐릭터'],
+['gaeun','개운하다','개운함','calm',3,'형용사','none','묵은 것이 씻겨 산뜻하다.','푹 자고 나니 개운해.','먼지를 털고 창을 닦는 캐릭터'],
+];
+
+const EDGE_PAIRS = [
+['aecheo','antakkap'],['aecheo','cheoryang'],['aejan','aryeon'],['aejan','seogeul'],['aetae','dugeun'],['aetae','ganjeol'],
+['aetong','chamdam'],['aetong','seoreop'],['aetteut','ganjeol'],['aetteut','geurip'],['aetteut','geuuk'],['aetteut','sarang'],
+['ajjil','danghwang'],['ajjil','gyeopna'],['akkida','sarang'],['anjeol','chojo'],['anjeol','jomajoma'],['ansim','deundeun'],
+['ansim','pyeonan'],['antakkap','seuljeu'],['antakkap','sokssang'],['aryeon','geurip'],['aryeon','hyangsu'],['bangap','gippeu'],
+['banha','joa'],['banha','kkeulli'],['beokcha','gamgyeok'],['beokcha','haengbok'],['beokcha','ppudeut'],['bicham','chamdam'],
+['bicham','seoreop'],['bukkeu','changpi'],['bukkeu','mian'],['bukkeu','minmang'],['bukkeu','ssukseu'],['bulgil','buran'],
+['bulgil','duryeop'],['bulpyeon','dapdap'],['bulpyeon','eonjjanh'],['bulpyeon','motmattang'],['bunggae','bunhada'],['bunggae','gyeokbun'],
+['bunggae','hwanada'],['bunhada','eogul'],['bunhada','gwaesim'],['bunhada','hwanada'],['buran','chojo'],['buran','duryeop'],
+['buran','geokjeong'],['buran','gidae'],['buran','jomajoma'],['buran','makmak'],['buran','pyeonan'],['chabun','pyeonan'],
+['changpi','minmang'],['cheoryang','ssulssul'],['chimul','uljeok'],['chinmil','jeonggyeop'],['chinmil','sinroe'],['chojo','geokjeong'],
+['chojo','ginjang'],['chojo','jomajoma'],['chojo','pyeonan'],['chueok','hyangsu'],['dajeong','geuuk'],['dajeong','gomap'],
+['dajeong','jeonggyeop'],['dajeong','sarang'],['dajeong','sarangseureop'],['damdam','janjan'],['damdam','mudeon'],['danghwang','ginjang'],
+['dapdap','eogul'],['dapdap','huryeon'],['dapdap','jjajeung'],['dapdap','ulhwa'],['deotteops','heomu'],['deulddeu','dugeun'],
+['deulddeu','gidae'],['deulddeu','ppudeut'],['deundeun','pogeun'],['dugeun','minmang'],['dugeun','seolle'],['dugeun','ssukseu'],
+['duryeop','gyeopna'],['duryeop','oeroun'],['duryeop','wichuk'],['eogul','seoun'],['eogul','sokssang'],['eogul','wonmang'],
+['eonjjanh','motmattang'],['eonjjanh','ppyoro'],['gaeun','pyeonan'],['gamsa','haengbok'],['geokjeong','geunsim'],['geokjeong','mian'],
+['geokjeong','yeomnyeo'],['geoseul','jjajeung'],['geoseul','motmattang'],['geurip','hyangsu'],['geurip','oeroun'],['geurip','samuchi'],
+['gidae','seolle'],['gimppa','heotal'],['gimppa','ssupssul'],['ginjang','tteollida'],['ginjang','wichuk'],['gippeu','haengbok'],
+['gippeu','heumut'],['gippeu','huryeon'],['gippeu','jeulgeop'],['gippeu','joa'],['gippeu','ppudeut'],['gippeu','sinna'],
+['godok','jeokjeok'],['godok','oeroun'],['gollan','nancheo'],['gonghu','heojeon'],['gonghu','heomu'],['gonghu','heotal'],
+['gonghu','heotheot'],['gonghu','makmak'],['goyo','pyeongon'],['gwaesim','yasok'],['gyeokbun','hwanada'],['gyeomyeon','meosseuk'],
+['gyeomyeon','minmang'],['haengbok','heumut'],['heojeon','meokmeok'],['heojeon','ssulssul'],['heomu','heotal'],['heomu','makmak'],
+['heomu','sideul'],['heotal','maekeop'],['heotal','mugiryeok'],['heotal','seoun'],['heotal','ssupssul'],['heupjok','ppudeut'],
+['holgabun','huryeon'],['huhoe','jachaek'],['huhoe','nwiuchi'],['huryeon','sangkwae'],['huryeon','ssupssul'],['huryeon','yeoyu'],
+['hwanada','jjajeung'],['hwanada','ulhwa'],['janjan','mudeon'],['janjan','nareun'],['janjan','pyeongon'],['janjan','yeoyu'],
+['jarangseureop','ppudeut'],['jeokjeok','ssulssul'],['jeulgeop','yukwae'],['jichida','mugiryeok'],['jichida','sojin'],['jinyeom','jjajeung'],
+['jinyeom','seonggasi'],['jjajeung','seonggasi'],['jjarit','sinna'],['joa','kkeulli'],['joa','sarang'],['joa','sarangseureop'],
+['joa','seolle'],['joeseureop','mian'],['joeseureop','nwiuchi'],['kkeorim','mian'],['maekeop','mugiryeok'],['meokmeok','nunmulgyeop'],
+['meokmeok','seoreop'],['meokmeok','seuljeu'],['meosseuk','minmang'],['mian','sokssang'],['minmang','nancheo'],['mudeomdeom','simdeureong'],
+['nakdam','sangsim'],['nareun','pyeongon'],['natseol','seomeok'],['neugeut','yeoyu'],['oeroun','seogeul'],['oeroun','soewe'],
+['oeroun','ssulssul'],['pogeun','pyeonan'],['ppyoro','seoun'],['pyeonan','pyeongon'],['pyeonan','yeoyu'],['sangsim','sokssang'],
+['sarang','sinroe'],['seogeul','seuljeu'],['seogeul','ssulssul'],['seomeok','soewe'],['seoreop','seuljeu'],['seoun','sokssang'],
+['seoun','ssupssul'],['seoun','wonmang'],['seoun','yasok'],['seuljeu','sokssang'],['seuljeu','uljeok'],['sideul','simdeureong'],
+['simdeureong','ssupssul'],['simurook','sokssang'],['simurook','uljeok'],['sirida','ssulssul'],['wonmang','yasok'],
+];
+
+/* ══════════════ 데이터 조립 ══════════════ */
+const REGION_BY_ID = Object.fromEntries(REGIONS.map(r => [r.id, r]));
+const WORDS = {};
+WORD_ROWS.forEach(row => {
+  const [id,w,n,r,i,pos,prop,def,say,scene] = row;
+  WORDS[id] = { id,w,n,r,i,pos,prop,def,say,scene };
+});
+const ADJ = {};
+EDGE_PAIRS.forEach(([a,b]) => {
+  (ADJ[a] = ADJ[a]||[]).push(b);
+  (ADJ[b] = ADJ[b]||[]).push(a);
+});
+const WORDS_BY_REGION = {};
+Object.values(WORDS).forEach(w => (WORDS_BY_REGION[w.r] = WORDS_BY_REGION[w.r]||[]).push(w));
+
+// 골든 앵글 스파이럴로 영역 안에 단어 배치
+Object.keys(WORDS_BY_REGION).forEach(rid => {
+  const region = REGION_BY_ID[rid];
+  const words = WORDS_BY_REGION[rid];
+  const n = words.length;
+  words.forEach((w, i) => {
+    const t = Math.sqrt((i + 0.55) / n);
+    const angle = i * 2.39996323;
+    w._x = region.cx + region.rx * t * Math.cos(angle) * 0.82;
+    w._y = region.cy + region.ry * t * Math.sin(angle) * 0.82;
+  });
+});
+
+/* ══════════════ 저장소 (localStorage) ══════════════ */
+const STORE_KEY = 'ewm_store_v1';
+function loadStore(){
+  try { const s = JSON.parse(localStorage.getItem(STORE_KEY)); if (s) return s; } catch(e){}
+  return { discovered:['meokmeok','seoun','uljeok'], saved:[], notes:[], disclog:[{id:'meokmeok',at:Date.now()},{id:'seoun',at:Date.now()},{id:'uljeok',at:Date.now()}], savelog:[] };
+}
+let store = loadStore();
+function persist(){ localStorage.setItem(STORE_KEY, JSON.stringify(store)); }
+function isDiscovered(id){ return store.discovered.includes(id); }
+function tierOf(id){
+  if (isDiscovered(id)) return 2;
+  const nbs = ADJ[id] || [];
+  if (nbs.some(isDiscovered)) return 1;
+  return 0;
+}
+function discover(id){
+  if (isDiscovered(id)) return;
+  store.discovered.push(id);
+  store.disclog.push({ id, at: Date.now() });
+  persist();
+}
+
+/* ══════════════ 렌더링 ══════════════ */
+const svgNS = 'http://www.w3.org/2000/svg';
+const regionLayer = document.getElementById('regionLayer');
+const regionBorderLayer = document.getElementById('regionBorderLayer');
+const regionLabelLayer = document.getElementById('regionLabelLayer');
+const edgeLayer = document.getElementById('edgeLayer');
+const nodeLayer = document.getElementById('nodeLayer');
+
+function el(tag, attrs){
+  const e = document.createElementNS(svgNS, tag);
+  Object.entries(attrs).forEach(([k,v]) => e.setAttribute(k, v));
+  return e;
+}
+
+function renderRegions(){
+  regionLayer.innerHTML = ''; regionBorderLayer.innerHTML = ''; regionLabelLayer.innerHTML = '';
+  REGIONS.forEach(r => {
+    const words = WORDS_BY_REGION[r.id];
+    const found = words.filter(w => isDiscovered(w.id)).length;
+    // 옅은 워시(수채 느낌)만 블러 처리 — 테두리는 별도 레이어에 또렷하게 그린다. area는 color보다 훨씬 옅은 파스텔.
+    regionLayer.appendChild(el('ellipse', {
+      cx:r.cx, cy:r.cy, rx:r.rx, ry:r.ry, fill:r.area,
+      'fill-opacity': found>0 ? 0.09 : 0.05, stroke:'none',
+    }));
+    regionBorderLayer.appendChild(el('ellipse', {
+      cx:r.cx, cy:r.cy, rx:r.rx, ry:r.ry, fill:'none',
+      stroke:r.area, 'stroke-opacity':0.65,
+      'stroke-width':1.25, 'stroke-dasharray':'7 6',
+    }));
+    const label = el('text', {
+      x:r.cx, y:r.cy - r.ry - 16, 'text-anchor':'middle', fill: r.textColor || r.color,
+      'font-family':'Pretendard', 'font-weight':700, 'font-size':26, opacity: found>0 ? 0.9 : 0.6,
+    });
+    label.textContent = `${r.name} · ${found}/${words.length}`;
+    regionLabelLayer.appendChild(label);
+  });
+}
+
+function renderEdgesAndNodes(){
+  edgeLayer.innerHTML = ''; nodeLayer.innerHTML = '';
+  EDGE_PAIRS.forEach(([a,b]) => {
+    const ta = tierOf(a), tb = tierOf(b);
+    if (ta === 0 && tb === 0) return;
+    const wa = WORDS[a], wb = WORDS[b];
+    const solid = ta === 2 && tb === 2;
+    edgeLayer.appendChild(el('line', {
+      x1:wa._x, y1:wa._y, x2:wb._x, y2:wb._y,
+      class: 'edge-line ' + (solid ? 'edge-solid' : 'edge-dashed'),
+    }));
+  });
+  Object.values(WORDS).forEach(w => {
+    const tier = tierOf(w.id);
+    const g = el('g', { class:'node-group', 'data-tier':String(tier), 'data-id':w.id });
+    g.style.cursor = 'pointer';
+    g.addEventListener('click', () => openWord(w.id));
+    // 실제 원보다 훨씬 넓은 투명 히트 영역 — 이 근처에만 가도 호버/클릭이 먹힌다
+    g.appendChild(el('circle', { cx:w._x, cy:w._y, r:22, fill:'transparent', 'pointer-events':'all' }));
+    const r = tier === 2 ? 9 : tier === 1 ? 8 : 5;
+    g.appendChild(el('circle', {
+      class:'node-fill', cx:w._x, cy:w._y, r,
+      fill: tier === 1 ? 'none' : REGION_BY_ID[w.r].color,
+      stroke: REGION_BY_ID[w.r].color,
+    }));
+    if (w.id === focusId){
+      const ring = el('circle', { cx:w._x, cy:w._y, r:16, fill: REGION_BY_ID[w.r].color, class:'node-focus-ring' });
+      nodeLayer.appendChild(ring);
+    }
+    const label = el('text', {
+      class:'node-label', x:w._x + (tier===0?10:13), y:w._y + 5, 'font-size': tier===2?16:tier===1?14:12,
+      fill:'#262420',
+    });
+    label.textContent = w.n;
+    g.appendChild(label);
+    nodeLayer.appendChild(g);
+  });
+}
+
+function renderAll(){ renderRegions(); renderEdgesAndNodes(); renderHereCard(); }
+
+function renderHereCard(){
+  const hw = document.getElementById('hereWord'), hh = document.getElementById('hereHint');
+  if (!focusId){ hw.textContent = '—'; hh.textContent = '감정 찾기에서 감정을 찾거나 현재 지도에서 노드를 클릭해서 단어를 발견해보세요.'; return; }
+  const w = WORDS[focusId], r = REGION_BY_ID[w.r];
+  hw.textContent = w.n;
+  const nCount = (ADJ[focusId]||[]).length;
+  hh.textContent = `${r.name} · 이웃 감정 ${nCount}곳`;
+}
+
+/* ══════════════ 관계 · 경로 ══════════════ */
+// 전체 그래프 기준 BFS 홉 거리 (발견 여부와 무관 — "얼마나 가까운 감정인가"를 보여주기 위한 값)
+function hopDistancesFrom(id){
+  const dist = { [id]: 0 };
+  const queue = [id];
+  while (queue.length){
+    const cur = queue.shift();
+    for (const nb of (ADJ[cur]||[])){
+      if (dist[nb] === undefined){ dist[nb] = dist[cur] + 1; queue.push(nb); }
+    }
+  }
+  return dist;
+}
+function hopToPercent(h){ return h===1?92 : h===2?74 : h===3?56 : h===4?40 : 25; }
+
+// 가까운 감정 — 그래프상 실제로 가까운 순서(1촌 → 2촌)로, 거리(%)를 함께 보여준다
+function nearOf(id){
+  const dist = hopDistancesFrom(id);
+  return Object.entries(dist)
+    .filter(([nid,h]) => nid !== id && h <= 3)
+    .sort((a,b) => a[1]-b[1])
+    .slice(0,4)
+    .map(([nid,h]) => ({ ...WORDS[nid], pct: hopToPercent(h) }));
+}
+// 반의어 — 다른 영역 중 강도 차이가 가장 큰 단어 하나(결정적 규칙, id로 동점 처리)
+function antonymOf(id){
+  const w = WORDS[id];
+  let best = null, bestScore = -1;
+  for (const cand of Object.values(WORDS)){
+    if (cand.r === w.r) continue;
+    const score = Math.abs(cand.i - w.i);
+    if (score > bestScore || (score === bestScore && best && cand.id < best.id)){ bestScore = score; best = cand; }
+  }
+  return best;
+}
+// 조금 다른 감정 — 반의어를 제외한, 다른 영역 + 강도차 있는 보조 후보 2개
+function farOf(id, excludeId){
+  const w = WORDS[id];
+  const out = [];
+  for (const cand of Object.values(WORDS)){
+    if (out.length >= 2) break;
+    if (cand.id === id || cand.id === excludeId) continue;
+    if (cand.r === w.r) continue;
+    if (Math.abs(cand.i - w.i) >= 1) out.push(cand);
+  }
+  return out;
+}
+function breadcrumb(id){
+  const w = WORDS[id];
+  const root = REGION_BY_ID[w.r].root;
+  if (id === root) return [id];
+  const allowed = new Set(store.discovered); allowed.add(id); allowed.add(root);
+  const queue = [[root]]; const visited = new Set([root]);
+  while (queue.length){
+    const path = queue.shift();
+    const last = path[path.length - 1];
+    if (last === id) return path;
+    for (const nb of (ADJ[last]||[])){
+      if (!allowed.has(nb) || visited.has(nb)) continue;
+      visited.add(nb); queue.push([...path, nb]);
+    }
+  }
+  return [id];
+}
+
+/* ══════════════ 감정 캐릭터 일러스트 ══════════════ */
+function characterSVG(color, prop, mood){
+  const mouth = mood === 'smile' ? 'M28 62q10 8 20 0' : mood === 'frown' ? 'M28 66q10 -8 20 0' : 'M28 63h20';
+  let propSvg = '';
+  if (prop === 'book' || prop === 'letter' || prop === 'map'){
+    propSvg = `<rect x="46" y="38" width="20" height="15" rx="1.5" fill="#FFFBF3" stroke="#262420" stroke-width="1.4" transform="rotate(-8 56 45)"/>`;
+  } else if (prop === 'flower'){
+    propSvg = `<g opacity="0.9"><circle cx="58" cy="30" r="4" fill="${color}"/><circle cx="64" cy="24" r="2.6" fill="${color}" opacity=".7"/><circle cx="52" cy="24" r="2" fill="${color}" opacity=".5"/></g>`;
+  }
+  return `<svg viewBox="0 0 76 88" width="76" height="88" style="display:block">
+    <ellipse cx="38" cy="83" rx="18" ry="3" fill="#262420" opacity=".12"/>
+    <path d="M23 80V44c0-8.3 6.7-15 15-15s15 6.7 15 15v36Z" fill="${color}" opacity=".92"/>
+    <circle cx="32" cy="44" r="2.1" fill="#FFFBF3"/><circle cx="44" cy="44" r="2.1" fill="#FFFBF3"/>
+    <path d="${mouth}" fill="none" stroke="#FFFBF3" stroke-width="2" stroke-linecap="round"/>
+    ${propSvg}
+  </svg>`;
+}
+
+/* ══════════════ 상세 패널 ══════════════ */
+let focusId = null;
+const INTENSITY_LABEL = {1:'매우 약함',2:'약함',3:'보통',4:'강함',5:'매우 강함'};
+
+function openWord(id){
+  if (tierOf(id) !== 2) discover(id);
+  focusId = id;
+  renderAll();
+  const w = WORDS[id], r = REGION_BY_ID[w.r];
+  const saved = store.saved.includes(id);
+
+  document.getElementById('focusHeader').innerHTML = `
+    <div>
+      <p class="label-eyebrow text-[10px]" style="color:${r.color}">${r.name}</p>
+      <h2 class="font-serif-kr text-[30px] leading-tight mt-1">${w.n}<span class="text-[12px] text-dim label-eyebrow ml-2">${w.pos}</span></h2>
+    </div>
+    <button onclick="closeFocus()" aria-label="닫기" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-elevated2 text-dim shrink-0">
+      <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5l10 10M15 5L5 15"/></svg>
+    </button>`;
+
+  const path = breadcrumb(id);
+  const nearChips = nearOf(id).map(x => `<button onclick="openWord('${x.id}')" class="chip text-[13px] items-center gap-1.5" style="background:${REGION_BY_ID[x.r].color}22; color:${REGION_BY_ID[x.r].color};">${x.n}<span class="font-mono-coord text-[9px] opacity-70">${x.pct}%</span></button>`).join('');
+  const antonym = antonymOf(id);
+  const antonymChip = antonym ? `<button onclick="openWord('${antonym.id}')" class="chip text-[13px]" style="background:transparent; border:1.5px solid ${REGION_BY_ID[antonym.r].color}; color:${REGION_BY_ID[antonym.r].color}; font-weight:600;">${antonym.n} · ${REGION_BY_ID[antonym.r].name}</button>` : '<span class="text-dim text-xs">없음</span>';
+  const farChips = farOf(id, antonym && antonym.id).map(x => `<button onclick="openWord('${x.id}')" class="chip text-[13px]" style="background:transparent; border:1px dashed ${REGION_BY_ID[x.r].color}88; color:${REGION_BY_ID[x.r].color};">${x.n}</button>`).join('');
+  const pathHtml = path.map((pid,i) => `<span class="flex items-center gap-1"><span class="font-serif-kr text-[14px]" style="color:${pid===id?r.color:'var(--text-secondary)'}">${WORDS[pid].n}</span>${i<path.length-1?'<span class="text-dim text-xs">→</span>':''}</span>`).join('');
+  const notesForWord = store.notes.filter(n => n.id === id).slice().reverse();
+
+  document.getElementById('focusBody').innerHTML = `
+    <div class="flex gap-4 items-start p-3.5 rounded-md" style="background:${r.color}14; border:1px solid ${r.color}44;">
+      ${characterSVG(r.color, w.prop, REGION_MOOD[w.r])}
+      <div>
+        <p class="text-[10px] label-eyebrow mb-1" style="color:${r.color}">감정 캐릭터</p>
+        <p class="text-[13px] text-taupe leading-relaxed">${w.scene}</p>
+      </div>
+    </div>
+
+    <p class="font-serif-kr text-[17px] leading-relaxed mt-4 pl-3" style="border-left:2px solid var(--border-hairline-strong);">${w.def}</p>
+
+    <div class="flex items-center gap-3 mt-4">
+      <span class="text-xs text-taupe label-eyebrow">감정 강도</span>
+      <div class="flex gap-1 flex-1">${[1,2,3,4,5].map(n => `<span class="flex-1 h-1.5 rounded-full" style="background:${n<=w.i ? r.color : 'var(--bg-elevated2)'}"></span>`).join('')}</div>
+      <span class="text-[11px] text-taupe">${INTENSITY_LABEL[w.i]}</span>
+    </div>
+
+    <p class="text-xs text-taupe label-eyebrow mt-5 mb-2">가까운 감정 <span class="text-dim font-normal">· 유의어, 거리 순</span></p>
+    <div class="flex flex-wrap gap-2">${nearChips || '<span class="text-dim text-xs">아직 없어요</span>'}</div>
+
+    <p class="text-xs text-taupe label-eyebrow mt-4 mb-2">반의어</p>
+    <div class="flex flex-wrap gap-2">${antonymChip}</div>
+
+    <p class="text-xs text-taupe label-eyebrow mt-4 mb-2">조금 다른 감정</p>
+    <div class="flex flex-wrap gap-2">${farChips}</div>
+
+    <p class="text-xs text-taupe label-eyebrow mt-4 mb-2">감정의 위치</p>
+    <div class="flex flex-wrap items-center gap-2 p-3 rounded-md" style="background:var(--bg-elevated2); border:1px dashed var(--border-hairline-strong);">${pathHtml}</div>
+
+    <p class="text-xs text-amber label-eyebrow mt-5 mb-2">이렇게 표현할 수 있어요</p>
+    <blockquote class="font-serif-kr text-[16px] leading-relaxed p-4 rounded-md" style="background:var(--bg-elevated2);">"${w.say}"</blockquote>
+    <button onclick="copySay('${id}', this)" class="btn-secondary w-full mt-2 text-[13px]">문장 복사</button>
+
+    <p class="text-xs text-taupe label-eyebrow mt-5 mb-2">마음 기록</p>
+    <textarea id="noteInput" rows="3" placeholder="이 감정을 느낀 순간을 적어두면 감정 서고에 남아요." class="field w-full px-3 py-2.5 text-[13px] placeholder:text-dim"></textarea>
+    <button onclick="saveNote('${id}')" class="btn-secondary w-full mt-2 text-[13px]">기록 저장</button>
+    ${notesForWord.length ? `<div class="mt-3 space-y-2">${notesForWord.map(n => `
+      <div class="index-card p-3" style="border-left:2px solid ${r.color};">
+        <p class="text-[10px] text-dim font-mono-coord">${new Date(n.at).toLocaleDateString('ko-KR')}</p>
+        <p class="text-[13px] text-parchment/90 mt-1 leading-relaxed">${n.text}</p>
+      </div>`).join('')}</div>` : ''}
+
+    <button onclick="toggleSave('${id}')" class="btn-save mt-6 ${saved?'saved':''}">${saved?'저장됨 · 취소하기':'이 단어 저장하기'}</button>
+  `;
+  document.getElementById('focusPanel').style.display = 'flex';
+  centerOn(w._x, w._y, true);
+}
+
+function closeFocus(){
+  focusId = null;
+  document.getElementById('focusPanel').style.display = 'none';
+  renderAll();
+}
+
+function copySay(id, btn){
+  if (navigator.clipboard) navigator.clipboard.writeText(WORDS[id].say).catch(()=>{});
+  const t = btn.textContent; btn.textContent = '복사됨'; setTimeout(()=>btn.textContent=t, 1300);
+}
+function saveNote(id){
+  const ta = document.getElementById('noteInput');
+  const text = ta.value.trim();
+  if (!text) return;
+  store.notes.push({ id, at: Date.now(), text });
+  persist();
+  openWord(id);
+}
+function toggleSave(id){
+  const i = store.saved.indexOf(id);
+  if (i >= 0){ store.saved.splice(i,1); }
+  else { store.saved.push(id); store.savelog.push({ id, at: Date.now() }); }
+  persist();
+  openWord(id);
+}
+
+/* ══════════════ 팬 · 줌 ══════════════ */
+const wrap = document.getElementById('mapWrap');
+const canvas = document.getElementById('mapCanvas');
+let zoom = 0.58, panX = 0, panY = 0, dragging = false, dragStart = {x:0,y:0}, panStart = {x:0,y:0};
+function applyTransform(animate){
+  canvas.style.transition = animate ? 'transform .4s ease' : 'none';
+  canvas.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
+}
+const PANEL_WIDTH = 422; // 우측 상세 패널(400px + 여백 22px)이 가리는 폭 — 열려 있을 땐 그만큼 왼쪽으로 당겨서 보이는 영역 기준으로 가운데를 맞춘다
+function centerOn(cx, cy, avoidPanel){
+  const rect = wrap.getBoundingClientRect();
+  const usableWidth = avoidPanel ? Math.max(200, rect.width - PANEL_WIDTH) : rect.width;
+  panX = usableWidth/2 - cx*zoom;
+  panY = rect.height/2 - cy*zoom;
+  applyTransform(true);
+}
+function zoomBy(f){ zoom = Math.min(1.3, Math.max(0.16, zoom*f)); applyTransform(true); }
+function recenter(){ focusId ? centerOn(WORDS[focusId]._x, WORDS[focusId]._y, true) : centerOn(MAPW/2, MAPH/2); }
+wrap.addEventListener('mousedown', e => { dragging=true; wrap.classList.add('dragging'); dragStart={x:e.clientX,y:e.clientY}; panStart={x:panX,y:panY}; });
+window.addEventListener('mousemove', e => { if(!dragging) return; panX = panStart.x + (e.clientX-dragStart.x); panY = panStart.y + (e.clientY-dragStart.y); applyTransform(false); });
+window.addEventListener('mouseup', () => { dragging=false; wrap.classList.remove('dragging'); });
+wrap.addEventListener('wheel', e => {
+  e.preventDefault();
+  const rect = wrap.getBoundingClientRect();
+  const mouseX = e.clientX - rect.left, mouseY = e.clientY - rect.top;
+  const canvasX = (mouseX - panX) / zoom, canvasY = (mouseY - panY) / zoom;
+  const factor = e.deltaY < 0 ? 1.12 : 1 / 1.12; // 스크롤 업 → 확대, 스크롤 다운 → 축소
+  zoom = Math.min(1.3, Math.max(0.16, zoom * factor));
+  panX = mouseX - canvasX * zoom;
+  panY = mouseY - canvasY * zoom;
+  applyTransform(false);
+}, { passive: false });
+
+/* ══════════════ 초기화 ══════════════ */
+const urlWord = new URLSearchParams(location.search).get('w');
+renderAll();
+if (urlWord && WORDS[urlWord]) { zoom = 0.85; openWord(urlWord); }
+else centerOn(MAPW/2, MAPH/2); // 특정 단어로 들어온 게 아니면 항상 지도 정중앙에서 시작
+</script>
+</body>
+</html>

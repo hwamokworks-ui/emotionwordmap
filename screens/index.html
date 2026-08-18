@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>전체 흐름 · 감정 어휘 지도</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { base:'#E8E6D2', elevated:'#FFFFFF', elevated2:'#E3E1DA', parchment:'#262420', taupe:'#77746C', dim:'#A6A296',
+      amber:{ DEFAULT:'#8F5A12', strong:'#703F0A', glow:'#E0BD75' },
+      region:{ anger:'#D1503A', emptiness:'#A79A85', loneliness:'#3D8657', excitement:'#E87792', anxiety:'#4779A8', joy:'#E8A93A', sadness:'#5B72B8', shame:'#BE6D97', calm:'#3FA495' } },
+    fontFamily: { serif:['Pretendard','-apple-system','sans-serif'], sans:['Pretendard','-apple-system','sans-serif'], mono:['"IBM Plex Mono"','monospace'] },
+    borderRadius: { sm:'10px', md:'20px', lg:'28px' },
+    boxShadow: { card:'0 1px 2px rgba(38,36,32,.06), 0 8px 20px -8px rgba(38,36,32,.14)', glow:'0 1px 2px rgba(38,36,32,.15), 0 0 20px rgba(224,189,117,.35)' },
+  } } };
+</script>
+<link rel="stylesheet" href="../design-system/tokens.css" />
+</head>
+<body class="bg-base text-parchment">
+<div class="page-wrap">
+
+  <header class="topbar">
+    <a href="find.html" class="topbar-brand">감정 어휘 지도</a>
+    <div class="topbar-right">
+      <nav class="topbar-nav">
+        <a href="find.html">감정 찾기</a>
+        <a href="map.html">감정 지도</a>
+        <a href="archive.html">감정 서고</a>
+      </nav>
+      <div class="user-chip">
+        <span class="avatar">이</span>
+        <span class="text-[13px] text-taupe hidden md:inline">이준호</span>
+        <span class="status-dot" aria-hidden="true"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="content-inner max-w-[1000px] mx-auto">
+    <header class="enter">
+      <p class="font-mono-coord text-[11px] text-amber">WORKING SKELETON · WEB</p>
+      <h1 class="font-serif-kr text-[34px] leading-tight mt-2">감정 어휘 지도</h1>
+      <p class="text-taupe mt-3 leading-relaxed max-w-[560px]">이준호 페르소나가 감정 찾기 → 감정 지도 → 감정 서고 순서로 서비스를 사용하는 전체 흐름입니다. 지도에는 145개의 실제 감정 단어와 9개 영역이 연결되어 있어요.</p>
+    </header>
+
+    <section class="mt-10 space-y-4">
+      <a href="find.html" class="paper-card p-6 flex items-center gap-5 enter enter-delay-1 hover:border-amber/40 transition-colors">
+        <div class="w-12 h-12 rounded-full bg-amber-dim flex items-center justify-center shrink-0">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#8F5A12" stroke-width="1.6"><circle cx="9" cy="9" r="6"/><path d="M17 17l-4-4"/></svg>
+        </div>
+        <div class="flex-1">
+          <p class="font-serif-kr text-[20px]">① 감정 찾기 (홈)</p>
+          <p class="text-taupe text-[14px] mt-1">한 줄로 마음을 적으면, 그 마음이 놓인 자리를 지도에서 찾아드려요.</p>
+        </div>
+        <span class="text-dim">›</span>
+      </a>
+
+      <a href="map.html" class="paper-card p-6 flex items-center gap-5 enter enter-delay-2 hover:border-amber/40 transition-colors">
+        <div class="w-12 h-12 rounded-full bg-region-sadness/14 flex items-center justify-center shrink-0">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#5B72B8" stroke-width="1.6"><circle cx="6" cy="6" r="2.2"/><circle cx="15" cy="8" r="2.2"/><circle cx="10" cy="16" r="2.2"/><path d="M8 7l5 1M8 8l1 7M13 9l-2 6" stroke-width="1.2"/></svg>
+        </div>
+        <div class="flex-1">
+          <p class="font-serif-kr text-[20px]">② 감정 지도</p>
+          <p class="text-taupe text-[14px] mt-1">드래그로 움직이고 확대·축소하는 지도예요. 발견한 단어는 채색되어 실선으로 이어지고, 이웃 단어는 점선 원으로 힌트만 보여요. 클릭 한 번으로 우측 상세 패널이 열립니다.</p>
+        </div>
+        <span class="text-dim">›</span>
+      </a>
+
+      <a href="archive.html" class="paper-card p-6 flex items-center gap-5 enter enter-delay-3 hover:border-amber/40 transition-colors">
+        <div class="w-12 h-12 rounded-full bg-amber-dim flex items-center justify-center shrink-0">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#8F5A12" stroke-width="1.6"><path d="M4 4h6a2 2 0 012 2v10a2 2 0 00-2-2H4z"/><path d="M16 4h-6a2 2 0 00-2 2v10a2 2 0 012-2h6z"/></svg>
+        </div>
+        <div class="flex-1">
+          <p class="font-serif-kr text-[20px]">③ 감정 서고</p>
+          <p class="text-taupe text-[14px] mt-1">발견·저장·마음 기록 통계, 기간별 그래프, 지역 완성도, 뱃지가 한 화면에 모인 통합 아카이브예요.</p>
+        </div>
+        <span class="text-dim">›</span>
+      </a>
+    </section>
+
+    <footer class="mt-12 text-dim text-xs">design-system/MASTER.md 토큰을 그대로 적용했습니다 (v4 · 데이터 기반 지도 · 감정 서고)</footer>
+  </main>
+</div>
+</body>
+</html>
