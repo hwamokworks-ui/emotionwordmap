@@ -100,7 +100,7 @@ async function classify(text, words, count = 5) {
     ({ ids } = await callClassifier(retryMessages));
   }
 
-  const validIds = ids.filter((id) => words.some((w) => w.id === id));
+  const validIds = [...new Set(ids)].filter((id) => words.some((w) => w.id === id));
   if (validIds.length > 0) return validIds.slice(0, count);
 
   // lib/ai-match.ts는 프로덕션에서 무작위로 하나를 고르지만, 평가 재현성을 위해 여기서는

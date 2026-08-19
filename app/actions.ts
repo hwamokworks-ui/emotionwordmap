@@ -1,6 +1,6 @@
 'use server';
 
-import { createClient } from '@/lib/supabase/server';
+import { getEmotionContent } from '@/lib/emotion-content';
 import { classifyWordWithLLM } from '@/lib/ai-match';
 
 // index.html의 resolveWord()를 그대로 이식 — 원형/명사형에 먼저 매칭하고, 못 찾으면
@@ -51,9 +51,10 @@ export async function resolveWordAction(text: string): Promise<ResolveResult> {
   const t = (text || '').trim();
   if (!t) return { type: 'none' };
 
-  const supabase = await createClient();
-  const { data: words } = await supabase.from('emotion_words').select('id, word_form, noun_form, definition, region_id');
-  if (!words) return { type: 'none' };
+  // 검색할 때마다 434개 단어를 Supabase에서 새로 조회하던 게 지도·검색이 느려진 원인 중 하나였다 —
+  // 콘텐츠 데이터는 자주 안 바뀌니 캐시된 조회(lib/emotion-content.ts)를 함께 쓴다.
+  const { words } = await getEmotionContent();
+  if (words.length === 0) return { type: 'none' };
 
   // 1) 글자 그대로 매칭 — 빠르고 무료. 확실한 경우라도 바로 이동하지 않고 후보(1개)로 보여준 뒤
   // 사용자가 직접 클릭해서 들어가게 한다 — AI가 확신 없이 골랐을 수도 있으니 항상 확인을 거치게 한다.

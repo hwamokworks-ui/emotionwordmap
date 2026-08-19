@@ -1,21 +1,16 @@
 import { createClient } from '@/lib/supabase/server';
+import { getEmotionContent } from '@/lib/emotion-content';
 import MapClient from './MapClient';
-import type { Region, WordRow, Relation, NoteRow } from './types';
+import type { NoteRow } from './types';
 
-export const dynamic = 'force-dynamic'; // 로그인 세션에 따라 결과가 달라지므로 캐시하지 않는다.
+export const dynamic = 'force-dynamic'; // 로그인 세션(발견·저장·기록)에 따라 결과가 달라지므로 캐시하지 않는다.
 
 export default async function MapPage() {
   const supabase = await createClient();
 
-  const [{ data: regions }, { data: words }, { data: relations }] = await Promise.all([
-    supabase.from('emotion_regions').select('*'),
-    supabase.from('emotion_words').select('*').order('display_order'),
-    supabase.from('emotion_word_relations').select('*'),
-  ]);
-
-  const {
+  const [{ regions, words, relations }, {
     data: { user },
-  } = await supabase.auth.getUser();
+  }] = await Promise.all([getEmotionContent(), supabase.auth.getUser()]);
 
   let initialDiscovered: string[] = [];
   let initialSaved: string[] = [];
@@ -34,9 +29,9 @@ export default async function MapPage() {
 
   return (
     <MapClient
-      regions={(regions ?? []) as Region[]}
-      words={(words ?? []) as WordRow[]}
-      relations={(relations ?? []) as Relation[]}
+      regions={regions}
+      words={words}
+      relations={relations}
       isLoggedIn={!!user}
       initialDiscovered={initialDiscovered}
       initialSaved={initialSaved}

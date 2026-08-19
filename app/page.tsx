@@ -59,22 +59,21 @@ export default async function HomePage() {
 
           <aside className="mt-8 md:mt-[220px]">
             {dailyWord && (
-              <div className="p-5 enter enter-delay-3" style={{ background: 'var(--bg-elevated)', border: '1px solid var(--border-hairline)', borderRadius: '20px' }}>
-                <p className="text-xs text-taupe label-eyebrow mb-2">오늘의 한 단어</p>
-                <p className="font-display-serif text-[25px] text-parchment">{dailyWord.noun_form}</p>
-                <p className="text-[13px] text-taupe italic mt-2 leading-relaxed">&quot;{dailyWord.definition}&quot;</p>
-                <a href={`/map?w=${dailyWord.id}`} className="text-[12px] text-amber mt-3 inline-block hover:opacity-70 transition-opacity" style={{ textDecoration: 'underline', textUnderlineOffset: '3px' }}>
-                  지도에서 발견하기 ›
-                </a>
-              </div>
+              <>
+                <p className="text-[11.5px] text-taupe label-eyebrow mb-2 enter enter-delay-3">오늘의 한 단어</p>
+                <div className="p-5 enter enter-delay-3" style={{ background: 'var(--bg-elevated)', border: '1px solid var(--border-hairline)', borderRadius: '20px' }}>
+                  <p className="font-display-serif text-[25px] text-parchment">{dailyWord.noun_form}</p>
+                  <p className="text-[13px] text-taupe italic mt-2 leading-relaxed">&quot;{dailyWord.definition}&quot;</p>
+                  <a href={`/map?w=${dailyWord.id}`} className="text-[12px] text-amber mt-3 inline-block hover:opacity-70 transition-opacity" style={{ textDecoration: 'underline', textUnderlineOffset: '3px' }}>
+                    지도에서 발견하기 ›
+                  </a>
+                </div>
+              </>
             )}
 
             {trending.length > 0 && (
               <>
-                <div className="flex items-center justify-between mb-2 mt-7 enter enter-delay-3">
-                  <p className="text-[11.5px] text-taupe label-eyebrow">요즘 많이 찾는 감정</p>
-                  <span className="text-[11px] text-dim">이번 주</span>
-                </div>
+                <p className="text-[11.5px] text-taupe label-eyebrow mb-2 mt-7 enter enter-delay-3">요즘 많이 찾는 감정</p>
                 <div className="divide-y enter enter-delay-3" style={{ background: 'var(--bg-elevated)', border: '1px solid var(--border-hairline)', borderRadius: '16px', overflow: 'hidden' }}>
                   {trending.map((row, i) => (
                     <a

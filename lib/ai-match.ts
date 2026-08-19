@@ -89,7 +89,9 @@ export async function classifyWordWithLLM(
     ({ ids } = await requestIds(apiKey, retryMessages));
   }
 
-  const validIds = ids.filter((id) => words.some((w) => w.id === id));
+  // 모델이 같은 id를 두 번 이상 반환할 때가 있다(예: "환멸"이 한 응답에 3번 나온 적도 있었다) —
+  // 중복을 그대로 후보 카드로 넘기면 React key가 겹쳐서 렌더링이 꼬인다.
+  const validIds = [...new Set(ids)].filter((id) => words.some((w) => w.id === id));
   if (validIds.length > 0) return validIds.slice(0, count);
 
   // 재요청까지 해도 모델이 빈 배열을 고집하는 경우가 실제로 있다(30문장 평가 기준 30% 안팎, §15).
