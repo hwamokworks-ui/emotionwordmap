@@ -2,10 +2,13 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '감정 어휘 지도',
+  verification: {
+    // 옛 정적 index.html에 있던 Google Search Console 소유권 확인 태그를 그대로 옮겨왔다.
+    google: 'nrEWr6_NaDwPdvYxjokilh-GjF36wr2PrPcKYeiBGMg',
+  },
 };
 
-// 이 프로젝트는 빌드 스텝 없는 정적 HTML 3화면(index/archive)과 Next.js로 이식된 화면(map)이 공존한다.
-// 시각적 일관성을 위해 기존 화면과 똑같은 Tailwind CDN + 커스텀 토큰 설정을 그대로 쓴다.
+// 정적 HTML 프로토타입에서 쓰던 Tailwind CDN + 커스텀 토큰 설정을 시각적 일관성을 위해 그대로 가져왔다.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
