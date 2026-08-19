@@ -218,7 +218,10 @@ export default function MapClient({
         );
         const label = el('text', {
           x: r.cx,
-          y: r.cy - r.ry - 16,
+          // 경계 방향으로 치우친(edge_bias) 단어는 ry*1.1만큼 바깥으로 나가는데, 예전 -16 오프셋은
+          // 그 지점과 겹쳐서(예: "고적함"이 forest→room 방향 위로 튀어나와 지역 제목과 포개짐) 제목이
+          // 안 보였다. 그 최대 돌출 지점(ry*0.1)보다 확실히 더 바깥에 놓이도록 -50으로 늘렸다.
+          y: r.cy - r.ry - 50,
           'text-anchor': 'middle',
           fill: r.text_color || r.color,
           'font-family': 'Pretendard',

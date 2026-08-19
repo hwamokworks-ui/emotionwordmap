@@ -121,7 +121,7 @@ export default function SearchBox() {
 
       {notFound && (
         <p className="text-[12.5px] text-taupe mt-5 pt-5" style={{ borderTop: '1px solid var(--border-hairline)' }}>
-          아직 이 마음에 꼭 맞는 단어를 찾지 못했어요. 조금 다르게 표현해보시겠어요?
+          아직 이 마음에 꼭 맞는 단어를 찾지 못했어요. 문장을 조금 더 자세히 적어주시겠어요?
         </p>
       )}
     </section>

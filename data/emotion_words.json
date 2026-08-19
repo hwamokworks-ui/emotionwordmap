@@ -50,7 +50,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "너무 분해서 이가 떨리도록 몸이 부들거린다.",
-    "example_sentence": "그 말을 듣는 순간 치가 떨렸어.",
+    "example_sentence": "그 순간을 생각하면 아직도 치떨리는 기분이야.",
     "scene_description": "책장 모서리를 꽉 쥔 손이 파르르 떨리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 3
@@ -372,7 +372,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "존중받지 못한 마음이 크게 화로 터져 나온다.",
-    "example_sentence": "무시당했다는 생각에 몹시 노했어.",
+    "example_sentence": "존중받지 못했다는 생각에 속에서 노함이 치밀었어.",
     "scene_description": "지도 위 표식을 손으로 확 쓸어버리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 26
@@ -414,7 +414,7 @@
     "prop": "none",
     "intensity": 5,
     "definition": "속에서 뜨거운 것이 순식간에 치밀어 오른다.",
-    "example_sentence": "그 말을 듣자마자 나도 모르게 화가 났어.",
+    "example_sentence": "그 말을 듣자마자 얼마나 화나던지 몰라.",
     "scene_description": "촛불 심지를 확 세게 돋우는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 29
@@ -428,7 +428,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "잘난 척하는 모습을 보며 속이 배배 꼬인다.",
-    "example_sentence": "그렇게 잘난 척하는 게 아니꼬웠어.",
+    "example_sentence": "그렇게 잘난 척하는 모습에 아니꼬움이 밀려왔어.",
     "scene_description": "고개를 홱 돌리고 책등만 쳐다보는 캐릭터",
     "edge_bias_region_id": "sea",
     "display_order": 30
@@ -442,7 +442,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "부당한 일을 당해 속이 타들어 갈 만큼 원통하다.",
-    "example_sentence": "이렇게 지고 나니 너무 분해서 잠이 안 왔어.",
+    "example_sentence": "이렇게 지고 나니 정말 분하다는 생각이 들었어.",
     "scene_description": "구겨진 지도 모서리를 꽉 움켜쥔 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 31
@@ -470,7 +470,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "마음이 그것을 밀어내며 더는 가까이 두고 싶지 않다.",
-    "example_sentence": "그냥 그 얘기 자체가 듣기 싫었어.",
+    "example_sentence": "그냥 그 얘기 자체가 듣기 싫다고 생각했어.",
     "scene_description": "펼쳐진 책을 소리 나게 덮어버리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 33
@@ -498,7 +498,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "마음이 뒤틀릴 만큼 화가 나서 토라진다.",
-    "example_sentence": "그 말 한마디에 잔뜩 골이 났어.",
+    "example_sentence": "그 말 한마디에 잔뜩 골나서 아무 말도 안 했어.",
     "scene_description": "등을 홱 돌리고 책장 뒤에 숨어버리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 35
@@ -512,7 +512,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "풀리지 않은 억울함이 마음 깊이 사무친다.",
-    "example_sentence": "그때 그러지 못한 게 두고두고 한스러웠어.",
+    "example_sentence": "그때 그러지 못한 게 두고두고 한스러움으로 남았어.",
     "scene_description": "빛바랜 편지를 오래도록 쓰다듬는 캐릭터",
     "edge_bias_region_id": "sad",
     "display_order": 36
@@ -554,7 +554,7 @@
     "prop": "none",
     "intensity": 5,
     "definition": "누르고 눌러도 결국 밖으로 터져 나오는 뜨거운 화.",
-    "example_sentence": "몇 번을 참다가 결국 성이 났어.",
+    "example_sentence": "몇 번을 참다가 결국 성나서 자리를 박차고 일어났어.",
     "scene_description": "등불 유리를 쾅 소리 나게 내려놓는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 39
@@ -582,7 +582,7 @@
     "prop": "none",
     "intensity": 4,
     "definition": "짓눌리듯 압도당해 속에서 반발심이 치민다.",
-    "example_sentence": "그 기세에 눌리면서도 속으로는 화가 치밀었어.",
+    "example_sentence": "그 위압감에 눌려서 나도 모르게 주먹을 꽉 쥐었어.",
     "scene_description": "커다란 서가 그림자 아래서 주먹을 꽉 쥐는 캐릭터",
     "edge_bias_region_id": "disgust",
     "display_order": 41
@@ -666,7 +666,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "가볍게 여겨진 것 같아 은근히 얄밉고 서운하다.",
-    "example_sentence": "그렇게 말하는 게 괜히 고까웠어.",
+    "example_sentence": "그렇게 말하는 게 괜히 고깝고 서운했어.",
     "scene_description": "입을 삐죽이며 책 모서리를 톡톡 치는 캐릭터",
     "edge_bias_region_id": "shame",
     "display_order": 47
@@ -680,7 +680,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "기다림에 지쳐 속이 바싹바싹 타들어 간다.",
-    "example_sentence": "연락이 안 와서 속이 다 애탔어.",
+    "example_sentence": "연락이 안 와서 며칠째 마음이 애타서 혼났어.",
     "scene_description": "답장 없는 편지함을 몇 번이고 열어보는 캐릭터",
     "edge_bias_region_id": "disgust",
     "display_order": 48
@@ -722,7 +722,7 @@
     "prop": "none",
     "intensity": 5,
     "definition": "무시당한 것 같아 마음이 크게 상하고 화가 난다.",
-    "example_sentence": "그런 취급을 받으니 몹시 노여웠어.",
+    "example_sentence": "그런 취급을 받으니 못내 노엽고 속상했어.",
     "scene_description": "서가 문을 세게 밀치고 나가는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 51
@@ -736,7 +736,7 @@
     "prop": "map",
     "intensity": 4,
     "definition": "억울함이 뼛속 깊이까지 스며들어 잊히지 않는다.",
-    "example_sentence": "그날 일이 두고두고 사무쳤어.",
+    "example_sentence": "그날 일이 두고두고 사무치더라.",
     "scene_description": "낡은 지도의 한 지점을 오래 손끝으로 누르는 캐릭터",
     "edge_bias_region_id": "sea",
     "display_order": 52
@@ -764,7 +764,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "억울함과 서글픔이 뒤섞여 눈물이 핑 돈다.",
-    "example_sentence": "아무도 내 편이 없는 것 같아서 서러웠어.",
+    "example_sentence": "아무도 내 편이 없는 것 같아서 서럽고 눈물이 났어.",
     "scene_description": "꽃 한 송이를 품에 안고 고개 숙인 캐릭터",
     "edge_bias_region_id": "sea",
     "display_order": 54
@@ -876,7 +876,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "놀림당한 것처럼 속이 간질간질 부아가 치민다.",
-    "example_sentence": "번번이 지기만 해서 약이 올랐어.",
+    "example_sentence": "번번이 지기만 해서 약오르고 분했어.",
     "scene_description": "편지를 손에 쥐고 발을 동동 구르는 캐릭터",
     "edge_bias_region_id": "sea",
     "display_order": 62
@@ -890,7 +890,7 @@
     "prop": "none",
     "intensity": 5,
     "definition": "감정이 거세게 몰아쳐서 스스로도 주체하기 힘들다.",
-    "example_sentence": "말을 하다 보니 감정이 너무 격해졌어.",
+    "example_sentence": "말을 하다 보니 감정이 격하다 싶을 만큼 치밀어 올랐어.",
     "scene_description": "몸짓이 커지며 책상 위 물건을 쓸어버리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 63
@@ -918,7 +918,7 @@
     "prop": "none",
     "intensity": 5,
     "definition": "속에 쌓인 화를 참지 못하고 밖으로 쏟아낸다.",
-    "example_sentence": "결국 참지 못하고 크게 성을 냈어.",
+    "example_sentence": "결국 참지 못하고 크게 성내고 말았어.",
     "scene_description": "책상을 쾅 내리치며 일어서는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 65
@@ -988,7 +988,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "믿었던 것이 순식간에 사라져 마음이 텅 비어버린다.",
-    "example_sentence": "그렇게 믿었는데 다 부질없었다는 걸 알았을 때 허탈했어.",
+    "example_sentence": "그렇게 믿었던 게 한순간에 사라져서 너무 허망했어.",
     "scene_description": "다 넘긴 마지막 책장이 텅 빈 백지였던 걸 보고 멍하니 서 있는 캐릭터",
     "edge_bias_region_id": "sad",
     "display_order": 0
@@ -1002,7 +1002,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "아무것도 할 수 없다고 느껴져 몸과 마음에서 힘이 빠진 상태.",
-    "example_sentence": "손 하나 까딱할 힘도 없다고 느낀 날이었어.",
+    "example_sentence": "손 하나 까딱할 힘도 없이 무력감이 밀려왔어.",
     "scene_description": "서가 앞에 선 채 책을 뽑을 힘조차 내지 못하는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 1
@@ -1016,7 +1016,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "같은 일이 되풀이되어 속이 메스꺼울 만큼 지겨워진다.",
-    "example_sentence": "매일 똑같은 페이지만 읽는 것 같아서 신물이 났어.",
+    "example_sentence": "매일 똑같은 하루가 반복돼서 신물나서 견딜 수가 없었어.",
     "scene_description": "몇 번이고 되읽던 줄에서 눈을 떼고 책을 밀어내는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 2
@@ -1030,7 +1030,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "간절히 붙잡던 것이 사라지고 마음속에 빈자리만 남는다.",
-    "example_sentence": "그렇게 매달렸는데 결국 손에 남은 게 하나도 없더라.",
+    "example_sentence": "그렇게 매달렸는데 결국 남은 게 없어서 정말 허무했어.",
     "scene_description": "다 읽은 책의 마지막 장을 덮고도 자리를 뜨지 못하는 캐릭터",
     "edge_bias_region_id": "sad",
     "display_order": 3
@@ -1044,7 +1044,7 @@
     "prop": "none",
     "intensity": 1,
     "definition": "누군가의 눈치에 어깨가 저절로 움츠러든다.",
-    "example_sentence": "그 말 한마디에 괜히 작아지는 기분이었어.",
+    "example_sentence": "그 말 한마디에 나도 모르게 주눅들었어.",
     "scene_description": "서가 구석에서 몸을 웅크리고 책등 뒤로 숨은 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 4
@@ -1058,7 +1058,7 @@
     "prop": "map",
     "intensity": 1,
     "definition": "더는 바랄 수 없다는 걸 받아들이고 마음을 내려놓는다.",
-    "example_sentence": "어차피 안 될 거라는 생각에 그만 마음을 접었어.",
+    "example_sentence": "더는 바랄 수 없다는 걸 알고 결국 체념했어.",
     "scene_description": "펼쳐 두었던 지도를 조용히 접어 서랍 깊숙이 넣는 캐릭터",
     "edge_bias_region_id": "sad",
     "display_order": 5
@@ -1072,7 +1072,7 @@
     "prop": "letter",
     "intensity": 1,
     "definition": "마음에 낮게 가라앉은 구름이 걷히지 않는다.",
-    "example_sentence": "이유도 없이 하루 종일 가라앉아 있었어.",
+    "example_sentence": "이유도 없이 하루 종일 마음이 우울했어.",
     "scene_description": "부치지 못한 편지를 서랍에 넣고 창밖만 바라보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 6
@@ -1086,7 +1086,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "기운이 꺾여 하고 싶던 말도 목 안으로 삼킨다.",
-    "example_sentence": "괜히 기가 죽어서 아무 말도 못 하고 돌아섰어.",
+    "example_sentence": "괜히 기가 죽어서 하루 종일 의기소침했어.",
     "scene_description": "손을 뻗다 만 책을 다시 서가에 밀어 넣는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 7
@@ -1100,7 +1100,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "같은 하루가 반복될수록 마음이 조금씩 닳아간다.",
-    "example_sentence": "또 똑같은 하루라니, 지겨워서 한숨이 나왔어.",
+    "example_sentence": "또 똑같은 하루라니 지겹고 한숨만 나왔어.",
     "scene_description": "몇 번이나 펼쳤던 책장을 무심하게 넘기는 캐릭터",
     "edge_bias_region_id": "sad",
     "display_order": 8
@@ -1114,7 +1114,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "상대에게 눌려 자신감과 기운이 움츠러든다.",
-    "example_sentence": "다들 잘하는 걸 보니 나만 초라해지는 기분이었어.",
+    "example_sentence": "다들 잘하는 걸 보니 나도 모르게 기죽었어.",
     "scene_description": "두꺼운 책들 사이에서 자기 몸을 한껏 작게 웅크리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 9
@@ -1128,7 +1128,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "하던 일에 쏟던 힘과 의욕이 갑자기 쭉 빠져버린다.",
-    "example_sentence": "열심히 준비했는데 취소됐다는 말에 힘이 쭉 빠졌어.",
+    "example_sentence": "열심히 준비했는데 취소됐다는 말에 맥빠지고 말았어.",
     "scene_description": "들고 있던 책을 스르르 손에서 떨어뜨리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 10
@@ -1142,7 +1142,7 @@
     "prop": "none",
     "intensity": 1,
     "definition": "기운과 생기가 사라져 몸이 축 늘어진 상태가 된다.",
-    "example_sentence": "혼난 뒤로 하루 종일 어깨가 축 처져 있었어.",
+    "example_sentence": "혼난 뒤로 하루 종일 풀죽어 있었어.",
     "scene_description": "고개를 푹 숙인 채 책상 위에 엎드려 있는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 11
@@ -1156,7 +1156,7 @@
     "prop": "none",
     "intensity": 2,
     "definition": "손가락 하나 움직이는 일마저 성가시게 느껴진다.",
-    "example_sentence": "그냥 다 미뤄두고 아무것도 안 하고 싶었어.",
+    "example_sentence": "그냥 다 미루고 싶을 만큼 귀찮았어.",
     "scene_description": "펼쳐진 지도를 개지도 않고 그대로 밀어둔 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 12
@@ -1170,7 +1170,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "시간이 더디게 흘러 마음이 헛돌기만 한다.",
-    "example_sentence": "시계만 자꾸 쳐다보게 되는 오후였어.",
+    "example_sentence": "시간이 더디게 흘러서 오후 내내 지루했어.",
     "scene_description": "같은 문장을 세 번째 읽으면서도 눈이 겉도는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 13
@@ -1184,7 +1184,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "힘껏 밀던 힘이 갑자기 풀려 속이 텅 빈다.",
-    "example_sentence": "밤새 준비한 게 소용없어지고 나니 몸에 힘이 다 빠지더라.",
+    "example_sentence": "밤새 준비한 게 소용없어지고 나니 너무 허탈했어.",
     "scene_description": "정리하던 서류 뭉치를 내려놓고 빈 열람실 의자에 주저앉은 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 14
@@ -1198,7 +1198,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "같은 날들이 반복되어 마음에서 생기가 사라진다.",
-    "example_sentence": "매일이 어제와 똑같아서 아무 감흥이 없었어.",
+    "example_sentence": "매일이 어제와 똑같아서 권태로웠어.",
     "scene_description": "몇 번이나 넘겼던 책장을 또 무심히 넘기는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 15
@@ -1226,7 +1226,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "채워지지 않는 허전함으로 마음속이 텅 비어 있다.",
-    "example_sentence": "원하던 걸 다 가졌는데도 마음 한켠이 텅 빈 것 같았어.",
+    "example_sentence": "원하던 걸 다 가졌는데도 마음 한켠이 공허했어.",
     "scene_description": "책이 가득한 서가 한가운데서 제 빈손을 내려다보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 17
@@ -1240,7 +1240,7 @@
     "prop": "map",
     "intensity": 1,
     "definition": "마음속에서 같은 물음이 자꾸 되풀이된다.",
-    "example_sentence": "어떻게 해야 할지 몰라서 밤새 뒤척였어.",
+    "example_sentence": "어떻게 해야 할지 몰라서 밤새 고민했어.",
     "scene_description": "펼친 지도 위에서 갈 곳을 정하지 못하고 손끝만 맴도는 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 18
@@ -1254,7 +1254,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "아무 일도 일어나지 않는 시간이 밋밋하게 늘어진다.",
-    "example_sentence": "할 일이 없어서 하품만 늘어졌어.",
+    "example_sentence": "할 일이 없어서 하루 종일 따분했어.",
     "scene_description": "책장을 손끝으로 훑기만 하고 펴지는 않는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 19
@@ -1268,7 +1268,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "별다른 관심이나 흥이 일지 않아 시큰둥하다.",
-    "example_sentence": "좋다는 얘기를 들어도 딱히 마음이 끌리지 않았어.",
+    "example_sentence": "좋다는 얘기를 들어도 왠지 심드렁했어.",
     "scene_description": "추천받은 책을 잠깐 뒤적이다 도로 내려놓는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 20
@@ -1282,7 +1282,7 @@
     "prop": "letter",
     "intensity": 1,
     "definition": "여러 생각과 감정이 뒤엉켜 마음이 어수선하다.",
-    "example_sentence": "좋기도 하고 씁쓸하기도 해서 뭐라 말하기 힘들었어.",
+    "example_sentence": "좋기도 하고 씁쓸하기도 해서 마음이 착잡했어.",
     "scene_description": "여러 번 접힌 편지를 펴지도 접지도 못하는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 21
@@ -1296,7 +1296,7 @@
     "prop": "letter",
     "intensity": 1,
     "definition": "마음이 움직이지 않아 반응이 미지근하게 나온다.",
-    "example_sentence": "재밌다는 말에도 그냥 심드렁하게 고개만 끄덕였어.",
+    "example_sentence": "재밌다는 말에도 그냥 시큰둥했어.",
     "scene_description": "받은 편지를 대충 훑어보고 옆으로 밀어두는 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 22
@@ -1310,7 +1310,7 @@
     "prop": "none",
     "intensity": 1,
     "definition": "할 일이 없어 시간이 지루하게 흘러간다.",
-    "example_sentence": "딱히 할 것도 없이 시간만 흘려보낸 오후였어.",
+    "example_sentence": "딱히 할 것도 없이 무료한 오후를 보냈어.",
     "scene_description": "열람실 창가에서 하품하며 벽시계만 바라보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 23
@@ -1324,7 +1324,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "끝날 기미 없이 계속되어 지겹고 따분하다.",
-    "example_sentence": "언제 끝나나 싶을 만큼 길고 지루한 시간이었어.",
+    "example_sentence": "언제 끝나나 싶을 만큼 지리하게 느껴졌어.",
     "scene_description": "두꺼운 책의 남은 페이지 수를 세며 한숨 쉬는 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 24
@@ -1338,7 +1338,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "너무 많이 접해서 새로운 느낌 없이 물린다.",
-    "example_sentence": "뻔한 이야기라 더는 새롭게 느껴지지 않았어.",
+    "example_sentence": "너무 많이 접해서 이제는 식상했어.",
     "scene_description": "비슷비슷한 책 표지들을 훑어보다 흥미를 잃는 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 25
@@ -1352,7 +1352,7 @@
     "prop": "letter",
     "intensity": 1,
     "definition": "어떤 일에도 마음이 움직이거나 반응하지 않는다.",
-    "example_sentence": "감동적이라는 이야기를 읽어도 아무 느낌이 없었어.",
+    "example_sentence": "감동적이라는 이야기를 읽어도 무감동했어.",
     "scene_description": "감동적인 편지를 읽고도 무표정하게 접어두는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 26
@@ -1366,7 +1366,7 @@
     "prop": "none",
     "intensity": 1,
     "definition": "딱히 할 일이 없어 시간이 느슨하게 늘어진다.",
-    "example_sentence": "할 게 없어서 괜히 서가 사이를 왔다 갔다 했어.",
+    "example_sentence": "할 게 없어서 하루 종일 심심했어.",
     "scene_description": "서가 사이를 정처 없이 오가며 발끝으로 바닥을 톡톡 치는 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 27
@@ -1380,7 +1380,7 @@
     "prop": "letter",
     "intensity": 1,
     "definition": "출렁이던 마음이 가라앉아 잔잔하게 고요해진다.",
-    "example_sentence": "그 소식을 듣고도 이상하리만치 마음이 잔잔했어.",
+    "example_sentence": "그 소식을 듣고도 이상하리만치 담담했어.",
     "scene_description": "다 읽은 편지를 조용히 접어 서랍에 넣는 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 28
@@ -1394,7 +1394,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "무엇이 다가와도 마음이 크게 움직이지 않는다.",
-    "example_sentence": "좋은 소식에도 별다른 감흥이 일지 않았어.",
+    "example_sentence": "좋은 소식에도 별다른 감흥 없이 무덤덤했어.",
     "scene_description": "새로 들어온 책을 무심히 훑어보고 제자리에 꽂는 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 29
@@ -1408,7 +1408,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "사방이 서가로 둘러싸여 있어도 홀로 갇힌 듯한 느낌.",
-    "example_sentence": "사람들 사이에 있었는데도 나만 다른 서가에 갇힌 것 같았어.",
+    "example_sentence": "사람들 사이에 있었는데도 나만 고립감을 느꼈어.",
     "scene_description": "빽빽한 서가 사이에 갇혀 나가는 길을 두리번거리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 0
@@ -1422,7 +1422,7 @@
     "prop": "none",
     "intensity": 1,
     "definition": "함께 있으면서도 자기만 밀려난 듯한 서운한 느낌.",
-    "example_sentence": "다들 웃고 떠드는데 나만 대화에서 빠진 것 같았어.",
+    "example_sentence": "다들 웃고 떠드는데 나만 소외감이 들었어.",
     "scene_description": "둥글게 모인 무리 밖에서 혼자 서성이는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 1
@@ -1436,7 +1436,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "함께 있어도 마음 한구석이 텅 빈 것 같은 느낌.",
-    "example_sentence": "친구들이랑 웃고 있었는데도 나 혼자인 것 같았어.",
+    "example_sentence": "친구들이랑 웃고 있었는데도 왠지 외롭다는 생각이 들었어.",
     "scene_description": "북적이는 서가 사이에서 혼자 등을 기대고 앉은 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 2
@@ -1450,7 +1450,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "홀로 있는 시간이 낯설지 않고 오히려 익숙해진 상태.",
-    "example_sentence": "혼자 있는 게 이제는 아무렇지 않더라.",
+    "example_sentence": "혼자 있는 시간이 이제는 오히려 고독하고 편안했어.",
     "scene_description": "불 꺼진 서가 끝에서 혼자 책장을 정리하는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 3
@@ -1506,7 +1506,7 @@
     "prop": "none",
     "intensity": 1,
     "definition": "너무 막막해서 아무 생각도 못하고 멍하니 있는 상태.",
-    "example_sentence": "갑자기 혼자 남겨진 걸 알고 한참을 멍하니 서 있었어.",
+    "example_sentence": "갑자기 혼자 남겨진 걸 알고 한참을 망연했어.",
     "scene_description": "텅 빈 열람실 한가운데서 멍하니 서 있는 캐릭터",
     "edge_bias_region_id": "room",
     "display_order": 7
@@ -1590,7 +1590,7 @@
     "prop": "flower",
     "intensity": 1,
     "definition": "남의 딱한 처지가 마음에 걸려 안쓰럽게 느껴지는 마음.",
-    "example_sentence": "혼자 비를 맞고 있는 강아지를 보니 마음이 아팠어.",
+    "example_sentence": "혼자 비를 맞고 있는 강아지가 너무 불쌍했어.",
     "scene_description": "길 잃은 캐릭터에게 우산을 씌워주는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 13
@@ -1604,7 +1604,7 @@
     "prop": "flower",
     "intensity": 2,
     "definition": "힘들어하는 모습이 마음에 걸려 도와주고 싶어지는 느낌.",
-    "example_sentence": "힘든데도 괜찮다고 웃는 얼굴을 보니 마음이 아팠어.",
+    "example_sentence": "힘들어하는데도 괜찮다고 웃는 얼굴이 안쓰럽고 마음이 아팠어.",
     "scene_description": "지친 캐릭터의 어깨에 담요를 덮어주는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 14
@@ -1618,7 +1618,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "손쓸 수 없는 일이 아쉽고 속상하게 남는 마음.",
-    "example_sentence": "조금만 더 빨랐으면 잡을 수 있었는데 하고 계속 아쉬워했어.",
+    "example_sentence": "조금만 더 빨랐으면 잡을 수 있었는데 안타깝고 아쉬웠어.",
     "scene_description": "닫힌 문 앞에서 지도를 손에 쥔 채 서 있는 캐릭터",
     "edge_bias_region_id": "shame",
     "display_order": 15
@@ -1632,7 +1632,7 @@
     "prop": "flower",
     "intensity": 1,
     "definition": "처지가 딱해 보여 마음이 저절로 기울어지는 느낌.",
-    "example_sentence": "혼자 남겨진 우산을 보니 괜히 마음이 쓰였어.",
+    "example_sentence": "혼자 남겨진 우산을 보니 왠지 가엾었어.",
     "scene_description": "주인 없는 책 한 권을 조심스레 쓰다듬는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 16
@@ -1646,7 +1646,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "처지가 안되어 보여 마음이 짠하고 애가 쓰이는 느낌.",
-    "example_sentence": "혼자 짐을 나르는 모습을 보니 마음이 딱해서 뛰어갔어.",
+    "example_sentence": "혼자 짐을 나르는 모습이 딱하다는 생각이 들어서 뛰어갔어.",
     "scene_description": "무거운 책더미를 힘겹게 옮기는 캐릭터의 짐을 나눠 드는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 17
@@ -1674,7 +1674,7 @@
     "prop": "flower",
     "intensity": 2,
     "definition": "안쓰럽고 가여워서 마음이 자꾸 쓰이는 느낌.",
-    "example_sentence": "비를 흠뻑 맞고도 괜찮다고 말하는 모습이 애처로워 보였어.",
+    "example_sentence": "비를 흠뻑 맞고도 괜찮다고 말하는 모습이 애처럽고 안쓰러웠어.",
     "scene_description": "비바람에 꺾인 화분을 처마 밑으로 살며시 옮겨주는 캐릭터",
     "edge_bias_region_id": "shame",
     "display_order": 19
@@ -1688,7 +1688,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "바라던 만큼 채워지지 않아 미련이 남는 마음.",
-    "example_sentence": "조금만 더 있다 갈걸 하고 계속 미련이 남았어.",
+    "example_sentence": "조금만 더 있다 갈걸 하고 계속 아쉽고 미련이 남았어.",
     "scene_description": "덮은 지도를 다시 펼쳐 못 가본 길을 짚어보는 캐릭터",
     "edge_bias_region_id": "shame",
     "display_order": 20
@@ -1702,7 +1702,7 @@
     "prop": "flower",
     "intensity": 2,
     "definition": "안됐고 딱해서 마음이 절로 짠해지는 느낌.",
-    "example_sentence": "혼자 밥 먹는 뒷모습을 보니 마음이 짠했어.",
+    "example_sentence": "혼자 밥 먹는 뒷모습을 보니 마음이 측은했어.",
     "scene_description": "빈 의자 옆에 조용히 앉아주는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 21
@@ -1772,7 +1772,7 @@
     "prop": "flower",
     "intensity": 1,
     "definition": "남의 아픔을 헤아려 마음을 함께 얹어주는 것.",
-    "example_sentence": "사정을 듣고 나니 나도 모르게 마음이 쓰였어.",
+    "example_sentence": "사정을 듣고 나니 나도 모르게 마음속으로 동정하게 됐어.",
     "scene_description": "울고 있는 캐릭터 옆에 조용히 손수건을 건네는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 26
@@ -1828,7 +1828,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "같은 처지에 있는 사람끼리 서로를 가엾게 여기는 마음.",
-    "example_sentence": "같은 아픔을 겪은 사람과 이야기하다 보니 서로 마음이 통했어.",
+    "example_sentence": "같은 아픔을 겪은 사람과 이야기하다 보니 동병상련을 느꼈어.",
     "scene_description": "서로 같은 흉터를 알아보고 말없이 편지를 맞바꾸는 두 캐릭터",
     "edge_bias_region_id": "shame",
     "display_order": 30
@@ -1856,7 +1856,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "끝나서 후련하면서도 한편으론 아쉬움이 남는 마음.",
-    "example_sentence": "졸업하는 날, 후련하면서도 괜히 눈물이 났어.",
+    "example_sentence": "졸업하는 날, 후련하면서도 시원섭섭했어.",
     "scene_description": "마지막 책을 서가에 꽂고 문을 돌아보는 캐릭터",
     "edge_bias_region_id": "shame",
     "display_order": 32
@@ -1898,7 +1898,7 @@
     "prop": "letter",
     "intensity": 1,
     "definition": "지나간 시간이나 사람이 자꾸만 마음에 떠오르는 느낌.",
-    "example_sentence": "아무것도 아닌 날인데 문득 예전 생각이 났어.",
+    "example_sentence": "아무것도 아닌 날인데 문득 예전이 그립고 마음이 저릿했어.",
     "scene_description": "낡은 편지 뭉치를 꺼내 다시 묶는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 35
@@ -1912,7 +1912,7 @@
     "prop": "map",
     "intensity": 1,
     "definition": "떠나온 곳과 그 시절이 마음속에 은은히 남아 있는 것.",
-    "example_sentence": "타지에서 지내다 보니 고향 냄새가 자꾸 그리웠어.",
+    "example_sentence": "타지에서 지내다 보니 고향에 대한 향수가 밀려왔어.",
     "scene_description": "낡은 지도 위 고향 자리를 손끝으로 짚어보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 36
@@ -1926,7 +1926,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "달콤하고 부드러운 기운이 마음을 은은하게 감싼다.",
-    "example_sentence": "그 노래를 들을 때마다 마음이 살살 녹는 것 같았어.",
+    "example_sentence": "그 노래를 들을 때마다 마음이 감미로웠어.",
     "scene_description": "꽃잎 향이 밴 편지지를 살며시 코끝에 대보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 0
@@ -1940,7 +1940,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "낯익은 것에서 따뜻하고 친근한 정이 느껴진다.",
-    "example_sentence": "오래된 골목을 지나는데 괜히 마음이 푸근해졌어.",
+    "example_sentence": "오래된 골목을 지나는데 마음이 정겹고 푸근했어.",
     "scene_description": "손때 묻은 오래된 책을 쓰다듬는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 1
@@ -1954,7 +1954,7 @@
     "prop": "map",
     "intensity": 4,
     "definition": "새롭고 신기해서 자꾸 마음이 끌리고 궁금해진다.",
-    "example_sentence": "처음 보는 지도인데 자꾸 눈이 갔어.",
+    "example_sentence": "처음 보는 지도인데도 자꾸 흥미로웠어.",
     "scene_description": "낯선 지도 위 표시를 손가락으로 짚어보는 캐릭터",
     "edge_bias_region_id": "joy",
     "display_order": 2
@@ -1968,7 +1968,7 @@
     "prop": "flower",
     "intensity": 2,
     "definition": "오래 마주해 낯익어진 것에서 절로 배어나는 따뜻하고 다정한 느낌.",
-    "example_sentence": "자주 앉던 그 의자가 이상하게 마음을 놓이게 했어.",
+    "example_sentence": "자주 앉던 그 의자가 이상하게 정감이 갔어.",
     "scene_description": "자주 앉던 정원 벤치 자리를 손끝으로 가만히 쓸어보는 캐릭터",
     "edge_bias_region_id": "calm",
     "display_order": 3
@@ -1982,7 +1982,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "누군가의 마음 씀씀이가 따뜻하게 남아 오래간다.",
-    "example_sentence": "그때 아무 말 없이 도와줘서 참 고마웠어.",
+    "example_sentence": "그때 아무 말 없이 도와줘서 정말 고맙고 든든했어.",
     "scene_description": "말린 꽃 한 송이를 편지 갈피에 끼워 넣는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 4
@@ -1996,7 +1996,7 @@
     "prop": "flower",
     "intensity": 2,
     "definition": "보기만 해도 마음이 뿌듯하고 흡족해진다.",
-    "example_sentence": "동생이 혼자 다 해낸 걸 보니 마음이 뿌듯했어.",
+    "example_sentence": "동생이 혼자 다 해낸 걸 보니 마음이 흐뭇했어.",
     "scene_description": "활짝 핀 꽃을 멀찍이서 바라보며 웃는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 5
@@ -2010,7 +2010,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "마음 깊은 곳이 뭉클하게 움직이고 벅차오른다.",
-    "example_sentence": "낡은 일기장을 다시 펼쳤을 때 마음이 벅차올랐어.",
+    "example_sentence": "낡은 일기장을 다시 펼쳤을 때 정말 감동했어.",
     "scene_description": "오래된 편지를 두 손으로 꼭 쥐고 눈을 감는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 6
@@ -2024,7 +2024,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "막혔던 것이 풀려서 마음이 후련하고 개운하다.",
-    "example_sentence": "묵혀둔 말을 다 털어놓고 나니 속이 뻥 뚫렸어.",
+    "example_sentence": "묵혀둔 말을 다 털어놓고 나니 속시원했어.",
     "scene_description": "닫혀 있던 서가의 창문을 활짝 열어젖히는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 7
@@ -2038,7 +2038,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "말이 없어도 마음과 마음이 서로 통하며 조용히 이어진다.",
-    "example_sentence": "아무 말 안 했는데도 서로 무슨 생각인지 알겠더라.",
+    "example_sentence": "아무 말 안 했는데도 서로 통하듯 교감했어.",
     "scene_description": "답장 없는 편지를 건네받고도 마주 보며 고개를 끄덕이는 두 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 8
@@ -2052,7 +2052,7 @@
     "prop": "map",
     "intensity": 3,
     "definition": "숨길 것 없이 당당하고 마음이 편안하다.",
-    "example_sentence": "내가 한 일이라 누구 앞에서도 당당할 수 있었어.",
+    "example_sentence": "내가 한 일이라 누구 앞에서도 떳떳했어.",
     "scene_description": "지도 한가운데 자기 이름표를 똑바로 세워두는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 9
@@ -2066,7 +2066,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "누군가를 어여삐 여겨 자꾸만 눈길이 간다.",
-    "example_sentence": "작은 화분을 매일 들여다보며 예뻐해 줬어.",
+    "example_sentence": "작은 화분을 매일 들여다보며 이뻐했어.",
     "scene_description": "작은 화분에 물을 조심스레 나눠 주는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 10
@@ -2080,7 +2080,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "다음이 몹시 궁금해서 마음이 계속 두근거린다.",
-    "example_sentence": "다음 장이 궁금해서 책장을 넘기는 손이 빨라졌어.",
+    "example_sentence": "다음 장이 궁금해서 마음이 흥미진진했어.",
     "scene_description": "책장을 넘기며 몸을 앞으로 바짝 기울이는 캐릭터",
     "edge_bias_region_id": "joy",
     "display_order": 11
@@ -2094,7 +2094,7 @@
     "prop": "map",
     "intensity": 3,
     "definition": "다른 사람의 생각에 나도 그렇다고 마음이 맞장구친다.",
-    "example_sentence": "네 말을 듣는데 나도 딱 그렇게 생각했어.",
+    "example_sentence": "네 말을 듣는데 나도 딱 동감했어.",
     "scene_description": "옆 캐릭터가 편 지도를 같이 들여다보며 고개를 끄덕이는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 12
@@ -2108,7 +2108,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "오래도록 마음에 품고 다정하게 아끼는 마음.",
-    "example_sentence": "아무 이유 없이 그냥 그 자리를 좋아하게 됐어.",
+    "example_sentence": "아무 이유 없이 그냥 그 자리에 애정이 생겼어.",
     "scene_description": "손수 가꾼 꽃밭 한 켠을 매일 들여다보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 13
@@ -2122,7 +2122,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "무겁던 마음이 가벼워지고 개운해진다.",
-    "example_sentence": "미뤄뒀던 일을 끝내고 나니 마음이 홀가분했어.",
+    "example_sentence": "미뤄뒀던 일을 끝내고 나니 마음이 후련했어.",
     "scene_description": "무겁던 책 더미를 서가에 다 꽂고 기지개 켜는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 14
@@ -2136,7 +2136,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "가깝고 다정해서 마음이 절로 편안해진다.",
-    "example_sentence": "오랜만에 만났는데도 어색함 없이 다정하게 웃었어.",
+    "example_sentence": "오랜만에 만났는데도 어색함 없이 정답다는 느낌이 들었어.",
     "scene_description": "나란히 앉아 같은 지도를 함께 들여다보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 15
@@ -2150,7 +2150,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "원하던 것이 채워져 마음이 넉넉하고 편안하다.",
-    "example_sentence": "하루치 목표를 다 끝내고 나니 마음이 꽉 찼어.",
+    "example_sentence": "하루치 목표를 다 끝내고 나니 충족감이 들었어.",
     "scene_description": "빈 화분에 마지막 꽃을 심고 흙을 다독이는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 16
@@ -2164,7 +2164,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "마음 깊이 새겨질 만큼 크게 울림을 받은 벅찬 상태.",
-    "example_sentence": "그 책 마지막 장을 덮고도 한참 자리에서 못 일어났어.",
+    "example_sentence": "그 책 마지막 장을 덮고도 오래도록 감명이 남았어.",
     "scene_description": "다 읽은 책을 가슴에 꼭 끌어안고 눈을 감은 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 17
@@ -2178,7 +2178,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "무언가에 마음을 온통 빼앗겨 눈을 뗄 수 없게 된다.",
-    "example_sentence": "첫 페이지부터 손에서 놓을 수가 없었어.",
+    "example_sentence": "첫 페이지부터 완전히 매료됐어.",
     "scene_description": "서가 사이에서 발견한 책 한 권에 눈을 떼지 못하는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 18
@@ -2192,7 +2192,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "다가올 일을 앞두고 마음이 자꾸 두근거린다.",
-    "example_sentence": "내일 만날 생각에 자꾸만 마음이 앞서갔어.",
+    "example_sentence": "내일 만날 생각에 자꾸 마음이 설레고 두근거렸어.",
     "scene_description": "아직 봉하지 않은 편지를 만지작거리는 캐릭터",
     "edge_bias_region_id": "joy",
     "display_order": 19
@@ -2206,7 +2206,7 @@
     "prop": "none",
     "intensity": 4,
     "definition": "기쁘고 즐거운 마음이 저절로 차오르는 상태를 예스럽게 이르는 말.",
-    "example_sentence": "소식을 듣자마자 마음이 절로 환해졌어.",
+    "example_sentence": "오랜만에 다시 느낀 희로 마음이 벅찼어.",
     "scene_description": "두 팔을 활짝 벌리고 봄볕 아래 서 있는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 20
@@ -2234,7 +2234,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "그리운 마음을 품고 존경과 사랑으로 오래도록 바라본다.",
-    "example_sentence": "이름만 들어도 괜히 마음이 뭉클해지곤 했어.",
+    "example_sentence": "이름만 들어도 마음 깊이 사모했어.",
     "scene_description": "부치지 못한 편지를 서랍 깊숙이 소중히 넣어두는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 22
@@ -2248,7 +2248,7 @@
     "prop": "flower",
     "intensity": 1,
     "definition": "남을 향해 저절로 우러나는 따뜻하고 다정한 마음.",
-    "example_sentence": "낯선 사람이 건넨 우산 하나에 마음이 데워졌어.",
+    "example_sentence": "낯선 사람이 건넨 우산 하나에 온정을 느꼈어.",
     "scene_description": "시든 화분에 물을 나눠 붓는 손길이 조심스러운 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 23
@@ -2262,7 +2262,7 @@
     "prop": "none",
     "intensity": 4,
     "definition": "좋은 것에 흠뻑 빠져 다른 생각이 하나도 나지 않는다.",
-    "example_sentence": "음악에 빠져서 시간 가는 줄도 몰랐어.",
+    "example_sentence": "음악에 흠뻑 빠져서 완전히 도취했어.",
     "scene_description": "눈을 감고 제자리에서 천천히 맴도는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 24
@@ -2276,7 +2276,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "상대의 마음을 내 일처럼 그대로 느낀다.",
-    "example_sentence": "네 얘기를 듣는데 꼭 내 마음 같았어.",
+    "example_sentence": "네 얘기를 듣는데 나도 모르게 공감했어.",
     "scene_description": "상대가 건넨 편지를 읽으며 함께 고개를 끄덕이는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 25
@@ -2290,7 +2290,7 @@
     "prop": "letter",
     "intensity": 5,
     "definition": "뜨겁게 타오르듯 온 마음을 다해 누군가를 사랑하는 상태.",
-    "example_sentence": "하루 종일 그 사람 생각만 하고 있었어.",
+    "example_sentence": "하루 종일 그 사람 생각만 하며 열애에 빠졌어.",
     "scene_description": "붉은 봉인을 조심스레 뜯는 두 손이 떨리는 캐릭터",
     "edge_bias_region_id": "joy",
     "display_order": 26
@@ -2304,7 +2304,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "스스로 이룬 것에 떳떳하게 자신감을 품는다.",
-    "example_sentence": "직접 완성한 지도를 보며 스스로 뿌듯해했어.",
+    "example_sentence": "직접 완성한 지도를 보며 스스로 자부했어.",
     "scene_description": "직접 그린 지도를 서가 가장 잘 보이는 곳에 거는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 27
@@ -2318,7 +2318,7 @@
     "prop": "flower",
     "intensity": 1,
     "definition": "다른 마음 없이 오직 한곳으로만 향하는 순수한 사랑.",
-    "example_sentence": "그냥 좋아서 좋아했을 뿐, 바란 건 없었어.",
+    "example_sentence": "그냥 좋아서 좋아했을 뿐, 순정 그 자체였어.",
     "scene_description": "꽃 한 송이를 꺾지 않고 그대로 두고 오래 바라보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 28
@@ -2332,7 +2332,7 @@
     "prop": "none",
     "intensity": 4,
     "definition": "좋은 일을 앞두고 마음이 붕 뜬 듯 설렌다.",
-    "example_sentence": "여행 갈 생각에 벌써부터 마음이 붕 떠 있었어.",
+    "example_sentence": "여행 갈 생각에 벌써부터 마음이 들뜨고 설렜어.",
     "scene_description": "짐을 싸다 말고 창밖을 자꾸 내다보는 캐릭터",
     "edge_bias_region_id": "joy",
     "display_order": 29
@@ -2346,7 +2346,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "지난 일이 떠오르며 가슴 깊이 차오르는 벅찬 감정.",
-    "example_sentence": "옛날에 쓴 일기를 펼치니 마음이 이상하게 일렁였어.",
+    "example_sentence": "옛날에 쓴 일기를 펼치니 감개가 새로웠어.",
     "scene_description": "낡은 책장을 넘기다 손을 멈추고 먼 곳을 보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 30
@@ -2360,7 +2360,7 @@
     "prop": "map",
     "intensity": 4,
     "definition": "벅찬 감정이 너무 커서 말로는 다 표현할 수가 없다.",
-    "example_sentence": "여기까지 온 걸 생각하니 눈물이 핑 돌았어.",
+    "example_sentence": "여기까지 온 걸 생각하니 감개무량했어.",
     "scene_description": "오래 걸어온 지도 위 길을 손끝으로 되짚으며 눈시울 붉히는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 31
@@ -2374,7 +2374,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "가깝고 다정하게 여기는 마음으로 상대를 아끼고 좋아한다.",
-    "example_sentence": "편지 첫 줄에 이름을 쓰는데 벌써 마음이 따뜻해졌어.",
+    "example_sentence": "편지 첫머리에 이름을 쓰는 것만으로도 친애가 느껴졌어.",
     "scene_description": "편지지 맨 위에 이름을 정성껏 적어 내려가는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 32
@@ -2388,7 +2388,7 @@
     "prop": "none",
     "intensity": 3,
     "definition": "어느 한순간 마음이 그 사람 쪽으로 확 기울어진다.",
-    "example_sentence": "그 웃는 모습을 본 순간부터 자꾸 생각났어.",
+    "example_sentence": "그 웃는 모습을 본 순간 반하다시피 마음을 뺏겼어.",
     "scene_description": "서가 저편에 있는 상대를 몰래 훔쳐보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 33
@@ -2402,7 +2402,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "우러러보며 마음속 깊이 그 사람을 아끼고 사랑한다.",
-    "example_sentence": "그 사람 이야기만 나오면 나도 모르게 귀가 쫑긋해졌어.",
+    "example_sentence": "그 사람 이야기만 나오면 나도 모르게 흠모했어.",
     "scene_description": "좋아하는 저자의 책을 몰래 여러 번 훑어보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 34
@@ -2416,7 +2416,7 @@
     "prop": "map",
     "intensity": 4,
     "definition": "이겨낸 뒤라 걸음걸이마저 당당하고 신난다.",
-    "example_sentence": "어려운 문제를 풀고 나니 어깨가 절로 펴졌어.",
+    "example_sentence": "어려운 문제를 풀고 나니 의기양양했어.",
     "scene_description": "완성한 지도를 치켜들고 성큼성큼 걷는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 35
@@ -2430,7 +2430,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "누군가를 향해 은은하게 피어오르는 사랑의 감정.",
-    "example_sentence": "별일 아닌데도 그 사람 이름만 봐도 웃음이 났어.",
+    "example_sentence": "별일 아닌데도 그 사람에게 연정이 싹텄어.",
     "scene_description": "받는 사람 이름만 쓰고 한참 펜을 못 떼는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 36
@@ -2444,7 +2444,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "존경하는 마음을 담아 진심으로 아끼고 사랑한다.",
-    "example_sentence": "그분 말씀 한마디 한마디를 마음에 새기고 다녔어.",
+    "example_sentence": "그분 말씀 한마디 한마디를 마음 깊이 경애했어.",
     "scene_description": "존경하는 이의 이름이 적힌 책등을 두 손으로 받쳐 드는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 37
@@ -2458,7 +2458,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "여럿 중에서 유독 그것에 마음이 더 간다.",
-    "example_sentence": "여러 책 중에 유독 그 책에만 손이 갔어.",
+    "example_sentence": "여러 책 중에 유독 그 책을 선호했어.",
     "scene_description": "여러 꽃 중 한 송이만 골라 품에 안는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 38
@@ -2472,7 +2472,7 @@
     "prop": "flower",
     "intensity": 4,
     "definition": "마음을 사로잡아 저절로 이끌리게 만드는 강한 끌림.",
-    "example_sentence": "그 향기 하나에 발걸음을 멈춰버렸어.",
+    "example_sentence": "그 향기 하나에 완전히 매혹됐어.",
     "scene_description": "낯선 꽃향기를 따라 저도 모르게 걸음을 옮기는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 39
@@ -2486,7 +2486,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "닿지 못한 곳을 마음속 깊이 그리며 오래도록 바란다.",
-    "example_sentence": "지도에서 그 이름을 볼 때마다 언젠간 가보고 싶었어.",
+    "example_sentence": "지도에서 그 이름을 볼 때마다 늘 동경했어.",
     "scene_description": "아직 가보지 못한 지역을 지도 위에 동그라미 쳐두는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 40
@@ -2500,7 +2500,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "무엇보다 소중히 여기며 손끝으로 조심조심 다룬다.",
-    "example_sentence": "행여 다칠까봐 두 손으로 감싸 들고 다녔어.",
+    "example_sentence": "행여 다칠까봐 늘 애지중지 다뤘어.",
     "scene_description": "작은 화분 하나를 품에 안고 조심조심 옮기는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 41
@@ -2514,7 +2514,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "응원의 말에 힘을 얻어 마음이 한껏 부풀어 오른다.",
-    "example_sentence": "그 한마디에 다시 해볼 용기가 생겼어.",
+    "example_sentence": "그 한마디에 다시 해볼 용기가 생기며 고무됐어.",
     "scene_description": "응원 쪽지를 읽고 어깨를 펴며 자리에서 일어서는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 42
@@ -2528,7 +2528,7 @@
     "prop": "none",
     "intensity": 4,
     "definition": "흥이 나서 저절로 즐거워지는 가볍고 유쾌한 기분.",
-    "example_sentence": "노래 한 소절에 발끝이 절로 들썩였어.",
+    "example_sentence": "노래 한 소절에 절로 흥취가 돋았어.",
     "scene_description": "콧노래를 흥얼거리며 가볍게 발장단을 맞추는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 43
@@ -2542,7 +2542,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "지나온 시간을 돌아보며 마음속에 새롭게 밀려드는 감정.",
-    "example_sentence": "예전에 다니던 길을 다시 걸으니 기분이 묘했어.",
+    "example_sentence": "예전에 다니던 길을 다시 걸으니 감회가 새로웠어.",
     "scene_description": "오래된 지도에서 옛날에 걷던 길을 손가락으로 따라가는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 44
@@ -2556,7 +2556,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "훌륭함에 크게 감동하여 마음속으로 완전히 승복한다.",
-    "example_sentence": "그 이야기를 듣고 나니 더는 할 말이 없었어.",
+    "example_sentence": "그 이야기를 듣고 나니 절로 감복했어.",
     "scene_description": "감동적인 구절 앞에서 책을 덮고 가만히 고개를 숙이는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 45
@@ -2570,7 +2570,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "마음에 들어 기꺼이 반가운 마음으로 선뜻 받아들인다.",
-    "example_sentence": "갑작스러운 부탁인데도 왠지 싫지 않고 반가웠어.",
+    "example_sentence": "갑작스러운 부탁인데도 왠지 달가워했어.",
     "scene_description": "예상 못 한 초대장을 받고 활짝 웃음 짓는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 46
@@ -2584,7 +2584,7 @@
     "prop": "none",
     "intensity": 3,
     "definition": "누군가를 아끼고 사랑하는 마음을 예스럽게 이르는 말.",
-    "example_sentence": "말은 안 했지만 마음속엔 늘 그 사람이 있었어.",
+    "example_sentence": "말은 안 했지만 마음속엔 늘 그 사람을 향한 애가 있었어.",
     "scene_description": "가슴 한쪽에 손을 얹고 조용히 눈을 감는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 47
@@ -2598,7 +2598,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "마음에 깊이 와닿아 절로 일어나는 감동과 흥겨움.",
-    "example_sentence": "그 장면 하나에 온몸에 소름이 돋았어.",
+    "example_sentence": "그 장면 하나에 온몸이 소름 돋을 만큼 감홍이 일었어.",
     "scene_description": "인상 깊은 구절에 밑줄을 긋다 말고 손을 멈추는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 48
@@ -2612,7 +2612,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "가슴 한쪽이 뜨겁게 차오르며 벅찬 느낌이 밀려든다.",
-    "example_sentence": "마지막 문장을 읽는데 갑자기 목이 메었어.",
+    "example_sentence": "마지막 문장을 읽는데 갑자기 마음이 뭉클했어.",
     "scene_description": "편지를 읽다 말고 가만히 가슴에 손을 얹는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 49
@@ -2626,7 +2626,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "마음속 깊이 그리워하며 애틋하게 사랑을 품는다.",
-    "example_sentence": "얼굴만 봐도 하루 종일 기분이 좋았어.",
+    "example_sentence": "얼굴만 봐도 마음속으로 늘 연모했어.",
     "scene_description": "몰래 키운 꽃 한 송이를 창가에 살며시 놓아두는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 50
@@ -2640,7 +2640,7 @@
     "prop": "none",
     "intensity": 5,
     "definition": "기대와 두근거림이 한꺼번에 몰려와 벅차오른다.",
-    "example_sentence": "소식을 듣자마자 심장이 쿵쾅쿵쾅 뛰었어.",
+    "example_sentence": "소식을 듣자마자 흥분을 감출 수가 없었어.",
     "scene_description": "두 손을 꼭 쥔 채 발끝으로 콩콩 뛰는 캐릭터",
     "edge_bias_region_id": "joy",
     "display_order": 51
@@ -2654,7 +2654,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "그립고 안쓰러워서 마음이 자꾸 쓰인다.",
-    "example_sentence": "떠난 자리를 보니 괜히 마음이 아릿했어.",
+    "example_sentence": "떠난 자리를 보니 마음이 애틋했어.",
     "scene_description": "시든 꽃잎을 조심스레 책갈피에 눌러 담는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 52
@@ -2668,7 +2668,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "생각지 못한 일에 마음이 순간 크게 흔들린다.",
-    "example_sentence": "갑자기 나타난 모습에 하마터면 소리 지를 뻔했어.",
+    "example_sentence": "갑자기 나타난 모습에 놀랍고 신기했어.",
     "scene_description": "펼친 지도에서 뜻밖의 표시를 발견하고 눈이 휘둥그레진 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 53
@@ -2682,7 +2682,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "크고 위대한 것 앞에서 두려움 섞인 존경심을 느낀다.",
-    "example_sentence": "그 광경 앞에서 나도 모르게 숨을 멈췄어.",
+    "example_sentence": "그 광경 앞에서 나도 모르게 경외했어.",
     "scene_description": "거대한 산맥이 그려진 지도 앞에서 걸음을 멈추는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 54
@@ -2696,7 +2696,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "혼자서만 품고 전하지 못하는 애틋한 마음.",
-    "example_sentence": "말 한마디 못 걸고 멀리서만 바라봤어.",
+    "example_sentence": "말 한마디 못 걸고 멀리서 혼자 짝사랑했어.",
     "scene_description": "부치지 못한 편지를 서랍 깊숙이 넣어두는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 55
@@ -2710,7 +2710,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "분에 넘치는 대접에 몸 둘 바를 모를 만큼 송구스럽다.",
-    "example_sentence": "그런 귀한 자리까지 마련해주셔서 몸 둘 바를 몰랐어.",
+    "example_sentence": "그런 귀한 자리까지 마련해주셔서 너무 황공했어.",
     "scene_description": "귀한 초대장을 받고 두 손을 모아 고개 숙이는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 56
@@ -2724,7 +2724,7 @@
     "prop": "flower",
     "intensity": 4,
     "definition": "오래 곁에 두어 정이 들어 쉽게 놓지 못하는 마음.",
-    "example_sentence": "낡았는데도 도저히 다른 걸로 바꿀 수가 없었어.",
+    "example_sentence": "낡았는데도 도저히 버릴 수 없이 애착이 갔어.",
     "scene_description": "시든 화분을 버리지 못하고 계속 물을 주는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 57
@@ -2738,7 +2738,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "큰 사건이나 감동에 마음이 세차게 뒤흔들린다.",
-    "example_sentence": "그 소식을 듣는 순간 심장이 쿵쿵 뛰기 시작했어.",
+    "example_sentence": "그 소식을 듣는 순간 마음이 격동됐어.",
     "scene_description": "갑자기 뒤바뀐 지도 위 표시 앞에서 손끝이 떨리는 캐릭터",
     "edge_bias_region_id": "sea",
     "display_order": 58
@@ -2752,7 +2752,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "뭉클한 기운이 코끝과 마음을 살짝 저리게 한다.",
-    "example_sentence": "그 말 한마디에 갑자기 코끝이 찡해졌어.",
+    "example_sentence": "그 말 한마디에 코끝이 찡하다는 느낌이 들었어.",
     "scene_description": "낡은 편지를 읽다가 코끝을 문지르는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 59
@@ -2766,7 +2766,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "과분한 친절 앞에서 고맙고도 미안한 마음이 함께 든다.",
-    "example_sentence": "이렇게까지 챙겨주실 줄 몰라서 몸 둘 바를 몰랐어.",
+    "example_sentence": "이렇게까지 챙겨주실 줄 몰라서 너무 황송했어.",
     "scene_description": "뜻밖의 선물 편지를 받고 어쩔 줄 몰라 하는 캐릭터",
     "edge_bias_region_id": "shame",
     "display_order": 60
@@ -2780,7 +2780,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "남이 가진 것이 좋아 보여 마음이 자꾸 쏠린다.",
-    "example_sentence": "친구의 새 책을 보니 나도 모르게 눈이 갔어.",
+    "example_sentence": "친구의 새 책을 보니 부럽고 나도 갖고 싶었어.",
     "scene_description": "옆 캐릭터의 화려한 꽃다발을 곁눈질하는 캐릭터",
     "edge_bias_region_id": "shame",
     "display_order": 61
@@ -2794,7 +2794,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "놀랍고 훌륭한 것 앞에서 저절로 감탄이 터져 나온다.",
-    "example_sentence": "그 풍경을 보자마자 나도 모르게 탄성이 나왔어.",
+    "example_sentence": "그 풍경을 보자마자 나도 모르게 경탄했어.",
     "scene_description": "처음 펼쳐 든 지도의 광활함에 입을 다물지 못하는 캐릭터",
     "edge_bias_region_id": "sea",
     "display_order": 62
@@ -2808,7 +2808,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "생각지도 못한 일에 놀라서 온몸이 얼어붙는다.",
-    "example_sentence": "그 소식을 듣고 나도 모르게 숨이 턱 막혔어.",
+    "example_sentence": "그 소식을 듣고 나도 모르게 경악했어.",
     "scene_description": "펼쳐 든 책장이 손에서 뚝 떨어지는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 0
@@ -2836,7 +2836,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "더는 물러설 곳이 없다는 다급함이 목까지 차오른다.",
-    "example_sentence": "시간이 없다는 생각에 마음이 절박해졌어.",
+    "example_sentence": "시간이 없다는 생각에 절박감이 밀려왔어.",
     "scene_description": "마지막 페이지를 향해 숨차게 손끝을 미끄러뜨리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 2
@@ -2920,7 +2920,7 @@
     "prop": "none",
     "intensity": 5,
     "definition": "앞으로 벌어질 일이 무서워서 몸이 움츠러든다.",
-    "example_sentence": "결과를 듣기 전까지 문 앞에 서는 게 두려웠어.",
+    "example_sentence": "결과를 듣기 전까지 너무 두렵고 떨렸어.",
     "scene_description": "닫힌 열람실 문고리를 잡았다 놓았다 하는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 8
@@ -2962,7 +2962,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "기다리는 답이 오지 않아 마음이 바짝바짝 졸아든다.",
-    "example_sentence": "연락이 없으니까 정말 속이 타들어가듯 속탔어.",
+    "example_sentence": "연락이 없으니까 속타서 며칠을 서성였어.",
     "scene_description": "답장 없는 편지함 앞을 몇 바퀴째 서성이는 캐릭터",
     "edge_bias_region_id": "fire",
     "display_order": 11
@@ -3032,7 +3032,7 @@
     "prop": "none",
     "intensity": 5,
     "definition": "어떤 대상이나 상황이 두려워서 피하고 싶어진다.",
-    "example_sentence": "혼자 남은 서고가 그렇게 무서울 줄 몰랐어.",
+    "example_sentence": "혼자 남은 서고가 그렇게 무섭고 오싹할 줄 몰랐어.",
     "scene_description": "불 꺼진 열람실 문 앞에서 손잡이를 못 잡는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 16
@@ -3130,7 +3130,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "너무 놀라 얼굴빛이 하얗게 굳고 말을 잃는다.",
-    "example_sentence": "그 사실을 알고 나서 얼굴이 하얗게 질렸어.",
+    "example_sentence": "그 사실을 알고 나서 정말 아연실색했어.",
     "scene_description": "펼친 편지를 든 손이 하얗게 굳는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 23
@@ -3158,7 +3158,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "너무 어이가 없어서 말이 나오지 않는다.",
-    "example_sentence": "그 말을 듣고 나니 정말 기막혀서 웃음만 나왔어.",
+    "example_sentence": "그 말을 듣고 나니 정말 기막히고 웃음만 나왔어.",
     "scene_description": "펼친 책 속 말도 안 되는 문장을 다시 읽는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 25
@@ -3284,7 +3284,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "부끄러운 것을 들켜서 얼굴이 화끈 달아오른다.",
-    "example_sentence": "예전에 쓴 글을 다시 보고 낯뜨거워서 얼굴을 가렸어.",
+    "example_sentence": "예전에 쓴 글을 다시 보고 낯뜨겁고 얼굴이 화끈거렸어.",
     "scene_description": "실수로 적어둔 문장을 발견하고 얼굴을 붉히는 캐릭터",
     "edge_bias_region_id": "fire",
     "display_order": 34
@@ -3536,7 +3536,7 @@
     "prop": "letter",
     "intensity": 5,
     "definition": "몸 깊은 곳에서부터 억누르기 힘든 욕망이 차오른다.",
-    "example_sentence": "그 순간 이유 모를 욕망이 걷잡을 수 없이 차올랐어.",
+    "example_sentence": "그 순간 이유 모를 정욕이 걷잡을 수 없이 차올랐어.",
     "scene_description": "봉인된 편지 봉투를 뜯을 듯 말 듯 매만지는 캐릭터",
     "edge_bias_region_id": "disgust",
     "display_order": 52
@@ -3550,7 +3550,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "기쁨과 슬픔이 동시에 밀려와 마음이 뒤섞인다.",
-    "example_sentence": "합격 소식에 기쁘면서도 왠지 마음이 복잡했어.",
+    "example_sentence": "합격 소식에 희비가 엇갈렸어.",
     "scene_description": "웃음과 눈물이 동시에 번진 편지를 쥔 캐릭터",
     "edge_bias_region_id": "shame",
     "display_order": 53
@@ -3564,7 +3564,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "예상치 못한 일에 순간적으로 가슴이 철렁한다.",
-    "example_sentence": "책장 사이에서 갑자기 튀어나온 종이에 깜짝 놀랐어.",
+    "example_sentence": "책장 사이에서 갑자기 튀어나온 종이에 놀라서 뒤로 물러났어.",
     "scene_description": "책장을 넘기다 튀어나온 그림에 뒤로 물러나는 캐릭터",
     "edge_bias_region_id": "garden",
     "display_order": 54
@@ -3578,7 +3578,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "짐스럽던 일을 내려놓아 몸도 마음도 가벼워진다.",
-    "example_sentence": "밀린 일 다 끝내고 나니까 몸이 다 가벼웠어.",
+    "example_sentence": "밀린 일 다 끝내고 나니까 몸도 마음도 홀가분했어.",
     "scene_description": "묵직한 책 더미를 다 옮기고 빈손으로 기지개 켜는 캐릭터",
     "edge_bias_region_id": "garden",
     "display_order": 0
@@ -3592,7 +3592,7 @@
     "prop": "none",
     "intensity": 3,
     "definition": "부족함 없이 마음이 가득 차서 지금 이 순간이 좋다고 느낀다.",
-    "example_sentence": "아무 이유 없이 그냥 오늘 하루가 좋았어.",
+    "example_sentence": "아무 이유 없이 그냥 오늘 하루가 행복했어.",
     "scene_description": "언덕 꼭대기 열람실 의자에 몸을 기대고 볕을 쬐는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 1
@@ -3606,7 +3606,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "보고만 있어도 마음이 사르르 녹아 자꾸 눈길이 간다.",
-    "example_sentence": "그냥 보고 있는데도 저절로 웃음이 났어.",
+    "example_sentence": "그냥 보고 있는데도 너무 사랑스러웠어.",
     "scene_description": "손바닥만 한 꽃 화분을 두 손으로 감싸 안고 들여다보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 2
@@ -3620,7 +3620,7 @@
     "prop": "none",
     "intensity": 4,
     "definition": "막힌 데 없이 시원하고 개운해서 정신이 맑아진다.",
-    "example_sentence": "창문 열고 숨 한 번 크게 쉬니까 머리가 맑아졌어.",
+    "example_sentence": "창문 열고 숨 한 번 크게 쉬니까 정말 상쾌했어.",
     "scene_description": "언덕 꼭대기 창문을 활짝 열어젖히고 바람을 맞는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 3
@@ -3634,7 +3634,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "귀한 인정을 받아 자랑스럽고 벅찬 마음이 든다.",
-    "example_sentence": "내 이름이 불릴 때 온몸이 다 떨렸어.",
+    "example_sentence": "내 이름이 불릴 때 정말 영광스러웠어.",
     "scene_description": "서가 맨 위 칸에 자기 이름이 적힌 책을 조심스레 올려놓는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 4
@@ -3648,7 +3648,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "기분이 들썩들썩 솟아올라 가만히 있을 수가 없다.",
-    "example_sentence": "노래 나오자마자 발이 먼저 움직였어.",
+    "example_sentence": "노래 나오자마자 신나서 발이 먼저 움직였어.",
     "scene_description": "지도를 펼쳐 놓고 다음 갈 곳을 손가락으로 짚으며 콩콩 뛰는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 5
@@ -3662,7 +3662,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "바라던 순간이 찾아와 마음이 환하게 밝아진다.",
-    "example_sentence": "합격 소식 보자마자 소리를 지를 뻔했어.",
+    "example_sentence": "합격 소식 보자마자 너무 기쁘고 소리를 지를 뻔했어.",
     "scene_description": "긴 서가를 뒤지다 찾던 책을 두 손으로 번쩍 들어 올리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 6
@@ -3676,7 +3676,7 @@
     "prop": "letter",
     "intensity": 5,
     "definition": "그리웠던 무언가를 다시 만나 마음이 확 밝아진다.",
-    "example_sentence": "오랜만에 이름 보자마자 나도 모르게 손을 흔들었어.",
+    "example_sentence": "오랜만에 이름 보자마자 반갑고 나도 모르게 손을 흔들었어.",
     "scene_description": "편지함에서 낯익은 필체의 편지를 발견하고 얼른 뛰어가는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 7
@@ -3690,7 +3690,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "하는 일이 재미있어 마음이 가볍고 흥이 난다.",
-    "example_sentence": "시간 가는 줄도 모르고 계속 웃으면서 했어.",
+    "example_sentence": "시간 가는 줄도 모르고 즐겁고 계속 웃으면서 했어.",
     "scene_description": "열람실 바닥에 책을 잔뜩 펼쳐놓고 이 책 저 책 옮겨 다니는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 8
@@ -3704,7 +3704,7 @@
     "prop": "map",
     "intensity": 4,
     "definition": "발걸음이 가볍고 리듬을 탄 듯 상쾌하게 움직인다.",
-    "example_sentence": "발걸음이 저절로 통통 튀듯 가벼웠어.",
+    "example_sentence": "발걸음이 저절로 경쾌하게 튀어 올랐어.",
     "scene_description": "지도 위 오솔길을 콧노래 부르며 깡충깡충 걸어가는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 9
@@ -3718,7 +3718,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "힘든 일을 끝까지 해내고 나서 느끼는 뿌듯한 만족감.",
-    "example_sentence": "마지막 페이지 덮는 순간 뭔가 해냈다는 기분이 들었어.",
+    "example_sentence": "마지막 페이지 덮는 순간 벅찬 성취감이 들었어.",
     "scene_description": "두꺼운 책 한 권을 다 읽고 표지를 툭툭 두드리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 10
@@ -3732,7 +3732,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "막혔던 것이 뻥 뚫리듯 몸과 마음이 짜릿해지는 느낌.",
-    "example_sentence": "꽉 막혔던 문제가 풀리는 순간 온몸이 짜릿했어.",
+    "example_sentence": "꽉 막혔던 문제가 풀리는 순간 짜릿한 쾌감이 밀려왔어.",
     "scene_description": "엉킨 실타래 같던 지도 길을 손끝으로 단번에 쭉 그어 찾아내는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 11
@@ -3746,7 +3746,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "답답하던 일이 시원하게 풀려 속이 다 후련하다.",
-    "example_sentence": "하고 싶던 말 다 하고 나니까 속이 뻥 뚫렸어.",
+    "example_sentence": "하고 싶던 말 다 하고 나니까 속이 통쾌했어.",
     "scene_description": "먼지 쌓인 책장을 힘껏 밀어 열고 시원하게 기지개 켜는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 12
@@ -3760,7 +3760,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "부족함 없이 마음에 꼭 들어 흐뭇하게 느껴진다.",
-    "example_sentence": "정리해 놓은 책장을 보니까 마음이 흐뭇했어.",
+    "example_sentence": "정리해 놓은 책장을 보니까 마음이 흡족했어.",
     "scene_description": "가지런히 꽂힌 책들을 팔짱 끼고 흐뭇하게 바라보는 캐릭터",
     "edge_bias_region_id": "garden",
     "display_order": 13
@@ -3774,7 +3774,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "스스로 떳떳하고 자랑스럽게 여기는 단단한 마음.",
-    "example_sentence": "혼자 힘으로 여기까지 왔다는 게 자랑스러웠어.",
+    "example_sentence": "혼자 힘으로 여기까지 왔다는 게 긍지로 남았어.",
     "scene_description": "자기가 그린 지도 한 장을 벽에 조심스레 걸어두는 캐릭터",
     "edge_bias_region_id": "garden",
     "display_order": 14
@@ -3788,7 +3788,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "애쓴 만큼 결과가 따라와 스스로가 대견하게 느껴진다.",
-    "example_sentence": "혼자 다 정리했다는 게 나 스스로도 대견했어.",
+    "example_sentence": "혼자 다 정리했다는 게 나 스스로도 뿌듯했어.",
     "scene_description": "빼곡히 채운 서가 한 칸을 두 손으로 쓸어보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 15
@@ -3802,7 +3802,7 @@
     "prop": "map",
     "intensity": 4,
     "definition": "사는 게 새삼 즐겁고 힘이 나서 의욕이 솟는다.",
-    "example_sentence": "좋은 일이 겹치니까 갑자기 뭐든 다 할 수 있을 것 같았어.",
+    "example_sentence": "좋은 일이 겹치니까 살맛나서 뭐든 다 할 수 있을 것 같았어.",
     "scene_description": "새 지도를 펼치고 다음 여행지를 신나게 표시하는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 16
@@ -3816,7 +3816,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "흥이 절로 올라 몸도 마음도 들썩이며 신이 난다.",
-    "example_sentence": "일이 술술 풀리니까 콧노래가 절로 나왔어.",
+    "example_sentence": "일이 술술 풀리니까 신바람나서 콧노래가 절로 나왔어.",
     "scene_description": "서가 사이를 콧노래 부르며 신나게 뛰어다니는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 17
@@ -3830,7 +3830,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "내가 한 일이나 아끼는 것이 남에게 보여주고 싶을 만큼 뿌듯하다.",
-    "example_sentence": "내가 만든 걸 남한테 보여주고 싶어서 근질근질했어.",
+    "example_sentence": "내가 만든 걸 남한테 보여주고 싶을 만큼 자랑스러웠어.",
     "scene_description": "직접 쓴 편지를 두 손으로 들고 활짝 웃으며 내미는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 18
@@ -3844,7 +3844,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "하는 일에 푹 빠져 시간 가는 줄 모르고 즐겁다.",
-    "example_sentence": "책장을 넘기다 보니까 어느새 밤이 다 됐어.",
+    "example_sentence": "책장을 넘기다 보니까 정말 재미있었어.",
     "scene_description": "책 속 지도를 손가락으로 짚어가며 눈을 반짝이는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 19
@@ -3858,7 +3858,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "누군가에게 마음이 자꾸 끌리는 따뜻하고 좋은 느낌.",
-    "example_sentence": "이유는 몰라도 자꾸 눈이 갔어.",
+    "example_sentence": "이유는 몰라도 자꾸 호감이 갔어.",
     "scene_description": "낯선 편지 봉투에 적힌 이름을 보며 슬며시 웃는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 20
@@ -3872,7 +3872,7 @@
     "prop": "none",
     "intensity": 5,
     "definition": "가슴 벅차게 터져 나오는 크고 뜨거운 기쁨.",
-    "example_sentence": "결과를 본 순간 나도 모르게 소리를 질렀어.",
+    "example_sentence": "결과를 본 순간 벅찬 환희가 터져 나왔어.",
     "scene_description": "언덕 꼭대기에서 두 팔을 번쩍 들어 올리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 21
@@ -3886,7 +3886,7 @@
     "prop": "none",
     "intensity": 4,
     "definition": "너무 아름답고 벅차서 정신을 놓을 만큼 취한 듯하다.",
-    "example_sentence": "그 풍경을 보는데 숨 쉬는 것도 잊었어.",
+    "example_sentence": "그 풍경을 보는데 너무 황홀했어.",
     "scene_description": "언덕 꼭대기에서 펼쳐진 풍경에 넋을 놓고 서 있는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 22
@@ -3900,7 +3900,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "장단에 맞춰 절로 몸이 들썩일 만큼 신이 난다.",
-    "example_sentence": "박자를 듣자마자 어깨가 절로 들썩였어.",
+    "example_sentence": "박자를 듣자마자 흥겹고 어깨가 절로 들썩였어.",
     "scene_description": "지도 속 길을 따라 리듬 타듯 사뿐사뿐 걷는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 23
@@ -3914,7 +3914,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "애쓴 일이 값지게 여겨져 마음이 뿌듯하게 가득 찬다.",
-    "example_sentence": "힘들었던 만큼 끝내고 나니까 마음이 꽉 찼어.",
+    "example_sentence": "힘들었던 만큼 끝내고 나니까 보람차고 마음이 꽉 찼어.",
     "scene_description": "정리를 마친 서가 앞에서 두 팔 벌려 크게 숨을 들이쉬는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 24
@@ -3928,7 +3928,7 @@
     "prop": "none",
     "intensity": 2,
     "definition": "더 바랄 것 없이 지금 가진 것에 마음이 흡족해진다.",
-    "example_sentence": "이 정도면 충분하다 싶어서 마음이 편안해졌어.",
+    "example_sentence": "이 정도면 충분하다 싶어서 마음이 만족했어.",
     "scene_description": "다 꾸민 열람실 한구석에 앉아 고개를 끄덕이는 캐릭터",
     "edge_bias_region_id": "garden",
     "display_order": 25
@@ -3942,7 +3942,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "산뜻하고 가벼워서 기분이 절로 밝아진다.",
-    "example_sentence": "바람 한 줄기에 기분이 확 밝아졌어.",
+    "example_sentence": "바람 한 줄기에 기분이 상큼해졌어.",
     "scene_description": "화분에 핀 작은 꽃 한 송이 냄새를 맡고 웃는 캐릭터",
     "edge_bias_region_id": "garden",
     "display_order": 26
@@ -3956,7 +3956,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "가슴 속 흥이 절로 솟아올라 몸까지 들썩이게 만들다.",
-    "example_sentence": "노래가 나오자마자 나도 모르게 신명났어.",
+    "example_sentence": "노래가 나오자마자 신명나서 나도 모르게 어깨춤을 췄어.",
     "scene_description": "책등을 손끝으로 통통 두드리며 어깨춤을 추는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 27
@@ -3970,7 +3970,7 @@
     "prop": "letter",
     "intensity": 5,
     "definition": "가볍고 밝은 기운이 넘쳐 웃음이 끊이지 않는다.",
-    "example_sentence": "별것 아닌 얘기에도 계속 웃음이 터졌어.",
+    "example_sentence": "별것 아닌 얘기에도 계속 유쾌했어.",
     "scene_description": "친구와 나눈 편지를 읽다가 소리 내어 웃는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 28
@@ -3984,7 +3984,7 @@
     "prop": "map",
     "intensity": 4,
     "definition": "지금 하는 일에 푹 빠져 마음껏 누리며 좋아한다.",
-    "example_sentence": "결과는 신경 안 쓰고 그 순간을 그냥 만끽했어.",
+    "example_sentence": "결과는 신경 안 쓰고 그 순간을 즐기려고 했어.",
     "scene_description": "지도 한구석에 앉아 여유롭게 풍경을 감상하는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 29
@@ -3998,7 +3998,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "마음에 쏙 들어 별다른 이유 없이도 기분이 밝아진다.",
-    "example_sentence": "그냥 다 좋아서 이유를 찾을 필요도 없었어.",
+    "example_sentence": "그냥 다 좋다는 생각뿐이었어.",
     "scene_description": "볕 잘 드는 서가 한켠에 앉아 편안하게 웃는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 30
@@ -4012,7 +4012,7 @@
     "prop": "none",
     "intensity": 5,
     "definition": "너무 좋아서 이성을 잊을 만큼 온 마음으로 빠져든다.",
-    "example_sentence": "무대를 보는 내내 목이 쉬도록 소리를 질렀어.",
+    "example_sentence": "무대를 보는 내내 완전히 열광했어.",
     "scene_description": "언덕 꼭대기에서 두 팔을 흔들며 환호하는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 31
@@ -4026,7 +4026,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "무언가에 온 마음을 쏟게 만드는 뜨겁고 밝은 힘.",
-    "example_sentence": "그 일만 생각하면 밤새는 줄도 몰랐어.",
+    "example_sentence": "그 일만 생각하면 밤새는 줄도 모를 만큼 열정이 넘쳤어.",
     "scene_description": "낡은 지도 위에 새 길을 붉은 선으로 그어 넣는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 32
@@ -4040,7 +4040,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "흥이 솟아올라 몸이 절로 들썩이고 기분이 좋아진다.",
-    "example_sentence": "음악 소리 듣자마자 몸이 먼저 반응했어.",
+    "example_sentence": "음악 소리 듣자마자 흥나서 몸이 먼저 반응했어.",
     "scene_description": "서가 사이를 콩콩 뛰며 손뼉을 치는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 33
@@ -4054,7 +4054,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "마음 깊이 벅차올라 눈시울까지 뜨거워진다.",
-    "example_sentence": "축하한다는 말 한마디에 눈물이 핑 돌았어.",
+    "example_sentence": "축하한다는 말 한마디에 눈물 나도록 감격했어.",
     "scene_description": "받은 편지를 가슴에 꼭 끌어안는 캐릭터",
     "edge_bias_region_id": "garden",
     "display_order": 34
@@ -4110,7 +4110,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "무엇이든 잘 해낼 수 있다는 믿음으로 마음이 당당하다.",
-    "example_sentence": "이번엔 왠지 다 잘될 것 같은 기분이 들었어.",
+    "example_sentence": "이번엔 왠지 다 잘될 것 같아서 자신만만했어.",
     "scene_description": "새 지도를 펼쳐 들고 씩씩하게 첫걸음을 내딛는 캐릭터",
     "edge_bias_region_id": "garden",
     "display_order": 38
@@ -4138,7 +4138,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "숨 가쁘게 몰아치는 상황에 심장이 쫄깃해지는 짜릿함.",
-    "example_sentence": "마지막 장을 넘길 때 손에 땀이 다 났어.",
+    "example_sentence": "마지막 장을 넘길 때 손에 땀이 날 만큼 박진감이 넘쳤어.",
     "scene_description": "책장 넘기는 손끝이 급해지며 몸을 앞으로 바짝 기울이는 캐릭터",
     "edge_bias_region_id": "garden",
     "display_order": 40
@@ -4180,7 +4180,7 @@
     "prop": "none",
     "intensity": 3,
     "definition": "칭찬 한 번에 어깨가 절로 올라가고 나만 잘난 듯하다.",
-    "example_sentence": "다들 잘했다고 하니까 괜히 콧대가 높아졌어.",
+    "example_sentence": "다들 잘했다고 하니까 괜히 우쭐했어.",
     "scene_description": "괜히 콧노래를 흥얼거리며 발끝으로 통통 튀듯 걷는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 43
@@ -4194,7 +4194,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "자기 능력을 지나치게 믿어 우쭐대는 마음.",
-    "example_sentence": "이 정도는 식은 죽 먹기라고 큰소리쳤어.",
+    "example_sentence": "이 정도는 식은 죽 먹기라고 자만심에 큰소리쳤어.",
     "scene_description": "펼쳐보지도 않은 책 위에 발을 척 걸치고 거들먹거리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 44
@@ -4292,7 +4292,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "마음이 짓눌려 견디기 힘든 고통이 계속된다.",
-    "example_sentence": "며칠째 그 생각 때문에 너무 괴로웠어.",
+    "example_sentence": "며칠째 그 생각 때문에 괴롭다고 느꼈어.",
     "scene_description": "무거운 책더미를 등에 지고 서가를 오르는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 6
@@ -4418,7 +4418,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "내 잘못으로 누군가 아팠을까 봐 마음이 무겁다.",
-    "example_sentence": "그때 그 말을 하지 말걸, 계속 마음에 걸렸어.",
+    "example_sentence": "그때 그 말을 하지 말걸, 계속 죄책감이 들었어.",
     "scene_description": "부치지 못한 사과 편지를 서랍에 넣어두는 캐릭터",
     "edge_bias_region_id": "fire",
     "display_order": 15
@@ -4502,7 +4502,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "후회가 뼛속까지 파고들 만큼 아프고 쓰라리다.",
-    "example_sentence": "그때 그 말을 한 게 두고두고 뼈아팠어.",
+    "example_sentence": "그때 그 말을 한 게 두고두고 뼈아프고 후회됐어.",
     "scene_description": "낡은 책 모서리를 손톱으로 꾹 누르는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 21
@@ -4530,7 +4530,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "소중한 것을 잃고 난 뒤 텅 빈 마음이 이어진다.",
-    "example_sentence": "그게 사라지고 나니까 마음 한쪽이 텅 빈 것 같았어.",
+    "example_sentence": "그게 사라지고 나니까 마음에 상실감이 밀려왔어.",
     "scene_description": "빈 책꽂이 앞에서 손끝으로 먼지를 쓸어보는 캐릭터",
     "edge_bias_region_id": "room",
     "display_order": 23
@@ -4544,7 +4544,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "너무 오래 겪어서 더는 견디기 싫어진다.",
-    "example_sentence": "같은 이야기를 너무 많이 들어서 질렸어.",
+    "example_sentence": "같은 이야기를 너무 많이 들어서 질리고 지쳤어.",
     "scene_description": "다 읽은 책을 밀쳐두고 고개를 돌리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 24
@@ -4572,7 +4572,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "쓸쓸하고 애처로워서 마음이 조용히 가라앉는다.",
-    "example_sentence": "혼자 저녁을 먹는데 괜히 서글펐어.",
+    "example_sentence": "혼자 저녁을 먹는데 괜히 서글프고 쓸쓸했어.",
     "scene_description": "다 탄 초 옆에서 편지를 다시 접는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 26
@@ -4600,7 +4600,7 @@
     "prop": "letter",
     "intensity": 1,
     "definition": "근심이 쌓이고 쌓여 감당하기 벅차다.",
-    "example_sentence": "이런저런 걱정이 겹쳐 시름겨웠어.",
+    "example_sentence": "이런저런 걱정이 겹쳐서 시름겹고 마음이 무거웠어.",
     "scene_description": "쌓여가는 편지 더미에 파묻힌 캐릭터",
     "edge_bias_region_id": "room",
     "display_order": 28
@@ -4712,7 +4712,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "가슴 한켠이 시큰해지며 눈물이 고인다.",
-    "example_sentence": "아무 이유 없이 그냥 눈물이 났어.",
+    "example_sentence": "아무 이유 없이 그냥 슬프고 눈물이 났어.",
     "scene_description": "빗물이 새어 드는 책장 밑에 웅크린 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 36
@@ -4810,7 +4810,7 @@
     "prop": "map",
     "intensity": 3,
     "definition": "마음이 안타깝고 서글퍼서 애가 타다.",
-    "example_sentence": "그 사연을 듣고 나니 마음이 애달팠어.",
+    "example_sentence": "그 사연을 듣고 나니 마음이 애달프고 짠했어.",
     "scene_description": "찢어진 지도 조각을 조심스레 이어 붙이는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 43
@@ -4880,7 +4880,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "마음 한구석이 찌르듯이 시리고 아프다.",
-    "example_sentence": "그 말을 듣고 나니 마음이 아렸어.",
+    "example_sentence": "그 말을 듣고 나니 마음이 아리고 시렸어.",
     "scene_description": "종이에 베인 손끝을 가만히 감싸 쥐는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 48
@@ -4922,7 +4922,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "잘못을 저질렀다는 생각이 마음 한구석에 계속 남아 있는 상태.",
-    "example_sentence": "그때 일이 자꾸 떠올라서 마음이 무거웠어.",
+    "example_sentence": "그때 일이 자꾸 떠올라서 죄의식이 마음을 짓눌렀어.",
     "scene_description": "부치지 못한 사과 편지를 서랍 속에 넣어두는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 1
@@ -4936,7 +4936,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "내가 저지른 잘못이 마음에 걸려 미안하고 부끄럽다.",
-    "example_sentence": "그날 거짓말한 게 두고두고 죄스러웠어.",
+    "example_sentence": "그날 거짓말한 게 두고두고 죄스럽다는 생각이 들었어.",
     "scene_description": "구겨진 책장을 조심스레 펴서 제자리에 꽂아두는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 2
@@ -4950,7 +4950,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "예상치 못한 상황에 부딪혀 어찌할 바를 모르고 쩔쩔맨다.",
-    "example_sentence": "갑자기 질문이 쏟아져서 뭐라 답해야 할지 몰랐어.",
+    "example_sentence": "갑자기 질문이 쏟아져서 곤혹스럽고 뭐라 답해야 할지 몰랐어.",
     "scene_description": "여러 갈래로 갈라진 지도 앞에서 어느 길로 가야 할지 헤매는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 3
@@ -4964,7 +4964,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "스스로에게 실망해 부끄러움이 속에서부터 차오르는 마음.",
-    "example_sentence": "내가 그것밖에 안 되는 사람인가 싶어서 스스로가 한심했어.",
+    "example_sentence": "내가 그것밖에 안 되는 사람인가 싶어서 자괴감이 들었어.",
     "scene_description": "자기 이름이 적힌 책을 서가 맨 구석으로 밀어 넣는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 4
@@ -4992,7 +4992,7 @@
     "prop": "flower",
     "intensity": 3,
     "definition": "마음에 들지 않아 뒷맛이 씁쓸하게 남는 느낌이다.",
-    "example_sentence": "그 대답을 듣고 나니 뭔가 개운치 않고 떫었어.",
+    "example_sentence": "그 대답을 듣고 나니 뭔가 개운치 않고 떫다는 느낌이 들었어.",
     "scene_description": "시든 꽃송이를 손끝으로 만지작거리며 입맛을 다시는 캐릭터",
     "edge_bias_region_id": "sad",
     "display_order": 6
@@ -5006,7 +5006,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "썩 내키지 않아 못마땅한 기색을 감추지 못한다.",
-    "example_sentence": "그 결정이 영 마음에 안 들어서 표정이 굳었어.",
+    "example_sentence": "그 결정이 영 마음에 안 들어서 마땅찮았어.",
     "scene_description": "펼쳐진 책의 한 문장에 눈살을 찌푸리며 손가락으로 톡톡 두드리는 캐릭터",
     "edge_bias_region_id": "sad",
     "display_order": 7
@@ -5034,7 +5034,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "양심이 찔려 마음 한켠이 계속 무겁고 불편한 상태.",
-    "example_sentence": "혼자만 몰래 빠져나온 게 계속 마음에 걸렸어.",
+    "example_sentence": "혼자만 몰래 빠져나온 게 계속 가책으로 남았어.",
     "scene_description": "쓰다 만 사과 편지를 다시 꺼내 읽어보는 캐릭터",
     "edge_bias_region_id": "sea",
     "display_order": 9
@@ -5048,7 +5048,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "기가 눌려 몸도 마음도 잔뜩 움츠러드는 느낌.",
-    "example_sentence": "다들 잘나 보여서 나도 모르게 어깨가 움츠러들었어.",
+    "example_sentence": "다들 잘나 보여서 나도 모르게 위축감이 들었어.",
     "scene_description": "커다란 책장 그늘 아래로 몸을 잔뜩 웅크리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 10
@@ -5076,7 +5076,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "내키지 않아 자꾸만 뒤로 미루거나 피하고 싶어진다.",
-    "example_sentence": "그 얘기만 나오면 자꾸 화제를 돌리고 싶었어.",
+    "example_sentence": "그 얘기만 나오면 자꾸 꺼리고 화제를 돌리고 싶었어.",
     "scene_description": "손 뻗었던 책을 도로 슬며시 내려놓는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 12
@@ -5104,7 +5104,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "뭔가 들킬까 봐 마음 한구석이 자꾸 찔리고 불안하다.",
-    "example_sentence": "숨긴 게 있어서 그런지 자꾸 뒤가 켕겼어.",
+    "example_sentence": "숨긴 게 있어서 그런지 자꾸 마음이 켕기고 불안했어.",
     "scene_description": "몰래 뜯어본 편지를 봉투에 서둘러 도로 넣는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 14
@@ -5118,7 +5118,7 @@
     "prop": "map",
     "intensity": 3,
     "definition": "남들이 알까 봐 부끄럽고 얼굴을 들 수가 없다.",
-    "example_sentence": "동네 사람들이 다 알까 봐 남부끄러워서 숨고 싶었어.",
+    "example_sentence": "동네 사람들이 다 알까 봐 남부끄럽고 숨고 싶었어.",
     "scene_description": "지도에서 우리 동네만 손으로 슬쩍 가려버리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 15
@@ -5188,7 +5188,7 @@
     "prop": "letter",
     "intensity": 3,
     "definition": "서운한 마음에 삐쳐서 토라진 티를 낸다.",
-    "example_sentence": "괜히 서운해서 하루 종일 토라져 있었어.",
+    "example_sentence": "괜히 서운해서 하루 종일 토라지고 말도 안 했어.",
     "scene_description": "등을 돌리고 편지를 서랍 깊숙이 밀어 넣는 캐릭터",
     "edge_bias_region_id": "sea",
     "display_order": 20
@@ -5230,7 +5230,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "미워하면서도 끝내 놓지 못하는 애틋하고 복잡한 마음.",
-    "example_sentence": "밉다고 하면서도 자꾸 그 사람 안부가 궁금했어.",
+    "example_sentence": "밉다고 하면서도 자꾸 애증이 남았어.",
     "scene_description": "찢으려다 만 편지를 다시 접어 서랍에 넣는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 23
@@ -5244,7 +5244,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "남 앞에서 낯이 화끈거리고 몸 둘 바를 모르겠다.",
-    "example_sentence": "실수한 걸 들켜서 얼굴이 다 빨개지도록 부끄러웠어.",
+    "example_sentence": "실수한 걸 들켜서 부끄럽고 얼굴이 다 빨개졌어.",
     "scene_description": "책등 뒤로 살짝 얼굴을 감추는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 24
@@ -5258,7 +5258,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "가볍게 토라져 눈과 입매가 삐죽 비뚤어진다.",
-    "example_sentence": "괜히 서운해서 나도 모르게 눈을 흘겼어.",
+    "example_sentence": "괜히 서운해서 나도 모르게 표정이 샐쭉했어.",
     "scene_description": "책 모서리를 손톱으로 톡톡 튕기며 딴청을 피우는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 25
@@ -5328,7 +5328,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "결정을 내리지 못하고 이러지도 저러지도 못한다.",
-    "example_sentence": "말을 꺼낼까 말까 한참을 망설였어.",
+    "example_sentence": "말을 꺼낼까 말까 망설이다가 결국 그만뒀어.",
     "scene_description": "갈림길 지도 앞에서 발걸음을 떼지 못하는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 30
@@ -5426,7 +5426,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "마음에 흡족하고 기뻐서 선뜻 응하고 싶어진다.",
-    "example_sentence": "부탁을 들어줄 수 있어서 오히려 내가 기꺼웠어.",
+    "example_sentence": "부탁을 들어줄 수 있어서 오히려 기껍고 반가웠어.",
     "scene_description": "부탁 편지에 흔쾌히 좋다는 답장을 적어 넣는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 37
@@ -5440,7 +5440,7 @@
     "prop": "flower",
     "intensity": 2,
     "definition": "남이 부러워할 만큼 부족함 없이 흡족한 상태다.",
-    "example_sentence": "지금 이대로도 남부러울 게 없다고 느꼈어.",
+    "example_sentence": "지금 이대로도 남부럽고 부족함이 없다고 느꼈어.",
     "scene_description": "탐스럽게 핀 꽃을 아무 욕심 없이 가만히 바라보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 38
@@ -5454,7 +5454,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "듣기 낯 뜨거워서 온몸이 오글거리고 민망하다.",
-    "example_sentence": "그런 낯간지러운 소리를 들으니 몸이 배배 꼬였어.",
+    "example_sentence": "그런 낯간지러운 소리를 들으니 낯간지럽고 몸이 배배 꼬였어.",
     "scene_description": "낯 뜨거운 문장을 읽다 말고 책을 탁 덮어버리는 캐릭터",
     "edge_bias_region_id": "sea",
     "display_order": 39
@@ -5482,7 +5482,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "멋쩍고 계면쩍어서 몸을 어디에 둘지 모르겠다.",
-    "example_sentence": "칭찬을 들으니까 괜히 쑥스러웠어.",
+    "example_sentence": "칭찬을 들으니까 쑥스럽다는 생각에 얼굴이 붉어졌어.",
     "scene_description": "고개를 숙이고 책장 모서리만 매만지는 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 41
@@ -5496,7 +5496,7 @@
     "prop": "book",
     "intensity": 3,
     "definition": "지난 잘못을 깊이 뉘우치며 마음을 다잡는 상태.",
-    "example_sentence": "그때 왜 그랬을까 밤새 뒤척이며 후회했어.",
+    "example_sentence": "그때 왜 그랬을까 밤새 뒤척이며 회오에 잠겼어.",
     "scene_description": "낡은 일기장 같은 책을 펼쳐 지난 페이지를 오래 들여다보는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 42
@@ -5510,7 +5510,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "잘못을 깨닫고 마음속 깊이 반성한다.",
-    "example_sentence": "화낸 걸 뒤늦게 뉘우쳤어.",
+    "example_sentence": "화낸 걸 뒤늦게 뉘우치며 마음이 무거웠어.",
     "scene_description": "구겨 버렸던 편지를 다시 펴서 매만지는 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 43
@@ -5524,7 +5524,7 @@
     "prop": "map",
     "intensity": 3,
     "definition": "어이없거나 하찮아 보여 헛웃음이 나온다.",
-    "example_sentence": "돌이켜보니 그때 내 행동이 스스로도 우스웠어.",
+    "example_sentence": "돌이켜보니 그때 내 행동이 스스로도 우습고 헛웃음이 났어.",
     "scene_description": "삐뚤어진 지도를 보고 피식 웃는 캐릭터",
     "edge_bias_region_id": "sea",
     "display_order": 44
@@ -5538,7 +5538,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "잘못을 뉘우치고 마음을 바로잡아 새로 다짐하는 일.",
-    "example_sentence": "잘못을 인정하고 나니 마음이 한결 가벼워졌어.",
+    "example_sentence": "잘못을 인정하고 나니 마음에 회개가 찾아왔어.",
     "scene_description": "잘못을 적어 내려간 사죄 편지를 곱게 접어 우체통에 넣는 캐릭터",
     "edge_bias_region_id": "forest",
     "display_order": 45
@@ -5580,7 +5580,7 @@
     "prop": "none",
     "intensity": 1,
     "definition": "몸도 마음도 눌리는 데 없이 자연스럽게 풀려 있다.",
-    "example_sentence": "신발을 벗고 나니 그제야 마음이 편했어.",
+    "example_sentence": "신발을 벗고 나니 그제야 마음이 편하다는 생각이 들었어.",
     "scene_description": "열람실 구석 소파에 팔다리를 늘어뜨리고 앉은 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 2
@@ -5650,7 +5650,7 @@
     "prop": "flower",
     "intensity": 2,
     "definition": "더 바라지 않고 지금 가진 것에 스스로 만족한다.",
-    "example_sentence": "작은 화분 하나로도 충분하다 싶어 마음이 흐뭇했어.",
+    "example_sentence": "작은 화분 하나로도 충분하다 싶어 자족했어.",
     "scene_description": "작은 화분 하나를 가만히 들여다보며 고개를 끄덕이는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 7
@@ -5678,7 +5678,7 @@
     "prop": "letter",
     "intensity": 1,
     "definition": "걱정하던 마음을 내려놓고 편안해진다는 말.",
-    "example_sentence": "답장이 도착한 걸 보고서야 겨우 맘을 놓았어.",
+    "example_sentence": "답장이 도착한 걸 보고서야 겨우 맘놓았어.",
     "scene_description": "기다리던 편지를 품에 안고 참았던 숨을 내쉬는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 9
@@ -5692,7 +5692,7 @@
     "prop": "map",
     "intensity": 1,
     "definition": "걱정하던 일이 무사히 끝나 마음이 탁 놓이다.",
-    "example_sentence": "결과가 괜찮다는 소식에 나도 모르게 한숨이 놓였어.",
+    "example_sentence": "결과가 괜찮다는 소식에 나도 모르게 안도했어.",
     "scene_description": "구겨졌던 지도를 조심스레 펴서 다시 접는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 10
@@ -5706,7 +5706,7 @@
     "prop": "map",
     "intensity": 1,
     "definition": "아무 걱정 없이 느긋하고 여유로워 보인다.",
-    "example_sentence": "지도 위에 누워 갈 길을 미루고 낮잠부터 잤어.",
+    "example_sentence": "아무 걱정 없이 하루 종일 태평스러웠어.",
     "scene_description": "펼쳐놓은 지도를 베개 삼아 느긋하게 누운 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 11
@@ -5720,7 +5720,7 @@
     "prop": "book",
     "intensity": 2,
     "definition": "무거운 짐을 던 듯 몸과 마음이 가볍고 개운하다.",
-    "example_sentence": "밀린 책 정리를 끝내고 나니 몸이 다 가벼워졌어.",
+    "example_sentence": "밀린 책 정리를 끝내고 나니 몸이 가뜬했어.",
     "scene_description": "정리를 마친 서가 앞에서 기지개를 켜며 웃는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 12
@@ -5748,7 +5748,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "상대를 하찮게 여기며 짓밟듯 업신여기는 마음.",
-    "example_sentence": "그 눈빛 하나에 내가 이렇게 초라해질 줄 몰랐어.",
+    "example_sentence": "그 눈빛 하나에 지독한 모멸을 느꼈어.",
     "scene_description": "빌려온 책을 발끝으로 슬쩍 밀쳐내는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 0
@@ -5762,7 +5762,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "말할 수 없이 창피하고 낯이 뜨거워지는 상태다.",
-    "example_sentence": "그 순간이 자꾸 떠올라서 혼자 얼굴이 화끈거렸어.",
+    "example_sentence": "그 순간이 자꾸 떠올라서 너무 치욕스러웠어.",
     "scene_description": "얼룩진 페이지를 손으로 가려 숨기는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 1
@@ -5776,7 +5776,7 @@
     "prop": "letter",
     "intensity": 4,
     "definition": "오랜 억울함이 마음 깊숙이 매듭처럼 엉겨 붙다.",
-    "example_sentence": "그 일은 아직도 마음 한구석에 응어리로 남아 있어.",
+    "example_sentence": "그 일은 아직도 마음속에 한맺히고 응어리로 남았어.",
     "scene_description": "낡은 편지를 몇 번이고 접었다 펴는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 2
@@ -5790,7 +5790,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "위장이 뒤틀릴 만큼 견디기 힘든 거부감이 인다.",
-    "example_sentence": "그 냄새를 맡자마자 나도 모르게 헛구역질이 났어.",
+    "example_sentence": "그 냄새를 맡자마자 역겹고 헛구역질이 났어.",
     "scene_description": "곰팡이 슨 책장을 집게로 조심스레 넘기는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 3
@@ -5804,7 +5804,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "믿었던 것의 실체를 알고 정나미가 뚝 떨어지는 마음.",
-    "example_sentence": "그 실체를 알고 나니 완전히 마음이 식어버렸어.",
+    "example_sentence": "그 실체를 알고 나니 완전한 환멸을 느꼈어.",
     "scene_description": "아끼던 책을 서가 맨 구석으로 밀어 넣는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 4
@@ -5818,7 +5818,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "상대를 하찮게 여기며 마음속으로 깔보다.",
-    "example_sentence": "그 행동을 보고 나서는 눈도 마주치기 싫어졌어.",
+    "example_sentence": "그 행동을 보고 나서는 완전히 경멸했어.",
     "scene_description": "빌린 책을 손끝으로만 집어 되돌려주는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 5
@@ -5832,7 +5832,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "믿었던 마음이 통째로 뒤집혀 무너지는 기분.",
-    "example_sentence": "그 말을 듣는 순간 믿음이 와르르 무너졌어.",
+    "example_sentence": "그 말을 듣는 순간 배신감이 밀려왔어.",
     "scene_description": "함께 쓰던 지도에 금을 그어 반으로 나누는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 6
@@ -5846,7 +5846,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "미움이 뼛속까지 스며들어 등을 돌리고 싶어지다.",
-    "example_sentence": "그 이름을 듣는 순간 속이 싸늘하게 굳었어.",
+    "example_sentence": "그 이름을 듣는 순간 속으로 증오했어.",
     "scene_description": "서가 맨 뒷줄, 손 닿지 않는 곳에 책을 밀어 넣는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 7
@@ -5860,7 +5860,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "떠올리는 것만으로도 몸서리치며 밀어내고 싶다.",
-    "example_sentence": "그 얘기만 나오면 저절로 미간이 찌푸려졌어.",
+    "example_sentence": "그 얘기만 나오면 나도 모르게 혐오가 치밀었어.",
     "scene_description": "먼지 쌓인 책을 장갑 낀 손으로 멀리 치우는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 8
@@ -5874,7 +5874,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "속은 검으면서 겉으로만 착한 척해 얄밉고 괘씸하다.",
-    "example_sentence": "그 웃는 얼굴 뒤에 숨은 게 뻔히 보여서 소름이 돋았어.",
+    "example_sentence": "그 웃는 얼굴 뒤에 숨은 게 뻔히 보여서 가증스러웠어.",
     "scene_description": "겉장만 멀쩡한 가짜 책을 손끝으로 집어 드는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 9
@@ -5888,7 +5888,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "스스로가 미워 견딜 수 없어 속으로 자신을 깎아내리는 마음.",
-    "example_sentence": "거울 속 나를 보는 게 그렇게 싫을 줄 몰랐어.",
+    "example_sentence": "거울 속 나를 보는 순간 지독한 자기혐오가 밀려왔어.",
     "scene_description": "제 이름이 적힌 페이지를 찢어 구겨버리는 캐릭터",
     "edge_bias_region_id": "fire",
     "display_order": 10
@@ -5902,7 +5902,7 @@
     "prop": "book",
     "intensity": 5,
     "definition": "차마 눈뜨고 보기 힘들 만큼 참혹하고 소름 돋다.",
-    "example_sentence": "그 장면이 자꾸 떠올라서 눈을 질끈 감았어.",
+    "example_sentence": "그 장면이 자꾸 떠올라서 너무 끔찍했어.",
     "scene_description": "펼쳐진 책장을 화들짝 덮어버리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 11
@@ -5916,7 +5916,7 @@
     "prop": "letter",
     "intensity": 5,
     "definition": "기분이 상해 마음 한켠이 껄끄럽고 언짢다.",
-    "example_sentence": "그 말투 때문에 하루 종일 기분이 찜찜했어.",
+    "example_sentence": "그 말투 때문에 하루 종일 기분이 불쾌했어.",
     "scene_description": "구겨진 편지를 펴다 말고 미간을 찌푸리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 12
@@ -5930,7 +5930,7 @@
     "prop": "map",
     "intensity": 5,
     "definition": "마음속에서 절로 밀어내고 싶어지는 거부감.",
-    "example_sentence": "그 이야기를 듣자마자 마음이 뻣뻣하게 굳었어.",
+    "example_sentence": "그 이야기를 듣자마자 마음속에 반감이 일었어.",
     "scene_description": "펼쳐 보이는 지도를 손바닥으로 슬쩍 밀어내는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 13
@@ -5944,7 +5944,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "무언가가 죽도록 싫어서 몸서리치며 피하고 싶다.",
-    "example_sentence": "그 얘기만 나오면 나도 모르게 손사래를 쳤어.",
+    "example_sentence": "그 얘기만 나오면 나도 모르게 질색했어.",
     "scene_description": "펼쳐진 책장을 탁 덮고 저만치 밀어내는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 14
@@ -5958,7 +5958,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "자꾸 눈에 거슬려 마음이 곱게 가지 않다.",
-    "example_sentence": "그 행동 하나하나가 자꾸 눈에 거슬렸어.",
+    "example_sentence": "그 행동 하나하나에 자꾸 미움이 쌓였어.",
     "scene_description": "늦게 돌아온 책 표지를 흘겨보는 캐릭터",
     "edge_bias_region_id": "fire",
     "display_order": 15
@@ -5972,7 +5972,7 @@
     "prop": "book",
     "intensity": 4,
     "definition": "말이나 행동이 얄궂어 살짝 밉살스럽다.",
-    "example_sentence": "그 능청스러운 말투에 나도 모르게 입이 삐죽였어.",
+    "example_sentence": "그 능청스러운 말투가 얄밉고 나도 모르게 입이 삐죽였어.",
     "scene_description": "몰래 바뀐 책갈피 자리를 보고 눈을 흘기는 캐릭터",
     "edge_bias_region_id": "fire",
     "display_order": 16
@@ -5986,7 +5986,7 @@
     "prop": "none",
     "intensity": 5,
     "definition": "등줄기가 서늘해지며 살갗이 오싹 곤두서다.",
-    "example_sentence": "그 소리를 듣는 순간 온몸에 소름이 돋았어.",
+    "example_sentence": "그 소리를 듣는 순간 소름끼치고 온몸이 서늘해졌어.",
     "scene_description": "어두운 서고 안쪽에서 인기척을 느끼고 굳어버리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 17
@@ -6000,7 +6000,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "뭔가 걸리는 게 있어 마음 한구석이 영 개운치 않다.",
-    "example_sentence": "찜찜한 기분을 떨치지 못한 채 자꾸 뒤를 돌아봤어.",
+    "example_sentence": "뭔가 걸리는 게 있어서 하루 종일 께름직했어.",
     "scene_description": "덮은 지도를 다시 슬쩍 펼쳐 구석을 확인하는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 18
@@ -6014,7 +6014,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "선뜻 내키지 않고 자꾸 마음에 걸려 찜찜하다.",
-    "example_sentence": "괜히 마음에 걸려서 결국 다시 확인해봤어.",
+    "example_sentence": "괜히 마음에 걸려서 계속 꺼림직했어.",
     "scene_description": "봉인한 편지를 뜯을까 말까 손끝으로 만지작대는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 19
@@ -6028,7 +6028,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "우습고 하찮아서 코웃음이 절로 나올 만큼 어이없다.",
-    "example_sentence": "그 큰소리가 어찌나 우스운지 헛웃음이 나왔어.",
+    "example_sentence": "그 큰소리가 어찌나 가소로운지 헛웃음이 나왔어.",
     "scene_description": "엉터리 지도를 들고 픽 웃어버리는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 20
@@ -6042,7 +6042,7 @@
     "prop": "letter",
     "intensity": 2,
     "definition": "선뜻 내키지 않아 표정이 살짝 굳고 뒷맛이 남는다.",
-    "example_sentence": "대답은 했지만 뒷맛이 영 개운치 않았어.",
+    "example_sentence": "대답은 했지만 뒷맛이 영 떠름했어.",
     "scene_description": "받은 편지를 한 번 더 들여다보며 입을 삐죽이는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 21
@@ -6056,7 +6056,7 @@
     "prop": "book",
     "intensity": 1,
     "definition": "탐탁지 않아 표정이 어정쩡하게 굳어버리는 상태.",
-    "example_sentence": "썩 내키지 않았지만 티 내지 않으려고 애썼어.",
+    "example_sentence": "썩 내키지 않아서 표정이 떨떠름했어.",
     "scene_description": "건네받은 책을 어정쩡하게 받아드는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 22
@@ -6070,7 +6070,7 @@
     "prop": "map",
     "intensity": 2,
     "definition": "어이없고 하찮게 여겨 콧소리로 픽 비웃는 웃음.",
-    "example_sentence": "그 말을 듣자마자 나도 모르게 콧방귀가 나왔어.",
+    "example_sentence": "그 말을 듣자마자 나도 모르게 코웃음이 나왔어.",
     "scene_description": "구겨진 지도를 보며 콧소리로 픽 웃는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 23

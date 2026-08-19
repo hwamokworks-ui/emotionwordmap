@@ -62,7 +62,7 @@ export async function resolveWordAction(text: string): Promise<ResolveResult> {
   if (literal) return { type: 'candidates', candidates: toCandidates([literal], words), confident: true };
 
   // 2) 글자로 못 찾으면 의미로 찾는다 — LLM이 골라준 후보를 그대로 신뢰하지 않고
-  // 최대 5개를 사용자에게 보여줘 직접 고르게 한다 (30문장 평가 기준 top-1 정확도 30%대로 낮음).
+  // 최대 7개를 사용자에게 보여줘 직접 고르게 한다 (30문장 평가 기준 top-1 정확도 40%대로 낮음).
   const ids = await classifyWordWithLLM(t, words);
   if (ids.length === 0) return { type: 'none' };
 

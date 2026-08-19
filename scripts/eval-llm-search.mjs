@@ -10,7 +10,7 @@ import { createClient } from '@supabase/supabase-js';
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const ANON_KEY = process.env.SUPABASE_ANON_KEY;
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
-const CLASSIFY_MODEL = 'openai/gpt-4o-mini';
+const CLASSIFY_MODEL = process.env.EVAL_MODEL || 'openai/gpt-4o-mini';
 
 const supabase = createClient(SUPABASE_URL, ANON_KEY, { auth: { persistSession: false } });
 
@@ -75,14 +75,14 @@ async function callClassifier(messages) {
   return { ids, raw: content };
 }
 
-async function classify(text, words, count = 5) {
+async function classify(text, words, count = 7) {
   const ordered = [...words].sort((a, b) => (MOOD_ORDER[a.region_id] ?? 0) - (MOOD_ORDER[b.region_id] ?? 0));
   const candidateList = ordered.map((w) => `${w.id}: ${w.noun_form} - ${w.definition}`).join('\n');
+  // lib/ai-match.ts와 동일 — "억지로 채우지 마라" 지시는 정답 포함 확률을 오히려 떨어뜨려(§4) 되돌렸다.
   const system =
-    `너는 한국어 감정 단어 사전에서, 사용자가 쓴 문장이 나타내는 감정에 가까운 단어를 최소 1개, 최대 ${count}개까지 고르는 분류기다. ` +
-    '반드시 아래 목록에 있는 id만 고르고, 가장 가까운 순서대로 배열에 담아라. ' +
-    `개수를 ${count}개로 억지로 채우지 마라 — 확실히 어울리는 단어만 담고, 그런 단어가 적으면 그만큼만 담아라. ` +
-    '다만 완전히 딱 맞지 않아 보여도 그나마 가장 가까운 단어 하나는 반드시 포함해라 — 빈 배열은 절대 반환하지 마라. ' +
+    `너는 한국어 감정 단어 사전에서, 사용자가 쓴 문장이 나타내는 감정에 가까운 단어를 가장 가까운 순서로 정확히 ${count}개 고르는 분류기다. ` +
+    `반드시 아래 목록에 있는 id만 고르고, 가장 가까운 순서대로 배열에 담아라. ` +
+    `확신이 낮아도 상관없다 — 어떤 문장이든 그나마 가장 가까운 단어 ${count}개를 반드시 채워서 반환해라. 빈 배열이나 ${count}개 미만은 허용되지 않는다. ` +
     '설명 없이 JSON 객체 하나만 출력해라: {"word_ids": ["id1", "id2", ...]}';
   const user = `문장: "${text}"\n\n감정 단어 목록:\n${candidateList}`;
   const messages = [
@@ -90,22 +90,8 @@ async function classify(text, words, count = 5) {
     { role: 'user', content: user },
   ];
 
-  let { ids, raw } = await callClassifier(messages);
-  if (ids.length === 0) {
-    const retryMessages = [
-      ...messages,
-      { role: 'assistant', content: raw },
-      { role: 'user', content: '빈 배열은 허용되지 않는다. 아무리 애매해도 목록에서 그나마 가장 비슷한 단어를 최소 1개 골라 다시 답해라.' },
-    ];
-    ({ ids } = await callClassifier(retryMessages));
-  }
-
-  const validIds = [...new Set(ids)].filter((id) => words.some((w) => w.id === id));
-  if (validIds.length > 0) return validIds.slice(0, count);
-
-  // lib/ai-match.ts는 프로덕션에서 무작위로 하나를 고르지만, 평가 재현성을 위해 여기서는
-  // 결정적으로 정렬된 목록의 첫 단어를 폴백으로 쓴다(§15) — "완전 실패"와 "약한 성공"을 구분해서 본다.
-  return ordered.length > 0 ? [ordered[0].id] : [];
+  const { ids } = await callClassifier(messages);
+  return [...new Set(ids)].filter((id) => words.some((w) => w.id === id)).slice(0, count);
 }
 
 async function main() {
@@ -113,7 +99,7 @@ async function main() {
   if (!words) throw new Error('단어 목록을 불러오지 못했습니다.');
 
   let top1Hit = 0; // 후보 1순위가 정답인 경우
-  let candidateHit = 0; // 후보(최대 3개) 중 하나라도 정답인 경우
+  let candidateHit = 0; // 후보(최대 7개) 중 하나라도 정답인 경우
   let regionHit = 0; // 후보 1순위의 지역이 기대한 지역과 같은 경우
   const rows = [];
 
