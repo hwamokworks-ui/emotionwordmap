@@ -10,7 +10,6 @@ export default function SearchBox() {
   const [isSearching, setIsSearching] = useState(false);
   const cancelledRef = useRef(false);
   const [candidates, setCandidates] = useState<WordCandidate[] | null>(null);
-  const [confident, setConfident] = useState(true);
   const [notFound, setNotFound] = useState(false);
 
   function submit() {
@@ -24,7 +23,6 @@ export default function SearchBox() {
       setIsSearching(false);
       if (result.type === 'candidates') {
         setCandidates(result.candidates);
-        setConfident(result.confident);
       } else {
         setNotFound(true);
       }
@@ -101,7 +99,7 @@ export default function SearchBox() {
       {candidates && (
         <div className="mt-5 pt-5" style={{ borderTop: '1px solid var(--border-hairline)' }}>
           <p className="text-[12.5px] text-taupe mb-3">
-            가장 가까운 감정을 골라주세요{!confident && '. 적당한 감정이 없다면, 조금 더 상세하게 감정을 적어주세요.'}
+            가장 가까운 감정을 골라주세요. 적당한 감정이 없다면, 조금 더 상세하게 감정을 적어주세요.
           </p>
           <div className="divide-y" style={{ background: 'var(--bg-elevated)', border: '1px solid var(--border-hairline)', borderRadius: '14px', overflow: 'hidden' }}>
             {candidates.map((c, i) => (

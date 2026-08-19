@@ -38,6 +38,6 @@ export const getEmotionContent = unstable_cache(
   // 이전 값이 계속 나온 적이 있었다 — unstable_cache 항목이 `.next/cache` 삭제·프로세스 재시작을
   // 넘어 살아남는 것으로 보여, 캐시 키 자체를 바꿔 예전 항목을 무효화했다. 콘텐츠를 다시 직접
   // 손대는 일이 있으면 이 키를 한 번 더 올려야 할 수도 있다.
-  ['emotion-content-v2'],
+  ['emotion-content-v3'],
   { revalidate: 3600 } // 어휘·지역·관계선은 SQL 마이그레이션으로만 바뀌는 콘텐츠라 1시간 정도는 묵혀도 된다.
 );

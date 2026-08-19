@@ -79,6 +79,8 @@ async function classify(text, words, count = 7) {
   const ordered = [...words].sort((a, b) => (MOOD_ORDER[a.region_id] ?? 0) - (MOOD_ORDER[b.region_id] ?? 0));
   const candidateList = ordered.map((w) => `${w.id}: ${w.noun_form} - ${w.definition}`).join('\n');
   // lib/ai-match.ts와 동일 — "억지로 채우지 마라" 지시는 정답 포함 확률을 오히려 떨어뜨려(§4) 되돌렸다.
+  // "감정 먼저 감지 → 체크리스트로 강제" 2단계 호출도 시도했지만 1순위 정확도가 크게 떨어져(43.3%→
+  // 26.7%) 되돌렸다.
   const system =
     `너는 한국어 감정 단어 사전에서, 사용자가 쓴 문장이 나타내는 감정에 가까운 단어를 가장 가까운 순서로 정확히 ${count}개 고르는 분류기다. ` +
     `반드시 아래 목록에 있는 id만 고르고, 가장 가까운 순서대로 배열에 담아라. ` +

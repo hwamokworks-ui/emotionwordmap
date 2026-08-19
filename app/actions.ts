@@ -9,37 +9,39 @@ function stemOf(wordForm: string) {
   return wordForm.replace(/(하다|되다|스럽다|답다|롭다|다)$/, '');
 }
 
-// 문장 하나에 서로 다른 감정 단어가 여러 개 그대로 들어있을 수 있다("아쉽다와 기쁘다, 근데
-// 슬프다"). 예전에는 가장 점수가 높은 단어 하나만 골랐는데, 이러면 나머지 감정이 통째로 사라진다.
-// 그래서 글자 그대로 일치하는 단어는 전부 모아서, 문장에 등장한 순서대로 반환한다.
+// 문장 하나에 서로 다른 감정 단어가 여러 개 있을 수 있는데, 활용형이 섞여 있을 때가 많다
+// ("아쉽지만 보람차다"에서 "보람차다"는 원형 그대로지만 "아쉽다"는 "아쉽지만"으로 활용됨).
+// 예전에는 글자 그대로 일치하는 단어가 하나라도 있으면 어간 매칭을 아예 시도하지 않아서,
+// 활용된 감정은 통째로 사라졌다(이 예시에서 "보람차다"만 잡히고 "아쉽다"는 사라짐). 이제는
+// 정확히 일치하는 단어를 전부 모으고, 그와 별개로 아직 못 찾은 단어들에 대해 어간(원형에서
+// 어미를 뗀 형태) 매칭도 항상 같이 시도해서 합친다 — 문장에 등장한 순서대로 반환한다.
 function literalMatchAll(t: string, words: { id: string; word_form: string; noun_form: string }[]): string[] {
   const hits: { id: string; at: number }[] = [];
+  const found = new Set<string>();
   for (const { id, word_form: w, noun_form: n } of words) {
     const atW = w ? t.indexOf(w) : -1;
     const atN = n ? t.indexOf(n) : -1;
     const at = atW >= 0 ? atW : atN;
-    if (at >= 0) hits.push({ id, at });
-  }
-  if (hits.length > 0) return hits.sort((a, b) => a.at - b.at).map((h) => h.id).slice(0, 7);
-
-  // 글자 그대로 일치하는 단어가 하나도 없을 때만, 노이즈가 큰 어간 매칭으로 넘어간다 — 어간은
-  // 짧고 흔해서 여러 개를 그대로 다 보여주면 오히려 헷갈리니 가장 구체적인(어간이 긴) 것 하나만 쓴다.
-  let best: string | null = null;
-  let bestLen = 0;
-  for (const { id, word_form: w } of words) {
-    const stem = stemOf(w);
-    if (stem && stem.length >= 2 && t.includes(stem) && stem.length > bestLen) {
-      bestLen = stem.length;
-      best = id;
+    if (at >= 0) {
+      hits.push({ id, at });
+      found.add(id);
     }
   }
-  return best ? [best] : [];
+  for (const { id, word_form: w } of words) {
+    if (found.has(id)) continue;
+    const stem = stemOf(w);
+    if (stem && stem.length >= 2) {
+      const at = t.indexOf(stem);
+      if (at >= 0) hits.push({ id, at });
+    }
+  }
+  return hits.sort((a, b) => a.at - b.at).map((h) => h.id).slice(0, 7);
 }
 
 // 글자 매칭은 원래 정답 단어 1개만 보여줬는데, 이 서비스의 목적은 "정답 하나 맞히기"가 아니라
 // "감정 어휘 확장"이라(docs/AI_의미검색_구현기록.md 참고) — 글자로 확실히 찾은 경우에도 관계선
-// (emotion_word_relations, 지도의 "가까운 감정"과 같은 데이터)을 타고 가까운 순서대로 6개를 더
-// 붙여, LLM 경로(정확히 7개)와 후보 개수를 맞춘다.
+// (emotion_word_relations, 지도의 "가까운 감정"과 같은 데이터)을 타고 가까운 순서대로 채워, LLM
+// 경로(정확히 7개)와 후보 개수를 맞춘다.
 function nearestByRelation(id: string, relations: { word_a_id: string; word_b_id: string }[], limit: number): string[] {
   const adj: Record<string, string[]> = {};
   for (const { word_a_id: a, word_b_id: b } of relations) {
@@ -62,6 +64,40 @@ function nearestByRelation(id: string, relations: { word_a_id: string; word_b_id
     .sort((a, b) => a[1] - b[1])
     .slice(0, limit)
     .map(([nid]) => nid);
+}
+
+// 글자 매칭으로 몇 개를 찾았든("아쉽다" 1개든, "아쉽다 보람차다" 2개든) 항상 정확히 count개를
+// 채워서 보여준다 — LLM 경로와 개수를 맞추기 위해서다. 부족한 자리는 찾은 단어들 각각의 관계선
+// 이웃을 한 명씩 돌아가며(라운드 로빈) 채운다 — 첫 단어 주변만 몰아 채우면 나중에 언급된 감정
+// 쪽 어휘가 안 보이게 된다.
+function fillToCount(
+  literalIds: string[],
+  relations: { word_a_id: string; word_b_id: string }[],
+  count: number
+): string[] {
+  const result = [...literalIds];
+  if (result.length >= count) return result.slice(0, count);
+
+  const seen = new Set(result);
+  const neighborQueues = literalIds.map((id) => nearestByRelation(id, relations, count).filter((nid) => !seen.has(nid)));
+
+  let progressed = true;
+  while (result.length < count && progressed) {
+    progressed = false;
+    for (const queue of neighborQueues) {
+      if (result.length >= count) break;
+      while (queue.length) {
+        const candidate = queue.shift()!;
+        if (!seen.has(candidate)) {
+          result.push(candidate);
+          seen.add(candidate);
+          progressed = true;
+          break;
+        }
+      }
+    }
+  }
+  return result;
 }
 
 export type WordCandidate = { id: string; noun_form: string; definition: string };
@@ -88,15 +124,12 @@ export async function resolveWordAction(text: string): Promise<ResolveResult> {
 
   // 1) 글자 그대로 매칭 — 빠르고 무료. 확실한 경우라도 바로 이동하지 않고 후보로 보여준 뒤
   // 사용자가 직접 클릭해서 들어가게 한다 — AI가 확신 없이 골랐을 수도 있으니 항상 확인을 거치게 한다.
+  // 문장에서 몇 개를 찾았든(1개든 여러 개든) 관계선으로 채워서 항상 7개를 보여준다 — LLM 경로와
+  // 개수를 맞추고, 찾은 단어들 주변 어휘도 함께 넓혀 보여주기 위해서다.
   const literalIds = literalMatchAll(t, words);
-  if (literalIds.length > 1) {
-    // 문장에 서로 다른 감정 단어가 여럿 그대로 있으면, 하나로 뭉뚱그리지 않고 전부 후보로 보여준다.
-    return { type: 'candidates', candidates: toCandidates(literalIds, words), confident: true };
-  }
-  if (literalIds.length === 1) {
-    // 하나만 나왔다면, 관계선을 타고 가까운 단어 6개를 더 이어서 총 7개로 어휘를 넓힐 기회를 준다.
-    const nearby = nearestByRelation(literalIds[0], relations, 6);
-    return { type: 'candidates', candidates: toCandidates([literalIds[0], ...nearby], words), confident: true };
+  if (literalIds.length > 0) {
+    const finalIds = fillToCount(literalIds, relations, 7);
+    return { type: 'candidates', candidates: toCandidates(finalIds, words), confident: true };
   }
 
   // 2) 글자로 못 찾으면 의미로 찾는다 — LLM이 골라준 후보를 그대로 신뢰하지 않고
