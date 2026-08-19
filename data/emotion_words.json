@@ -2206,7 +2206,7 @@
     "prop": "none",
     "intensity": 4,
     "definition": "기쁘고 즐거운 마음이 저절로 차오르는 상태를 예스럽게 이르는 말.",
-    "example_sentence": "오랜만에 다시 느낀 희로 마음이 벅찼어.",
+    "example_sentence": "오랜만에 이렇게 기쁘고 즐거운 마음이 저절로 차올랐어.",
     "scene_description": "두 팔을 활짝 벌리고 봄볕 아래 서 있는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 20
@@ -2584,7 +2584,7 @@
     "prop": "none",
     "intensity": 3,
     "definition": "누군가를 아끼고 사랑하는 마음을 예스럽게 이르는 말.",
-    "example_sentence": "말은 안 했지만 마음속엔 늘 그 사람을 향한 애가 있었어.",
+    "example_sentence": "말은 안 했지만 마음속엔 늘 그 사람을 아끼고 사랑하는 마음이 있었어.",
     "scene_description": "가슴 한쪽에 손을 얹고 조용히 눈을 감는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 47
@@ -2592,13 +2592,13 @@
   {
     "id": "gamheung",
     "region_id": "garden",
-    "word_form": "감홍",
-    "noun_form": "감홍",
+    "word_form": "감흥",
+    "noun_form": "감흥",
     "pos": "명사",
     "prop": "book",
     "intensity": 3,
     "definition": "마음에 깊이 와닿아 절로 일어나는 감동과 흥겨움.",
-    "example_sentence": "그 장면 하나에 온몸이 소름 돋을 만큼 감홍이 일었어.",
+    "example_sentence": "그 장면 하나에 온몸이 소름 돋을 만큼 감흥이 일었어.",
     "scene_description": "인상 깊은 구절에 밑줄을 긋다 말고 손을 멈추는 캐릭터",
     "edge_bias_region_id": null,
     "display_order": 48

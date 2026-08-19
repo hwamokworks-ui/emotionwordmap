@@ -11,6 +11,10 @@ const INTENSITY_LABEL: Record<number, string> = { 1: '매우 약함', 2: '약함
 const STORE_KEY = 'ewm_store_v1';
 const PANEL_WIDTH = 422;
 
+// 정의가 "~을 예스럽게 이르는 말"인 단어들 — 예문에 억지로 끼워 넣으면 부자연스러워서,
+// 대신 요즘 표현으로 이렇게 말한다는 걸 상세 패널에 따로 알려준다.
+const ARCHAIC_MODERN: Record<string, string> = { hui: '기쁨', ae: '정 · 사랑' };
+
 type Word = {
   id: string;
   w: string;
@@ -451,6 +455,11 @@ export default function MapClient({
         </div>
 
         <p class="font-serif-kr text-[17px] leading-relaxed mt-4 pl-3" style="border-left:2px solid var(--border-hairline-strong);">${w.def}</p>
+        ${
+          ARCHAIC_MODERN[id]
+            ? `<p class="text-[11.5px] text-dim mt-2 pl-3">옛말 표현이에요 · 요즘엔 <b class="text-taupe">'${ARCHAIC_MODERN[id]}'</b>처럼 표현해요.</p>`
+            : ''
+        }
 
         <div class="flex items-center gap-3 mt-4">
           <span class="text-xs text-taupe label-eyebrow">감정 강도</span>
