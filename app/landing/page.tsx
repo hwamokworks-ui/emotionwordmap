@@ -194,7 +194,7 @@ export default function LandingPage() {
         <section className="mt-16 md:mt-24 enter enter-delay-1 text-center">
           <p className="label-eyebrow text-xs text-amber mb-3">02 · 왜 지도인가</p>
           <h2 className="font-display-serif text-[26px] md:text-[30px] leading-snug">
-            어휘가 늘수록, 위치는 정확해집니다
+            마음이 오간 영역들이 드러납니다
           </h2>
           <p className="text-taupe text-[14.5px] leading-relaxed mt-4 max-w-[560px] mx-auto">
             사전처럼 나열하면 정확한 단어를 이미 알고 있어야만 찾을 수 있습니다. 감정 어휘 지도는 비슷한
