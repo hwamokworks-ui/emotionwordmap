@@ -306,8 +306,8 @@ export default function LandingPage() {
           <p className="text-taupe text-[13.5px] leading-relaxed mt-4 max-w-[600px] mx-auto">
             감정 단어가 문장에 안 들어 있어도 뜻을 찾아내는 자유 문장 검색은 임베딩 유사도(
             <span className="landing-mono-label text-[12px]">text-embedding-3-small</span>) → LLM 직접 분류(현재{' '}
-            <span className="landing-mono-label text-[12px]">gpt-4o-mini</span>) → 후보 여러 개 제시 순으로 10단계를
-            거쳤고, 매 단계 같은 30개 문장으로 다시 측정했습니다.
+            <span className="landing-mono-label text-[12px]">gpt-4o-mini</span>) → 후보 여러 개 제시 → 복합 감정 지원
+            순으로 12단계를 거쳤고, 매 단계 같은 30개 문장으로 다시 측정했습니다.
           </p>
 
           <div className="mt-8 max-w-[640px] mx-auto">
@@ -315,7 +315,7 @@ export default function LandingPage() {
           </div>
 
           <p className="text-taupe text-[13px] leading-relaxed mt-8 max-w-[600px] mx-auto text-left">
-            1순위 정확도는 30~43%대를 오갔고, 지금 쓰는 최종 방식 기준으로는 40.0%입니다. 이 숫자를 실패율로 보지 않습니다 — 이 서비스의 목적은 정답
+            1순위 정확도는 30~43%대를 오갔고, 지금 쓰는 최종 방식 기준으로는 43.3%입니다. 이 숫자를 실패율로 보지 않습니다 — 이 서비스의 목적은 정답
             하나를 맞히는 게 아니라 감정 어휘를 넓히는 것이라, 후보 중 정답이 없어도 같은 정서 방향의 인접 어휘가
             나오면 의미가 있다고 봅니다. 그래서 후보 여러 개를 보여주고 사용자가 직접 클릭해 확인하는 방식으로
             설계했습니다.
