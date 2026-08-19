@@ -1,0 +1,2482 @@
+[
+  {
+    "word_a_id": "ae",
+    "word_b_id": "dalgawohada"
+  },
+  {
+    "word_a_id": "ae",
+    "word_b_id": "gamhoe"
+  },
+  {
+    "word_a_id": "aechak",
+    "word_b_id": "bureop"
+  },
+  {
+    "word_a_id": "aechak",
+    "word_b_id": "hwanggonghada"
+  },
+  {
+    "word_a_id": "aechak",
+    "word_b_id": "jjaksarang"
+  },
+  {
+    "word_a_id": "aechak",
+    "word_b_id": "jjingha"
+  },
+  {
+    "word_a_id": "aecheo",
+    "word_b_id": "antakkapda"
+  },
+  {
+    "word_a_id": "aecheo",
+    "word_b_id": "aswipda"
+  },
+  {
+    "word_a_id": "aecheo",
+    "word_b_id": "sasan"
+  },
+  {
+    "word_a_id": "aecheo",
+    "word_b_id": "ttakha"
+  },
+  {
+    "word_a_id": "aedal",
+    "word_b_id": "aedap"
+  },
+  {
+    "word_a_id": "aedal",
+    "word_b_id": "aehwan"
+  },
+  {
+    "word_a_id": "aedap",
+    "word_b_id": "aehwan"
+  },
+  {
+    "word_a_id": "aedap",
+    "word_b_id": "ari"
+  },
+  {
+    "word_a_id": "aedap",
+    "word_b_id": "jeonghan"
+  },
+  {
+    "word_a_id": "aedo",
+    "word_b_id": "biryeon"
+  },
+  {
+    "word_a_id": "aedo",
+    "word_b_id": "seulpeu"
+  },
+  {
+    "word_a_id": "aehwan",
+    "word_b_id": "guseul"
+  },
+  {
+    "word_a_id": "aejan",
+    "word_b_id": "dongjeonghada"
+  },
+  {
+    "word_a_id": "aejan",
+    "word_b_id": "gojeok"
+  },
+  {
+    "word_a_id": "aejan",
+    "word_b_id": "sukyeon"
+  },
+  {
+    "word_a_id": "aejeong",
+    "word_b_id": "gamdong"
+  },
+  {
+    "word_a_id": "aejeong",
+    "word_b_id": "gyogamhada"
+  },
+  {
+    "word_a_id": "aejeong",
+    "word_b_id": "ippeoha"
+  },
+  {
+    "word_a_id": "aejeong",
+    "word_b_id": "samohada"
+  },
+  {
+    "word_a_id": "aejeung",
+    "word_b_id": "eocheoguni"
+  },
+  {
+    "word_a_id": "aejeung",
+    "word_b_id": "joesong"
+  },
+  {
+    "word_a_id": "aejeung",
+    "word_b_id": "mian"
+  },
+  {
+    "word_a_id": "aejijungji",
+    "word_b_id": "gambokhada"
+  },
+  {
+    "word_a_id": "aejijungji",
+    "word_b_id": "heummohada"
+  },
+  {
+    "word_a_id": "aejijungji",
+    "word_b_id": "maehok"
+  },
+  {
+    "word_a_id": "aejijungji",
+    "word_b_id": "seonho"
+  },
+  {
+    "word_a_id": "aekkeul",
+    "word_b_id": "jomajoma"
+  },
+  {
+    "word_a_id": "aekkeul",
+    "word_b_id": "natteugeop"
+  },
+  {
+    "word_a_id": "aeryeon",
+    "word_b_id": "dongbyeong"
+  },
+  {
+    "word_a_id": "aeryeon",
+    "word_b_id": "ttakha"
+  },
+  {
+    "word_a_id": "aeseok",
+    "word_b_id": "joesong"
+  },
+  {
+    "word_a_id": "aeseok",
+    "word_b_id": "ppyoroton"
+  },
+  {
+    "word_a_id": "aeseok",
+    "word_b_id": "wichukgam"
+  },
+  {
+    "word_a_id": "aesu",
+    "word_b_id": "dongbyeong"
+  },
+  {
+    "word_a_id": "aesu",
+    "word_b_id": "siwonseopseophada"
+  },
+  {
+    "word_a_id": "aetada",
+    "word_b_id": "bulman"
+  },
+  {
+    "word_a_id": "aetada",
+    "word_b_id": "nosimchosa"
+  },
+  {
+    "word_a_id": "aeteut",
+    "word_b_id": "gyeongoehada"
+  },
+  {
+    "word_a_id": "aeteut",
+    "word_b_id": "jjaksarang"
+  },
+  {
+    "word_a_id": "aeteut",
+    "word_b_id": "mungkeulhada"
+  },
+  {
+    "word_a_id": "aeteut",
+    "word_b_id": "yeonmohada"
+  },
+  {
+    "word_a_id": "aetong",
+    "word_b_id": "jeogui"
+  },
+  {
+    "word_a_id": "aetong",
+    "word_b_id": "jinjeori"
+  },
+  {
+    "word_a_id": "aetong",
+    "word_b_id": "jjajeungnae"
+  },
+  {
+    "word_a_id": "aetong",
+    "word_b_id": "suchi"
+  },
+  {
+    "word_a_id": "aetong",
+    "word_b_id": "tonghan"
+  },
+  {
+    "word_a_id": "ajjil",
+    "word_b_id": "geomna"
+  },
+  {
+    "word_a_id": "ajjil",
+    "word_b_id": "tteuak"
+  },
+  {
+    "word_a_id": "allak",
+    "word_b_id": "pyeongan"
+  },
+  {
+    "word_a_id": "allak",
+    "word_b_id": "pyeonghwa"
+  },
+  {
+    "word_a_id": "amdam",
+    "word_b_id": "amul"
+  },
+  {
+    "word_a_id": "amdam",
+    "word_b_id": "chamdam"
+  },
+  {
+    "word_a_id": "amul",
+    "word_b_id": "chamdam"
+  },
+  {
+    "word_a_id": "amul",
+    "word_b_id": "nakdam"
+  },
+  {
+    "word_a_id": "amul",
+    "word_b_id": "silmang"
+  },
+  {
+    "word_a_id": "andal",
+    "word_b_id": "bulman"
+  },
+  {
+    "word_a_id": "andal",
+    "word_b_id": "saemnae"
+  },
+  {
+    "word_a_id": "andal",
+    "word_b_id": "samuchi"
+  },
+  {
+    "word_a_id": "andal",
+    "word_b_id": "yagoreu"
+  },
+  {
+    "word_a_id": "andalbokdal",
+    "word_b_id": "geomna"
+  },
+  {
+    "word_a_id": "andalbokdal",
+    "word_b_id": "gigeop"
+  },
+  {
+    "word_a_id": "andalbokdal",
+    "word_b_id": "gijeolchopung"
+  },
+  {
+    "word_a_id": "ando",
+    "word_b_id": "ansim"
+  },
+  {
+    "word_a_id": "ando",
+    "word_b_id": "deomdeom"
+  },
+  {
+    "word_a_id": "ando",
+    "word_b_id": "mamnoh"
+  },
+  {
+    "word_a_id": "anikkop",
+    "word_b_id": "hanseureop"
+  },
+  {
+    "word_a_id": "anikkop",
+    "word_b_id": "jachaek"
+  },
+  {
+    "word_a_id": "anjeong",
+    "word_b_id": "ansim"
+  },
+  {
+    "word_a_id": "anjeong",
+    "word_b_id": "mamnoh"
+  },
+  {
+    "word_a_id": "anjeong",
+    "word_b_id": "pyeonan"
+  },
+  {
+    "word_a_id": "ansim",
+    "word_b_id": "mamnoh"
+  },
+  {
+    "word_a_id": "ansim",
+    "word_b_id": "taepyeong"
+  },
+  {
+    "word_a_id": "ansseureopda",
+    "word_b_id": "bulssanghada"
+  },
+  {
+    "word_a_id": "ansseureopda",
+    "word_b_id": "gayeopda"
+  },
+  {
+    "word_a_id": "ansseureopda",
+    "word_b_id": "jeokjeok"
+  },
+  {
+    "word_a_id": "antakkapda",
+    "word_b_id": "aswipda"
+  },
+  {
+    "word_a_id": "antakkapda",
+    "word_b_id": "sasan"
+  },
+  {
+    "word_a_id": "antakkapda",
+    "word_b_id": "yeonyeon"
+  },
+  {
+    "word_a_id": "ari",
+    "word_b_id": "jeonghan"
+  },
+  {
+    "word_a_id": "ari",
+    "word_b_id": "usu"
+  },
+  {
+    "word_a_id": "aseulaseul",
+    "word_b_id": "bijang"
+  },
+  {
+    "word_a_id": "aseulaseul",
+    "word_b_id": "ginjang"
+  },
+  {
+    "word_a_id": "aswipda",
+    "word_b_id": "yeonyeon"
+  },
+  {
+    "word_a_id": "ayeon",
+    "word_b_id": "geuripda"
+  },
+  {
+    "word_a_id": "ayeon",
+    "word_b_id": "hyangsu"
+  },
+  {
+    "word_a_id": "ayeon",
+    "word_b_id": "yeonmin"
+  },
+  {
+    "word_a_id": "ayeonhada",
+    "word_b_id": "songyeon"
+  },
+  {
+    "word_a_id": "ayeonhada",
+    "word_b_id": "susim"
+  },
+  {
+    "word_a_id": "ayeonsilsaek",
+    "word_b_id": "galdeung"
+  },
+  {
+    "word_a_id": "ayeonsilsaek",
+    "word_b_id": "gimak"
+  },
+  {
+    "word_a_id": "ayeonsilsaek",
+    "word_b_id": "sigi"
+  },
+  {
+    "word_a_id": "baesingam",
+    "word_b_id": "chiyok"
+  },
+  {
+    "word_a_id": "baesingam",
+    "word_b_id": "gyeongmyeol"
+  },
+  {
+    "word_a_id": "baesingam",
+    "word_b_id": "hwanmyeol"
+  },
+  {
+    "word_a_id": "baesingam",
+    "word_b_id": "jeungo"
+  },
+  {
+    "word_a_id": "bakjin",
+    "word_b_id": "huinak"
+  },
+  {
+    "word_a_id": "bakjin",
+    "word_b_id": "huiyeol"
+  },
+  {
+    "word_a_id": "bakjin",
+    "word_b_id": "jasinmanman"
+  },
+  {
+    "word_a_id": "balkkeun",
+    "word_b_id": "banhangsim"
+  },
+  {
+    "word_a_id": "balkkeun",
+    "word_b_id": "bibungangae"
+  },
+  {
+    "word_a_id": "balkkeun",
+    "word_b_id": "gyeokhada"
+  },
+  {
+    "word_a_id": "balkkeun",
+    "word_b_id": "seongnae"
+  },
+  {
+    "word_a_id": "balkkeun",
+    "word_b_id": "tongbun"
+  },
+  {
+    "word_a_id": "bangam",
+    "word_b_id": "bulkwae"
+  },
+  {
+    "word_a_id": "bangam",
+    "word_b_id": "kkeumjjik"
+  },
+  {
+    "word_a_id": "bangam",
+    "word_b_id": "soreum"
+  },
+  {
+    "word_a_id": "bangap",
+    "word_b_id": "gyeongkwae"
+  },
+  {
+    "word_a_id": "bangap",
+    "word_b_id": "sangkwae"
+  },
+  {
+    "word_a_id": "bangap",
+    "word_b_id": "seongchwigam"
+  },
+  {
+    "word_a_id": "bangap",
+    "word_b_id": "yeonggwang"
+  },
+  {
+    "word_a_id": "banha",
+    "word_b_id": "gamgaemuryang"
+  },
+  {
+    "word_a_id": "banha",
+    "word_b_id": "maehok"
+  },
+  {
+    "word_a_id": "banhangsim",
+    "word_b_id": "gyeokhada"
+  },
+  {
+    "word_a_id": "banhangsim",
+    "word_b_id": "noyeop"
+  },
+  {
+    "word_a_id": "banhangsim",
+    "word_b_id": "tongbun"
+  },
+  {
+    "word_a_id": "beonmin",
+    "word_b_id": "makmak"
+  },
+  {
+    "word_a_id": "beonmin",
+    "word_b_id": "sangsim"
+  },
+  {
+    "word_a_id": "beonmin",
+    "word_b_id": "seulpeu"
+  },
+  {
+    "word_a_id": "beonnoe",
+    "word_b_id": "biryeon"
+  },
+  {
+    "word_a_id": "beonnoe",
+    "word_b_id": "gonoe"
+  },
+  {
+    "word_a_id": "beonnoe",
+    "word_b_id": "guseul"
+  },
+  {
+    "word_a_id": "biae",
+    "word_b_id": "jeoljeol"
+  },
+  {
+    "word_a_id": "biae",
+    "word_b_id": "seolwo"
+  },
+  {
+    "word_a_id": "bibungangae",
+    "word_b_id": "seongnae"
+  },
+  {
+    "word_a_id": "bicham",
+    "word_b_id": "cheocheolhada"
+  },
+  {
+    "word_a_id": "bicham",
+    "word_b_id": "chimtong"
+  },
+  {
+    "word_a_id": "bicham",
+    "word_b_id": "eogul"
+  },
+  {
+    "word_a_id": "bijang",
+    "word_b_id": "ginjang"
+  },
+  {
+    "word_a_id": "bijang",
+    "word_b_id": "gyeokjeong"
+  },
+  {
+    "word_a_id": "biryeon",
+    "word_b_id": "seulpeu"
+  },
+  {
+    "word_a_id": "bitan",
+    "word_b_id": "bulhaeng"
+  },
+  {
+    "word_a_id": "bitan",
+    "word_b_id": "byeoap"
+  },
+  {
+    "word_a_id": "bitan",
+    "word_b_id": "gaetan"
+  },
+  {
+    "word_a_id": "bitan",
+    "word_b_id": "hantan"
+  },
+  {
+    "word_a_id": "bitong",
+    "word_b_id": "hantan"
+  },
+  {
+    "word_a_id": "bitong",
+    "word_b_id": "tongtan"
+  },
+  {
+    "word_a_id": "boramcha",
+    "word_b_id": "jaemi"
+  },
+  {
+    "word_a_id": "boramcha",
+    "word_b_id": "ppudeut"
+  },
+  {
+    "word_a_id": "boramcha",
+    "word_b_id": "yeongye"
+  },
+  {
+    "word_a_id": "bua",
+    "word_b_id": "silta"
+  },
+  {
+    "word_a_id": "bua",
+    "word_b_id": "wiapgam"
+  },
+  {
+    "word_a_id": "bukkeureop",
+    "word_b_id": "gonhokseureop"
+  },
+  {
+    "word_a_id": "bukkeureop",
+    "word_b_id": "kaenggi"
+  },
+  {
+    "word_a_id": "bukkeureop",
+    "word_b_id": "minmang"
+  },
+  {
+    "word_a_id": "bulhaeng",
+    "word_b_id": "jigeutjigeut"
+  },
+  {
+    "word_a_id": "bulhaeng",
+    "word_b_id": "joechaekgam"
+  },
+  {
+    "word_a_id": "bulkwae",
+    "word_b_id": "hyeomo"
+  },
+  {
+    "word_a_id": "bulkwae",
+    "word_b_id": "kkeumjjik"
+  },
+  {
+    "word_a_id": "bulkwae",
+    "word_b_id": "soreum"
+  },
+  {
+    "word_a_id": "bulman",
+    "word_b_id": "nogi"
+  },
+  {
+    "word_a_id": "bulman",
+    "word_b_id": "nosimchosa"
+  },
+  {
+    "word_a_id": "bulman",
+    "word_b_id": "samuchi"
+  },
+  {
+    "word_a_id": "bulmanjok",
+    "word_b_id": "eonjjan"
+  },
+  {
+    "word_a_id": "bulmanjok",
+    "word_b_id": "hanseureop"
+  },
+  {
+    "word_a_id": "bulpyeon",
+    "word_b_id": "hoehan"
+  },
+  {
+    "word_a_id": "bulpyeon",
+    "word_b_id": "nangpae"
+  },
+  {
+    "word_a_id": "bulpyeon",
+    "word_b_id": "seoreop"
+  },
+  {
+    "word_a_id": "bulpyeon",
+    "word_b_id": "uibun"
+  },
+  {
+    "word_a_id": "bulssanghada",
+    "word_b_id": "gayeopda"
+  },
+  {
+    "word_a_id": "bulssanghada",
+    "word_b_id": "jeokjeok"
+  },
+  {
+    "word_a_id": "bulssanghada",
+    "word_b_id": "seounhada"
+  },
+  {
+    "word_a_id": "bungae",
+    "word_b_id": "gyeogang"
+  },
+  {
+    "word_a_id": "bungae",
+    "word_b_id": "nohada"
+  },
+  {
+    "word_a_id": "bungae",
+    "word_b_id": "singyeongjil"
+  },
+  {
+    "word_a_id": "bungae",
+    "word_b_id": "ulbun"
+  },
+  {
+    "word_a_id": "bunhada",
+    "word_b_id": "gollana"
+  },
+  {
+    "word_a_id": "bunhada",
+    "word_b_id": "singyeongjil"
+  },
+  {
+    "word_a_id": "bunno",
+    "word_b_id": "gyeongno"
+  },
+  {
+    "word_a_id": "bunno",
+    "word_b_id": "nobaldaebal"
+  },
+  {
+    "word_a_id": "bunno",
+    "word_b_id": "ulhwatong"
+  },
+  {
+    "word_a_id": "buntong",
+    "word_b_id": "jinno"
+  },
+  {
+    "word_a_id": "buntong",
+    "word_b_id": "singyeongjil"
+  },
+  {
+    "word_a_id": "buntong",
+    "word_b_id": "ulhwa"
+  },
+  {
+    "word_a_id": "buntong",
+    "word_b_id": "wonhan"
+  },
+  {
+    "word_a_id": "buran",
+    "word_b_id": "galdeung"
+  },
+  {
+    "word_a_id": "buran",
+    "word_b_id": "sokta"
+  },
+  {
+    "word_a_id": "bureop",
+    "word_b_id": "hwangsonghada"
+  },
+  {
+    "word_a_id": "byeoap",
+    "word_b_id": "gaetan"
+  },
+  {
+    "word_a_id": "chakjaphada",
+    "word_b_id": "gwontaerobda"
+  },
+  {
+    "word_a_id": "chakjaphada",
+    "word_b_id": "simsim"
+  },
+  {
+    "word_a_id": "chakjaphada",
+    "word_b_id": "simu"
+  },
+  {
+    "word_a_id": "changpi",
+    "word_b_id": "gachaek"
+  },
+  {
+    "word_a_id": "changpi",
+    "word_b_id": "geobuk"
+  },
+  {
+    "word_a_id": "cheocham",
+    "word_b_id": "eogul"
+  },
+  {
+    "word_a_id": "cheocham",
+    "word_b_id": "paebaegam"
+  },
+  {
+    "word_a_id": "cheocham",
+    "word_b_id": "wonmang"
+  },
+  {
+    "word_a_id": "cheocheolhada",
+    "word_b_id": "eogul"
+  },
+  {
+    "word_a_id": "cheocheolhada",
+    "word_b_id": "paebaegam"
+  },
+  {
+    "word_a_id": "cheonyeomhada",
+    "word_b_id": "gijukda"
+  },
+  {
+    "word_a_id": "cheonyeomhada",
+    "word_b_id": "jigyeop"
+  },
+  {
+    "word_a_id": "cheoryanghada",
+    "word_b_id": "oeropda"
+  },
+  {
+    "word_a_id": "cheoryanghada",
+    "word_b_id": "sseulsseulhada"
+  },
+  {
+    "word_a_id": "cheoryanghada",
+    "word_b_id": "sseupsseulhada"
+  },
+  {
+    "word_a_id": "cheoyeon",
+    "word_b_id": "heoheo"
+  },
+  {
+    "word_a_id": "cheoyeon",
+    "word_b_id": "seounhada"
+  },
+  {
+    "word_a_id": "cheoyeon",
+    "word_b_id": "sseupsseulhada"
+  },
+  {
+    "word_a_id": "cheugeunhada",
+    "word_b_id": "gayeopda"
+  },
+  {
+    "word_a_id": "cheugeunhada",
+    "word_b_id": "singsungsaenghada"
+  },
+  {
+    "word_a_id": "cheugeunhada",
+    "word_b_id": "yeonyeon"
+  },
+  {
+    "word_a_id": "chimtong",
+    "word_b_id": "eogul"
+  },
+  {
+    "word_a_id": "chimtong",
+    "word_b_id": "geobugam"
+  },
+  {
+    "word_a_id": "chimul",
+    "word_b_id": "eumul"
+  },
+  {
+    "word_a_id": "chimul",
+    "word_b_id": "nakmang"
+  },
+  {
+    "word_a_id": "chimul",
+    "word_b_id": "uljeok"
+  },
+  {
+    "word_a_id": "chinaehada",
+    "word_b_id": "gamgae"
+  },
+  {
+    "word_a_id": "chinaehada",
+    "word_b_id": "gyeongaehada"
+  },
+  {
+    "word_a_id": "chinaehada",
+    "word_b_id": "jabu"
+  },
+  {
+    "word_a_id": "chitteolli",
+    "word_b_id": "ulhwa"
+  },
+  {
+    "word_a_id": "chitteolli",
+    "word_b_id": "ulhwatong"
+  },
+  {
+    "word_a_id": "chitteolli",
+    "word_b_id": "wonhan"
+  },
+  {
+    "word_a_id": "chiyok",
+    "word_b_id": "jeungo"
+  },
+  {
+    "word_a_id": "chiyok",
+    "word_b_id": "momyeol"
+  },
+  {
+    "word_a_id": "chojo",
+    "word_b_id": "danghok"
+  },
+  {
+    "word_a_id": "chojo",
+    "word_b_id": "galdeung"
+  },
+  {
+    "word_a_id": "chojo",
+    "word_b_id": "gimak"
+  },
+  {
+    "word_a_id": "chungjokgam",
+    "word_b_id": "donggam"
+  },
+  {
+    "word_a_id": "chungjokgam",
+    "word_b_id": "gammyeong"
+  },
+  {
+    "word_a_id": "chungjokgam",
+    "word_b_id": "jeongdap"
+  },
+  {
+    "word_a_id": "chungjokgam",
+    "word_b_id": "tteottteot"
+  },
+  {
+    "word_a_id": "dalgawohada",
+    "word_b_id": "gamhoe"
+  },
+  {
+    "word_a_id": "damdam",
+    "word_b_id": "mudeom"
+  },
+  {
+    "word_a_id": "damdam",
+    "word_b_id": "simsim"
+  },
+  {
+    "word_a_id": "danghok",
+    "word_b_id": "danghwang"
+  },
+  {
+    "word_a_id": "danghok",
+    "word_b_id": "tteukkeum"
+  },
+  {
+    "word_a_id": "danghwang",
+    "word_b_id": "ginjang"
+  },
+  {
+    "word_a_id": "danghwang",
+    "word_b_id": "hwangdang"
+  },
+  {
+    "word_a_id": "danghwang",
+    "word_b_id": "tteukkeum"
+  },
+  {
+    "word_a_id": "dapdap",
+    "word_b_id": "sangsim"
+  },
+  {
+    "word_a_id": "dapdap",
+    "word_b_id": "silui"
+  },
+  {
+    "word_a_id": "deomdeom",
+    "word_b_id": "taepyeong"
+  },
+  {
+    "word_a_id": "deulteu",
+    "word_b_id": "gamtan"
+  },
+  {
+    "word_a_id": "deulteu",
+    "word_b_id": "heungchwi"
+  },
+  {
+    "word_a_id": "deulteu",
+    "word_b_id": "seolle"
+  },
+  {
+    "word_a_id": "deulteu",
+    "word_b_id": "uigiyangyang"
+  },
+  {
+    "word_a_id": "deulteu",
+    "word_b_id": "yeorae"
+  },
+  {
+    "word_a_id": "dochwihada",
+    "word_b_id": "gamgaemuryang"
+  },
+  {
+    "word_a_id": "dochwihada",
+    "word_b_id": "gamtan"
+  },
+  {
+    "word_a_id": "dochwihada",
+    "word_b_id": "maeryodoeda"
+  },
+  {
+    "word_a_id": "dongbyeong",
+    "word_b_id": "siwonseopseophada"
+  },
+  {
+    "word_a_id": "donggam",
+    "word_b_id": "ippeoha"
+  },
+  {
+    "word_a_id": "donggam",
+    "word_b_id": "soksiwon"
+  },
+  {
+    "word_a_id": "donggam",
+    "word_b_id": "tteottteot"
+  },
+  {
+    "word_a_id": "donggyeonghada",
+    "word_b_id": "gonggam"
+  },
+  {
+    "word_a_id": "donggyeonghada",
+    "word_b_id": "yeonjeong"
+  },
+  {
+    "word_a_id": "dongjeonghada",
+    "word_b_id": "garyeon"
+  },
+  {
+    "word_a_id": "dongjeonghada",
+    "word_b_id": "sukyeon"
+  },
+  {
+    "word_a_id": "dongjeonghada",
+    "word_b_id": "yeonmin"
+  },
+  {
+    "word_a_id": "dongyo",
+    "word_b_id": "huibi"
+  },
+  {
+    "word_a_id": "dongyo",
+    "word_b_id": "nopasim"
+  },
+  {
+    "word_a_id": "dongyo",
+    "word_b_id": "uia"
+  },
+  {
+    "word_a_id": "duryeop",
+    "word_b_id": "jeolbakgam"
+  },
+  {
+    "word_a_id": "duryeop",
+    "word_b_id": "jilgeop"
+  },
+  {
+    "word_a_id": "duryeop",
+    "word_b_id": "jiltu"
+  },
+  {
+    "word_a_id": "duryeop",
+    "word_b_id": "musimusi"
+  },
+  {
+    "word_a_id": "eocheoguni",
+    "word_b_id": "simran"
+  },
+  {
+    "word_a_id": "eocheoguni",
+    "word_b_id": "yugam"
+  },
+  {
+    "word_a_id": "eogul",
+    "word_b_id": "geobugam"
+  },
+  {
+    "word_a_id": "eogul",
+    "word_b_id": "wonmang"
+  },
+  {
+    "word_a_id": "eoieops",
+    "word_b_id": "mangseol"
+  },
+  {
+    "word_a_id": "eoieops",
+    "word_b_id": "mian"
+  },
+  {
+    "word_a_id": "eoieops",
+    "word_b_id": "muan"
+  },
+  {
+    "word_a_id": "eoieops",
+    "word_b_id": "ppyoroton"
+  },
+  {
+    "word_a_id": "eonjjan",
+    "word_b_id": "gogap"
+  },
+  {
+    "word_a_id": "eumul",
+    "word_b_id": "nakdam"
+  },
+  {
+    "word_a_id": "eumul",
+    "word_b_id": "nakmang"
+  },
+  {
+    "word_a_id": "gachaek",
+    "word_b_id": "geobuk"
+  },
+  {
+    "word_a_id": "gachaek",
+    "word_b_id": "nambukkeureop"
+  },
+  {
+    "word_a_id": "gaddeun",
+    "word_b_id": "jajok"
+  },
+  {
+    "word_a_id": "gaddeun",
+    "word_b_id": "taepyeong"
+  },
+  {
+    "word_a_id": "gajeung",
+    "word_b_id": "hanmaeng"
+  },
+  {
+    "word_a_id": "gajeung",
+    "word_b_id": "jagihyeomo"
+  },
+  {
+    "word_a_id": "gajeung",
+    "word_b_id": "jilsaek"
+  },
+  {
+    "word_a_id": "gajeung",
+    "word_b_id": "yeokgyeop"
+  },
+  {
+    "word_a_id": "galdeung",
+    "word_b_id": "gimak"
+  },
+  {
+    "word_a_id": "galdeung",
+    "word_b_id": "sokta"
+  },
+  {
+    "word_a_id": "gambokhada",
+    "word_b_id": "maehok"
+  },
+  {
+    "word_a_id": "gamdong",
+    "word_b_id": "gyogamhada"
+  },
+  {
+    "word_a_id": "gamdong",
+    "word_b_id": "heungmirop"
+  },
+  {
+    "word_a_id": "gamgae",
+    "word_b_id": "heummohada"
+  },
+  {
+    "word_a_id": "gamgae",
+    "word_b_id": "samohada"
+  },
+  {
+    "word_a_id": "gamgaemuryang",
+    "word_b_id": "gamtan"
+  },
+  {
+    "word_a_id": "gamgyeok",
+    "word_b_id": "huiyeol"
+  },
+  {
+    "word_a_id": "gamgyeok",
+    "word_b_id": "jasinmanman"
+  },
+  {
+    "word_a_id": "gamgyeok",
+    "word_b_id": "jeulgi"
+  },
+  {
+    "word_a_id": "gamgyeok",
+    "word_b_id": "joha"
+  },
+  {
+    "word_a_id": "gamheung",
+    "word_b_id": "gomudoeda"
+  },
+  {
+    "word_a_id": "gamheung",
+    "word_b_id": "mungkeulhada"
+  },
+  {
+    "word_a_id": "gamhoe",
+    "word_b_id": "gomudoeda"
+  },
+  {
+    "word_a_id": "gammirop",
+    "word_b_id": "gomap"
+  },
+  {
+    "word_a_id": "gammirop",
+    "word_b_id": "heumut"
+  },
+  {
+    "word_a_id": "gammirop",
+    "word_b_id": "jeonggyeop"
+  },
+  {
+    "word_a_id": "gammyeong",
+    "word_b_id": "jeongdap"
+  },
+  {
+    "word_a_id": "gamtan",
+    "word_b_id": "heungmijinjin"
+  },
+  {
+    "word_a_id": "garyeon",
+    "word_b_id": "heoheo"
+  },
+  {
+    "word_a_id": "garyeon",
+    "word_b_id": "singsungsaenghada"
+  },
+  {
+    "word_a_id": "gasorop",
+    "word_b_id": "jagihyeomo"
+  },
+  {
+    "word_a_id": "gasorop",
+    "word_b_id": "kkeorimjik"
+  },
+  {
+    "word_a_id": "gasorop",
+    "word_b_id": "kkeureumjik"
+  },
+  {
+    "word_a_id": "gasorop",
+    "word_b_id": "kowuseum"
+  },
+  {
+    "word_a_id": "gayeopda",
+    "word_b_id": "singsungsaenghada"
+  },
+  {
+    "word_a_id": "geobugam",
+    "word_b_id": "jinjeori"
+  },
+  {
+    "word_a_id": "geobugam",
+    "word_b_id": "wonmang"
+  },
+  {
+    "word_a_id": "geobuk",
+    "word_b_id": "kkeori"
+  },
+  {
+    "word_a_id": "geobuk",
+    "word_b_id": "tteolda"
+  },
+  {
+    "word_a_id": "geobuk",
+    "word_b_id": "yugam"
+  },
+  {
+    "word_a_id": "geokjeong",
+    "word_b_id": "simnyeo"
+  },
+  {
+    "word_a_id": "geokjeong",
+    "word_b_id": "yeomryeo"
+  },
+  {
+    "word_a_id": "geomna",
+    "word_b_id": "tteuak"
+  },
+  {
+    "word_a_id": "geungji",
+    "word_b_id": "heupjok"
+  },
+  {
+    "word_a_id": "geungji",
+    "word_b_id": "holgabun"
+  },
+  {
+    "word_a_id": "geungji",
+    "word_b_id": "manjok"
+  },
+  {
+    "word_a_id": "geunsim",
+    "word_b_id": "sigi"
+  },
+  {
+    "word_a_id": "geunsim",
+    "word_b_id": "uisim"
+  },
+  {
+    "word_a_id": "geunsimhada",
+    "word_b_id": "uisim"
+  },
+  {
+    "word_a_id": "geunsimhada",
+    "word_b_id": "uryeo"
+  },
+  {
+    "word_a_id": "geuripda",
+    "word_b_id": "hyangsu"
+  },
+  {
+    "word_a_id": "geuripda",
+    "word_b_id": "yeonmin"
+  },
+  {
+    "word_a_id": "gigeop",
+    "word_b_id": "gijeolchopung"
+  },
+  {
+    "word_a_id": "gigo",
+    "word_b_id": "jaman"
+  },
+  {
+    "word_a_id": "gigo",
+    "word_b_id": "ujjul"
+  },
+  {
+    "word_a_id": "gijeolchopung",
+    "word_b_id": "honbibaeksan"
+  },
+  {
+    "word_a_id": "gijukda",
+    "word_b_id": "uigi"
+  },
+  {
+    "word_a_id": "gijukda",
+    "word_b_id": "uul"
+  },
+  {
+    "word_a_id": "gikkeopda",
+    "word_b_id": "meotjjeok"
+  },
+  {
+    "word_a_id": "gikkeopda",
+    "word_b_id": "nambureop"
+  },
+  {
+    "word_a_id": "gimak",
+    "word_b_id": "seonttuk"
+  },
+  {
+    "word_a_id": "gimak",
+    "word_b_id": "wihwagam"
+  },
+  {
+    "word_a_id": "ginjang",
+    "word_b_id": "hwangdang"
+  },
+  {
+    "word_a_id": "gippeu",
+    "word_b_id": "jeulgeop"
+  },
+  {
+    "word_a_id": "gippeu",
+    "word_b_id": "seongchwigam"
+  },
+  {
+    "word_a_id": "godokhada",
+    "word_b_id": "oeropda"
+  },
+  {
+    "word_a_id": "godokhada",
+    "word_b_id": "sseulsseulhada"
+  },
+  {
+    "word_a_id": "goerop",
+    "word_b_id": "jeolmang"
+  },
+  {
+    "word_a_id": "goerop",
+    "word_b_id": "jwajeol"
+  },
+  {
+    "word_a_id": "goerop",
+    "word_b_id": "mangyeonjasil"
+  },
+  {
+    "word_a_id": "gogap",
+    "word_b_id": "hanseureop"
+  },
+  {
+    "word_a_id": "gogap",
+    "word_b_id": "seoreop"
+  },
+  {
+    "word_a_id": "gojeok",
+    "word_b_id": "heojeonhada"
+  },
+  {
+    "word_a_id": "gollana",
+    "word_b_id": "gwaessim"
+  },
+  {
+    "word_a_id": "gomap",
+    "word_b_id": "heumut"
+  },
+  {
+    "word_a_id": "gomap",
+    "word_b_id": "huryeon"
+  },
+  {
+    "word_a_id": "gomap",
+    "word_b_id": "jeonggam"
+  },
+  {
+    "word_a_id": "gomin",
+    "word_b_id": "gwichan"
+  },
+  {
+    "word_a_id": "gomin",
+    "word_b_id": "heotal"
+  },
+  {
+    "word_a_id": "gomin",
+    "word_b_id": "simdeuronghada"
+  },
+  {
+    "word_a_id": "gomudoeda",
+    "word_b_id": "gyeongaehada"
+  },
+  {
+    "word_a_id": "gonggam",
+    "word_b_id": "jabu"
+  },
+  {
+    "word_a_id": "gonggam",
+    "word_b_id": "yeonjeong"
+  },
+  {
+    "word_a_id": "gongheohada",
+    "word_b_id": "muryohada"
+  },
+  {
+    "word_a_id": "gongheohada",
+    "word_b_id": "simu"
+  },
+  {
+    "word_a_id": "gongheohada",
+    "word_b_id": "ttabun"
+  },
+  {
+    "word_a_id": "gongpo",
+    "word_b_id": "gyeongak"
+  },
+  {
+    "word_a_id": "gongpo",
+    "word_b_id": "honbibaeksan"
+  },
+  {
+    "word_a_id": "gonhokseureop",
+    "word_b_id": "guryok"
+  },
+  {
+    "word_a_id": "gonoe",
+    "word_b_id": "guseul"
+  },
+  {
+    "word_a_id": "gorip",
+    "word_b_id": "oeropda"
+  },
+  {
+    "word_a_id": "gorip",
+    "word_b_id": "soeo"
+  },
+  {
+    "word_a_id": "guryok",
+    "word_b_id": "kaenggi"
+  },
+  {
+    "word_a_id": "gwaessim",
+    "word_b_id": "tonghan"
+  },
+  {
+    "word_a_id": "gwaessim",
+    "word_b_id": "wontonghada"
+  },
+  {
+    "word_a_id": "gwichan",
+    "word_b_id": "simdeuronghada"
+  },
+  {
+    "word_a_id": "gwichan",
+    "word_b_id": "sinmulnada"
+  },
+  {
+    "word_a_id": "gwontaerobda",
+    "word_b_id": "simu"
+  },
+  {
+    "word_a_id": "gwontaerobda",
+    "word_b_id": "uigi"
+  },
+  {
+    "word_a_id": "gyeogang",
+    "word_b_id": "tongbun"
+  },
+  {
+    "word_a_id": "gyeogang",
+    "word_b_id": "ulbun"
+  },
+  {
+    "word_a_id": "gyeokbun",
+    "word_b_id": "gyeongno"
+  },
+  {
+    "word_a_id": "gyeokbun",
+    "word_b_id": "hwanada"
+  },
+  {
+    "word_a_id": "gyeokbun",
+    "word_b_id": "nohada"
+  },
+  {
+    "word_a_id": "gyeokdongdoeda",
+    "word_b_id": "gyeongtanhada"
+  },
+  {
+    "word_a_id": "gyeokdongdoeda",
+    "word_b_id": "heungbun"
+  },
+  {
+    "word_a_id": "gyeokdongdoeda",
+    "word_b_id": "nollap"
+  },
+  {
+    "word_a_id": "gyeokhada",
+    "word_b_id": "yeokjeong"
+  },
+  {
+    "word_a_id": "gyeokjeong",
+    "word_b_id": "jeongyok"
+  },
+  {
+    "word_a_id": "gyeokjeong",
+    "word_b_id": "nolla"
+  },
+  {
+    "word_a_id": "gyeomyeonjjeok",
+    "word_b_id": "meosseuk"
+  },
+  {
+    "word_a_id": "gyeomyeonjjeok",
+    "word_b_id": "saeljjuk"
+  },
+  {
+    "word_a_id": "gyeomyeonjjeok",
+    "word_b_id": "songgu"
+  },
+  {
+    "word_a_id": "gyeomyeonjjeok",
+    "word_b_id": "yeohan"
+  },
+  {
+    "word_a_id": "gyeongaehada",
+    "word_b_id": "jabu"
+  },
+  {
+    "word_a_id": "gyeongak",
+    "word_b_id": "honbibaeksan"
+  },
+  {
+    "word_a_id": "gyeongkwae",
+    "word_b_id": "salmatnada"
+  },
+  {
+    "word_a_id": "gyeongmyeol",
+    "word_b_id": "hwanmyeol"
+  },
+  {
+    "word_a_id": "gyeongmyeol",
+    "word_b_id": "hyeomo"
+  },
+  {
+    "word_a_id": "gyeongno",
+    "word_b_id": "hwanada"
+  },
+  {
+    "word_a_id": "gyeongoehada",
+    "word_b_id": "yeonmohada"
+  },
+  {
+    "word_a_id": "gyeongtanhada",
+    "word_b_id": "nollap"
+  },
+  {
+    "word_a_id": "haengbok",
+    "word_b_id": "ppudeut"
+  },
+  {
+    "word_a_id": "haengbok",
+    "word_b_id": "sarangseureop"
+  },
+  {
+    "word_a_id": "han",
+    "word_b_id": "nangpae"
+  },
+  {
+    "word_a_id": "han",
+    "word_b_id": "silta"
+  },
+  {
+    "word_a_id": "han",
+    "word_b_id": "yasok"
+  },
+  {
+    "word_a_id": "hanmaeng",
+    "word_b_id": "yeokgyeop"
+  },
+  {
+    "word_a_id": "hanseureop",
+    "word_b_id": "jachaek"
+  },
+  {
+    "word_a_id": "hantan",
+    "word_b_id": "tongtan"
+  },
+  {
+    "word_a_id": "heojeonhada",
+    "word_b_id": "sseulsseulhada"
+  },
+  {
+    "word_a_id": "heomanghada",
+    "word_b_id": "heomu"
+  },
+  {
+    "word_a_id": "heomanghada",
+    "word_b_id": "junuk"
+  },
+  {
+    "word_a_id": "heomu",
+    "word_b_id": "junuk"
+  },
+  {
+    "word_a_id": "heotal",
+    "word_b_id": "jigyeop"
+  },
+  {
+    "word_a_id": "heotal",
+    "word_b_id": "simdeuronghada"
+  },
+  {
+    "word_a_id": "heummohada",
+    "word_b_id": "samohada"
+  },
+  {
+    "word_a_id": "heummohada",
+    "word_b_id": "seonho"
+  },
+  {
+    "word_a_id": "heumut",
+    "word_b_id": "huryeon"
+  },
+  {
+    "word_a_id": "heungbun",
+    "word_b_id": "nollap"
+  },
+  {
+    "word_a_id": "heungchwi",
+    "word_b_id": "nollap"
+  },
+  {
+    "word_a_id": "heungchwi",
+    "word_b_id": "uigiyangyang"
+  },
+  {
+    "word_a_id": "heunggyeop",
+    "word_b_id": "hwanhui"
+  },
+  {
+    "word_a_id": "heunggyeop",
+    "word_b_id": "seongchwigam"
+  },
+  {
+    "word_a_id": "heunggyeop",
+    "word_b_id": "sinmyeong"
+  },
+  {
+    "word_a_id": "heunggyeop",
+    "word_b_id": "yukwae"
+  },
+  {
+    "word_a_id": "heungmijinjin",
+    "word_b_id": "seolle"
+  },
+  {
+    "word_a_id": "heungmirop",
+    "word_b_id": "maeryodoeda"
+  },
+  {
+    "word_a_id": "heungnada",
+    "word_b_id": "kwaegam"
+  },
+  {
+    "word_a_id": "heungnada",
+    "word_b_id": "yeolgwang"
+  },
+  {
+    "word_a_id": "heungnada",
+    "word_b_id": "yeoljeong"
+  },
+  {
+    "word_a_id": "heupjok",
+    "word_b_id": "manjok"
+  },
+  {
+    "word_a_id": "heupjok",
+    "word_b_id": "sangkeum"
+  },
+  {
+    "word_a_id": "hoegae",
+    "word_b_id": "nwiuchi"
+  },
+  {
+    "word_a_id": "hoegae",
+    "word_b_id": "ssukseureop"
+  },
+  {
+    "word_a_id": "hoehan",
+    "word_b_id": "seoreop"
+  },
+  {
+    "word_a_id": "hoehan",
+    "word_b_id": "soksang"
+  },
+  {
+    "word_a_id": "hoeo",
+    "word_b_id": "nambureop"
+  },
+  {
+    "word_a_id": "hoeo",
+    "word_b_id": "natganjireop"
+  },
+  {
+    "word_a_id": "hoeo",
+    "word_b_id": "useup"
+  },
+  {
+    "word_a_id": "hogam",
+    "word_b_id": "hwanghol"
+  },
+  {
+    "word_a_id": "hogam",
+    "word_b_id": "jarangseureop"
+  },
+  {
+    "word_a_id": "holgabun",
+    "word_b_id": "manjok"
+  },
+  {
+    "word_a_id": "huhoe",
+    "word_b_id": "jagoe"
+  },
+  {
+    "word_a_id": "huhoe",
+    "word_b_id": "joeseureop"
+  },
+  {
+    "word_a_id": "huhoe",
+    "word_b_id": "matangchanh"
+  },
+  {
+    "word_a_id": "huhoe",
+    "word_b_id": "tteolda"
+  },
+  {
+    "word_a_id": "hui",
+    "word_b_id": "maeryodoeda"
+  },
+  {
+    "word_a_id": "hui",
+    "word_b_id": "samohada"
+  },
+  {
+    "word_a_id": "huibi",
+    "word_b_id": "hwangdang"
+  },
+  {
+    "word_a_id": "huinak",
+    "word_b_id": "ujjul"
+  },
+  {
+    "word_a_id": "huinak",
+    "word_b_id": "yeongye"
+  },
+  {
+    "word_a_id": "huiyeol",
+    "word_b_id": "jasinmanman"
+  },
+  {
+    "word_a_id": "huryeon",
+    "word_b_id": "jeonggam"
+  },
+  {
+    "word_a_id": "huryeon",
+    "word_b_id": "onjeong"
+  },
+  {
+    "word_a_id": "hwanada",
+    "word_b_id": "nohada"
+  },
+  {
+    "word_a_id": "hwanada",
+    "word_b_id": "seongnada"
+  },
+  {
+    "word_a_id": "hwanggonghada",
+    "word_b_id": "jjaksarang"
+  },
+  {
+    "word_a_id": "hwanggonghada",
+    "word_b_id": "jjingha"
+  },
+  {
+    "word_a_id": "hwanghol",
+    "word_b_id": "jarangseureop"
+  },
+  {
+    "word_a_id": "hwanghol",
+    "word_b_id": "jeulgi"
+  },
+  {
+    "word_a_id": "hwanghol",
+    "word_b_id": "salmatnada"
+  },
+  {
+    "word_a_id": "hwangsonghada",
+    "word_b_id": "jjaksarang"
+  },
+  {
+    "word_a_id": "hwanhui",
+    "word_b_id": "seongchwigam"
+  },
+  {
+    "word_a_id": "hwanhui",
+    "word_b_id": "sinbaram"
+  },
+  {
+    "word_a_id": "hwanhui",
+    "word_b_id": "tongkwae"
+  },
+  {
+    "word_a_id": "hwanmyeol",
+    "word_b_id": "hyeomo"
+  },
+  {
+    "word_a_id": "hwanmyeol",
+    "word_b_id": "momyeol"
+  },
+  {
+    "word_a_id": "jaemi",
+    "word_b_id": "jarangseureop"
+  },
+  {
+    "word_a_id": "jaemi",
+    "word_b_id": "ppudeut"
+  },
+  {
+    "word_a_id": "jageung",
+    "word_b_id": "sangkeum"
+  },
+  {
+    "word_a_id": "jageung",
+    "word_b_id": "yeongye"
+  },
+  {
+    "word_a_id": "jagihyeomo",
+    "word_b_id": "yeokgyeop"
+  },
+  {
+    "word_a_id": "jagoe",
+    "word_b_id": "joeseureop"
+  },
+  {
+    "word_a_id": "jagoe",
+    "word_b_id": "joeuisik"
+  },
+  {
+    "word_a_id": "jajok",
+    "word_b_id": "pyeon"
+  },
+  {
+    "word_a_id": "jaman",
+    "word_b_id": "ujjul"
+  },
+  {
+    "word_a_id": "jeogui",
+    "word_b_id": "jjajeungnae"
+  },
+  {
+    "word_a_id": "jeogui",
+    "word_b_id": "yeoldeunggam"
+  },
+  {
+    "word_a_id": "jeolbakgam",
+    "word_b_id": "seomttuk"
+  },
+  {
+    "word_a_id": "jeoljeol",
+    "word_b_id": "seolwo"
+  },
+  {
+    "word_a_id": "jeolmang",
+    "word_b_id": "jwajeol"
+  },
+  {
+    "word_a_id": "jeonggyeop",
+    "word_b_id": "soksiwon"
+  },
+  {
+    "word_a_id": "jeonghan",
+    "word_b_id": "usu"
+  },
+  {
+    "word_a_id": "jeongyok",
+    "word_b_id": "nolla"
+  },
+  {
+    "word_a_id": "jeonjeongeunggeung",
+    "word_b_id": "nopasim"
+  },
+  {
+    "word_a_id": "jeonjeongeunggeung",
+    "word_b_id": "uihok"
+  },
+  {
+    "word_a_id": "jeonjeongeunggeung",
+    "word_b_id": "wihwagam"
+  },
+  {
+    "word_a_id": "jeulgeop",
+    "word_b_id": "seongchwigam"
+  },
+  {
+    "word_a_id": "jeulgi",
+    "word_b_id": "joha"
+  },
+  {
+    "word_a_id": "jigeutjigeut",
+    "word_b_id": "joechaekgam"
+  },
+  {
+    "word_a_id": "jigeutjigeut",
+    "word_b_id": "mangyeonjasil"
+  },
+  {
+    "word_a_id": "jigyeop",
+    "word_b_id": "sinmulnada"
+  },
+  {
+    "word_a_id": "jilgeop",
+    "word_b_id": "museop"
+  },
+  {
+    "word_a_id": "jilgeop",
+    "word_b_id": "seomttuk"
+  },
+  {
+    "word_a_id": "jilli",
+    "word_b_id": "mangyeonjasil"
+  },
+  {
+    "word_a_id": "jilli",
+    "word_b_id": "seogeulpeu"
+  },
+  {
+    "word_a_id": "jilli",
+    "word_b_id": "siljeung"
+  },
+  {
+    "word_a_id": "jilsaek",
+    "word_b_id": "kkeumjjik"
+  },
+  {
+    "word_a_id": "jilsaek",
+    "word_b_id": "mipda"
+  },
+  {
+    "word_a_id": "jilsaek",
+    "word_b_id": "yalmip"
+  },
+  {
+    "word_a_id": "jiltu",
+    "word_b_id": "jobasim"
+  },
+  {
+    "word_a_id": "jiltu",
+    "word_b_id": "musimusi"
+  },
+  {
+    "word_a_id": "jinjeori",
+    "word_b_id": "suchi"
+  },
+  {
+    "word_a_id": "jinno",
+    "word_b_id": "singyeongjil"
+  },
+  {
+    "word_a_id": "jinno",
+    "word_b_id": "wontonghada"
+  },
+  {
+    "word_a_id": "jirihada",
+    "word_b_id": "sikeun"
+  },
+  {
+    "word_a_id": "jirihada",
+    "word_b_id": "siksanghada"
+  },
+  {
+    "word_a_id": "jiru",
+    "word_b_id": "maekppajida"
+  },
+  {
+    "word_a_id": "jiru",
+    "word_b_id": "mugamdonghada"
+  },
+  {
+    "word_a_id": "jiru",
+    "word_b_id": "muryeokgam"
+  },
+  {
+    "word_a_id": "jiru",
+    "word_b_id": "muryohada"
+  },
+  {
+    "word_a_id": "jjajeungnae",
+    "word_b_id": "tonghan"
+  },
+  {
+    "word_a_id": "jjajeungnae",
+    "word_b_id": "yeoldeunggam"
+  },
+  {
+    "word_a_id": "jobasim",
+    "word_b_id": "jomajoma"
+  },
+  {
+    "word_a_id": "jobasim",
+    "word_b_id": "natteugeop"
+  },
+  {
+    "word_a_id": "joeseureop",
+    "word_b_id": "joeuisik"
+  },
+  {
+    "word_a_id": "jomajoma",
+    "word_b_id": "natteugeop"
+  },
+  {
+    "word_a_id": "junuk",
+    "word_b_id": "uul"
+  },
+  {
+    "word_a_id": "kaenggi",
+    "word_b_id": "nambukkeureop"
+  },
+  {
+    "word_a_id": "kaenggi",
+    "word_b_id": "torajida"
+  },
+  {
+    "word_a_id": "kkeori",
+    "word_b_id": "simran"
+  },
+  {
+    "word_a_id": "kkeorimjik",
+    "word_b_id": "kkeureumjik"
+  },
+  {
+    "word_a_id": "kkeorimjik",
+    "word_b_id": "tteoreum"
+  },
+  {
+    "word_a_id": "kkeureumjik",
+    "word_b_id": "tteoltteoreum"
+  },
+  {
+    "word_a_id": "kkeureumjik",
+    "word_b_id": "tteoreum"
+  },
+  {
+    "word_a_id": "kowuseum",
+    "word_b_id": "tteoreum"
+  },
+  {
+    "word_a_id": "kwaegam",
+    "word_b_id": "sinnada"
+  },
+  {
+    "word_a_id": "kwaegam",
+    "word_b_id": "tongkwae"
+  },
+  {
+    "word_a_id": "kwaegam",
+    "word_b_id": "yeolgwang"
+  },
+  {
+    "word_a_id": "maekppajida",
+    "word_b_id": "muryeokgam"
+  },
+  {
+    "word_a_id": "makmak",
+    "word_b_id": "sangsim"
+  },
+  {
+    "word_a_id": "mamnoh",
+    "word_b_id": "taepyeong"
+  },
+  {
+    "word_a_id": "mangseol",
+    "word_b_id": "muan"
+  },
+  {
+    "word_a_id": "mangyeon",
+    "word_b_id": "seounhada"
+  },
+  {
+    "word_a_id": "mangyeon",
+    "word_b_id": "sseupsseulhada"
+  },
+  {
+    "word_a_id": "mangyeonjasil",
+    "word_b_id": "seogeulpeu"
+  },
+  {
+    "word_a_id": "manjok",
+    "word_b_id": "nak"
+  },
+  {
+    "word_a_id": "matangchanh",
+    "word_b_id": "tteolda"
+  },
+  {
+    "word_a_id": "meosseuk",
+    "word_b_id": "meotjjeok"
+  },
+  {
+    "word_a_id": "meosseuk",
+    "word_b_id": "musaek"
+  },
+  {
+    "word_a_id": "meotjjeok",
+    "word_b_id": "ssukseureop"
+  },
+  {
+    "word_a_id": "meotjjeok",
+    "word_b_id": "yeohan"
+  },
+  {
+    "word_a_id": "mian",
+    "word_b_id": "nunmulgyeop"
+  },
+  {
+    "word_a_id": "minmang",
+    "word_b_id": "nambukkeureop"
+  },
+  {
+    "word_a_id": "minmang",
+    "word_b_id": "torajida"
+  },
+  {
+    "word_a_id": "mipda",
+    "word_b_id": "yalmip"
+  },
+  {
+    "word_a_id": "muan",
+    "word_b_id": "songgu"
+  },
+  {
+    "word_a_id": "mudeom",
+    "word_b_id": "simsim"
+  },
+  {
+    "word_a_id": "mugamdonghada",
+    "word_b_id": "muryohada"
+  },
+  {
+    "word_a_id": "mungkeulhada",
+    "word_b_id": "yeonmohada"
+  },
+  {
+    "word_a_id": "musaek",
+    "word_b_id": "saeljjuk"
+  },
+  {
+    "word_a_id": "museop",
+    "word_b_id": "tteuak"
+  },
+  {
+    "word_a_id": "musimusi",
+    "word_b_id": "sokta"
+  },
+  {
+    "word_a_id": "nak",
+    "word_b_id": "sangkeum"
+  },
+  {
+    "word_a_id": "nakdam",
+    "word_b_id": "nakmang"
+  },
+  {
+    "word_a_id": "nakdam",
+    "word_b_id": "naksim"
+  },
+  {
+    "word_a_id": "nakdam",
+    "word_b_id": "silmang"
+  },
+  {
+    "word_a_id": "naksim",
+    "word_b_id": "sangsilgam"
+  },
+  {
+    "word_a_id": "naksim",
+    "word_b_id": "silmang"
+  },
+  {
+    "word_a_id": "naksim",
+    "word_b_id": "sireum"
+  },
+  {
+    "word_a_id": "nambukkeureop",
+    "word_b_id": "torajida"
+  },
+  {
+    "word_a_id": "nambureop",
+    "word_b_id": "nunmulgyeop"
+  },
+  {
+    "word_a_id": "nangpae",
+    "word_b_id": "yasok"
+  },
+  {
+    "word_a_id": "natganjireop",
+    "word_b_id": "useup"
+  },
+  {
+    "word_a_id": "nobaldaebal",
+    "word_b_id": "seongnada"
+  },
+  {
+    "word_a_id": "nogi",
+    "word_b_id": "samuchi"
+  },
+  {
+    "word_a_id": "nopasim",
+    "word_b_id": "seonttuk"
+  },
+  {
+    "word_a_id": "nopasim",
+    "word_b_id": "uia"
+  },
+  {
+    "word_a_id": "nosimchosa",
+    "word_b_id": "wiapgam"
+  },
+  {
+    "word_a_id": "noyeop",
+    "word_b_id": "tongbun"
+  },
+  {
+    "word_a_id": "nwiuchi",
+    "word_b_id": "ssukseureop"
+  },
+  {
+    "word_a_id": "oeropda",
+    "word_b_id": "soeo"
+  },
+  {
+    "word_a_id": "oeropda",
+    "word_b_id": "sseulsseulhada"
+  },
+  {
+    "word_a_id": "onjeong",
+    "word_b_id": "sunjeong"
+  },
+  {
+    "word_a_id": "ppudeut",
+    "word_b_id": "sangkeum"
+  },
+  {
+    "word_a_id": "ppudeut",
+    "word_b_id": "sarangseureop"
+  },
+  {
+    "word_a_id": "ppyoroton",
+    "word_b_id": "seomeok"
+  },
+  {
+    "word_a_id": "pulchukda",
+    "word_b_id": "uigi"
+  },
+  {
+    "word_a_id": "pulchukda",
+    "word_b_id": "uul"
+  },
+  {
+    "word_a_id": "pyeon",
+    "word_b_id": "pyeonan"
+  },
+  {
+    "word_a_id": "pyeon",
+    "word_b_id": "pyeongon"
+  },
+  {
+    "word_a_id": "pyeonan",
+    "word_b_id": "pyeonghwa"
+  },
+  {
+    "word_a_id": "pyeonan",
+    "word_b_id": "pyeongon"
+  },
+  {
+    "word_a_id": "pyeongan",
+    "word_b_id": "pyeonghwa"
+  },
+  {
+    "word_a_id": "saeljjuk",
+    "word_b_id": "seomeok"
+  },
+  {
+    "word_a_id": "saemnae",
+    "word_b_id": "yagoreu"
+  },
+  {
+    "word_a_id": "saemnae",
+    "word_b_id": "yeokjeong"
+  },
+  {
+    "word_a_id": "sangkwae",
+    "word_b_id": "yeonggwang"
+  },
+  {
+    "word_a_id": "sangsilgam",
+    "word_b_id": "sireum"
+  },
+  {
+    "word_a_id": "sangsim",
+    "word_b_id": "silmang"
+  },
+  {
+    "word_a_id": "sangsim",
+    "word_b_id": "silui"
+  },
+  {
+    "word_a_id": "sasan",
+    "word_b_id": "ttakha"
+  },
+  {
+    "word_a_id": "seogeulpeu",
+    "word_b_id": "seopseop"
+  },
+  {
+    "word_a_id": "seogeulpeu",
+    "word_b_id": "silui"
+  },
+  {
+    "word_a_id": "seolle",
+    "word_b_id": "yeorae"
+  },
+  {
+    "word_a_id": "seolwo",
+    "word_b_id": "seoreowo"
+  },
+  {
+    "word_a_id": "seolwo",
+    "word_b_id": "siljeung"
+  },
+  {
+    "word_a_id": "seomeok",
+    "word_b_id": "wichukgam"
+  },
+  {
+    "word_a_id": "seongnada",
+    "word_b_id": "ulbun"
+  },
+  {
+    "word_a_id": "seonttuk",
+    "word_b_id": "tteukkeum"
+  },
+  {
+    "word_a_id": "seopseop",
+    "word_b_id": "siljeung"
+  },
+  {
+    "word_a_id": "seoreowo",
+    "word_b_id": "siljeung"
+  },
+  {
+    "word_a_id": "seounhada",
+    "word_b_id": "sseupsseulhada"
+  },
+  {
+    "word_a_id": "sigi",
+    "word_b_id": "wihwagam"
+  },
+  {
+    "word_a_id": "sikeun",
+    "word_b_id": "siksanghada"
+  },
+  {
+    "word_a_id": "sikeun",
+    "word_b_id": "simdeuronghada"
+  },
+  {
+    "word_a_id": "silta",
+    "word_b_id": "suchi"
+  },
+  {
+    "word_a_id": "simnyeo",
+    "word_b_id": "susim"
+  },
+  {
+    "word_a_id": "simnyeo",
+    "word_b_id": "yeomryeo"
+  },
+  {
+    "word_a_id": "simtong",
+    "word_b_id": "uibun"
+  },
+  {
+    "word_a_id": "simtong",
+    "word_b_id": "yeokjeong"
+  },
+  {
+    "word_a_id": "simu",
+    "word_b_id": "ttabun"
+  },
+  {
+    "word_a_id": "sinbaram",
+    "word_b_id": "tongkwae"
+  },
+  {
+    "word_a_id": "sinbaram",
+    "word_b_id": "yeoljeong"
+  },
+  {
+    "word_a_id": "sinmyeong",
+    "word_b_id": "yukwae"
+  },
+  {
+    "word_a_id": "sinnada",
+    "word_b_id": "tongkwae"
+  },
+  {
+    "word_a_id": "sireum",
+    "word_b_id": "uljeok"
+  },
+  {
+    "word_a_id": "siwonseopseophada",
+    "word_b_id": "yeonmin"
+  },
+  {
+    "word_a_id": "soksang",
+    "word_b_id": "yasok"
+  },
+  {
+    "word_a_id": "soksiwon",
+    "word_b_id": "tteottteot"
+  },
+  {
+    "word_a_id": "songgu",
+    "word_b_id": "yeohan"
+  },
+  {
+    "word_a_id": "songyeon",
+    "word_b_id": "susim"
+  },
+  {
+    "word_a_id": "sunjeong",
+    "word_b_id": "yeonjeong"
+  },
+  {
+    "word_a_id": "tteoltteoreum",
+    "word_b_id": "tteoreum"
+  },
+  {
+    "word_a_id": "uigi",
+    "word_b_id": "uul"
+  },
+  {
+    "word_a_id": "uihok",
+    "word_b_id": "wihwagam"
+  },
+  {
+    "word_a_id": "ulhwa",
+    "word_b_id": "wonhan"
+  },
+  {
+    "word_a_id": "uryeo",
+    "word_b_id": "yeomryeo"
+  }
+]

@@ -1,3 +1,14 @@
 감정 어휘지도 (standalone).html
 .vercel
 node_modules
+
+.vercel
+.env*
+!.env.example
+.next
+next-env.d.ts
+tsconfig.tsbuildinfo
+.claude/
+
+# Next.js 이전 정적 프로토타입 — app/map/으로 완전히 대체됨, 새 저장소에는 올리지 않음
+/map.html
