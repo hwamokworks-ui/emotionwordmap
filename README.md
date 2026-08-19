@@ -60,7 +60,7 @@ docs/                 설계·구현 기록 — 어휘 선정 기준, AI 검색 
 npm install
 ```
 
-`.env.local`에 Supabase 값을 채웁니다(`.env.example` 참고). `NEXT_PUBLIC_` 접두어를 쓰지 않아 서버에서만 읽힙니다.
+`.env.local`에 Supabase 값을 채웁니다. `NEXT_PUBLIC_` 접두어를 쓰지 않아 서버에서만 읽힙니다.
 
 ```
 SUPABASE_URL=
